@@ -35,11 +35,9 @@ struct HomeView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.black)
         .background(
-            LinearGradient(gradient: .init(colors: [Color.background,
-                                                    Color(#colorLiteral(red: 0.9058823529, green: 0.8509803922, blue: 0.8588235294, alpha: 1)),
-                                                    Color(#colorLiteral(red: 0.9843173623, green: 0.96470505, blue: 0.9647064805, alpha: 1))]),
-                           startPoint: .top,
-                           endPoint: .bottom)
+            LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.4313035607, green: 0.6823632717, blue: 0.7646967769, alpha: 1)), Color(#colorLiteral(red: 0.9058917165, green: 0.8509779572, blue: 0.8588247299, alpha: 1)), Color(#colorLiteral(red: 0.9843173623, green: 0.96470505, blue: 0.9647064805, alpha: 1))]), startPoint: .top, endPoint: .bottom)
+                            .edgesIgnoringSafeArea(.all)
+
         )
     }
     
