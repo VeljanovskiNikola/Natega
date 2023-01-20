@@ -61,7 +61,9 @@ struct HomeView: View {
             .font(.system(size: 13, weight: .regular, design: .rounded))
             .padding(.vertical, 5)
             .padding(.horizontal, 15)
-            .background(RoundedRectangle(cornerRadius: 30).opacity(0.1))
+            .background(Color.superLightBlue.opacity(0.3))
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+
     }
     
     private var image: some View {
@@ -140,13 +142,11 @@ struct HomeView: View {
                 }, label:{
                     Text(reading.title ?? "")
                         .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color(#colorLiteral(red: 0.26, green: 0.41, blue: 0.47, alpha: 1)))
+                        .foregroundColor(Color.lightTurquoise)
                         .padding(.vertical, 5)
                         .padding(.horizontal, 13)
-                        .background(
-                            Rectangle().fill (
-                                Color.background.opacity(1))
-                        ).cornerRadius(12)
+                        .background(Color.lightBlue)
+                        .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 })
             }
         }
@@ -160,12 +160,11 @@ struct HomeView: View {
                 }, label:{
                     Text(reading.title ?? "")
                         .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color(#colorLiteral(red: 0.5, green: 0.3, blue: 0.35, alpha: 1)))
+                        .foregroundColor(Color.softPink)
                         .padding(.vertical, 5)
                         .padding(.horizontal, 13)
-                        .background(
-                            Rectangle().fill(Color.brown.opacity(1))
-                        ).cornerRadius(12)
+                        .background(Color.pink)
+                        .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 })
             }
         }
@@ -179,12 +178,11 @@ struct HomeView: View {
                 }, label:{
                     Text(reading.title ?? "")
                         .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color(#colorLiteral(red: 0.5, green: 0.3, blue: 0.35, alpha: 1)))
+                        .foregroundColor(Color.purple)
                         .padding(.vertical, 5)
                         .padding(.horizontal, 13)
-                        .background(
-                            Rectangle().fill(Color.purple.opacity(0.8))
-                        ).cornerRadius(12)
+                        .background(Color.lightPurple)
+                        .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
                 })
             }
         }
@@ -251,14 +249,25 @@ struct HomeView: View {
                     .shadow(color: Color(#colorLiteral(red: 0.8984375, green: 0.9023876190185547, blue: 0.9375, alpha: 1)), radius:40, x:0, y:20)
                     
                 }
+                    .shadow(color: Color.black.opacity(1), radius:40, x:10, y:50)
+                    
+//                    .shadow(color: Color(.black), radius:10, x:0, y:5)
+                    
+                    
+                }
+//                .frame(height: 500)
+//                .padding(50)
+                
+
             }
             .frame(maxWidth: .infinity)
+            .padding(.horizontal, 16)
+            .ignoresSafeArea()
         }
-        .padding(.horizontal, 16)
     }
     
     func setupAppearance() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = .black
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.white)
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.lightPurple)
     }
-}
+
