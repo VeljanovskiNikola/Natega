@@ -112,6 +112,7 @@ final class HomeViewModel: ObservableObject {
     }
 
 //    private func setupColors() {
+    
 //        if imageNames.count > 0 {
 //            UIImage(imageLiteralResourceName: imageNames[0]).getColors { [weak self] colors in
 //                self?.backgroundColor = colors?.background ?? UIColor()
