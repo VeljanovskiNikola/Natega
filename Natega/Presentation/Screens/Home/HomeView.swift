@@ -32,11 +32,6 @@ struct HomeView: View {
     
     private var readyView: some View {
         ZStack {
-            LinearGradient(colors: viewModel.colors,
-                           startPoint: viewModel.start,
-                           endPoint: viewModel.end)
-            .edgesIgnoringSafeArea(.all)
-            
             VStack {
                 date
                 fast
@@ -52,7 +47,7 @@ struct HomeView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.black)
         .background(
-            LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.4313035607, green: 0.6823632717, blue: 0.7646967769, alpha: 1)), Color(#colorLiteral(red: 0.9058917165, green: 0.8509779572, blue: 0.8588247299, alpha: 1)), Color(#colorLiteral(red: 0.9843173623, green: 0.96470505, blue: 0.9647064805, alpha: 1))]), startPoint: .top, endPoint: .bottom)
+            LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.431372549, green: 0.6823632717, blue: 0.7646967769, alpha: 1)), Color(#colorLiteral(red: 0.9058917165, green: 0.8509779572, blue: 0.8588247299, alpha: 1)), Color(#colorLiteral(red: 0.9843173623, green: 0.96470505, blue: 0.9647064805, alpha: 1))]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
         )
@@ -61,24 +56,23 @@ struct HomeView: View {
     private var date: some View {
         HStack {
             Text("Today, \(viewModel.formattedDate())")
-                .fontWeight(.medium)
-                .font(.system(size: 15))
+                .font(.system(size: 20, weight: .medium, design: .rounded))
             
             Image(systemName: "smallcircle.filled.circle.fill")
-                .font(.system(size: 7, weight: .thin, design: .rounded))
+                .font(.system(size: 10, weight: .thin, design: .rounded))
             
             Text("17 Kiahk")
-                .font(.system(size: 15))
+                .font(.system(size: 20, weight: .regular, design: .rounded))
         }
-        .foregroundColor(Color(uiColor: viewModel.primaryColor))
+        .foregroundColor(Color.black)
         .padding(.top, 18)
     }
     
     private var fast: some View {
         Text("Nativity Fast")
-            .font(.system(size: 13, weight: .regular, design: .rounded))
-            .padding(.vertical, 5)
-            .padding(.horizontal, 15)
+            .font(.system(size: 17, weight: .regular, design: .rounded))
+            .padding(.vertical, 7)
+            .padding(.horizontal, 20)
             .background(Color.superLightBlue.opacity(0.3))
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
         
@@ -86,17 +80,17 @@ struct HomeView: View {
     
     private var image: some View {
         VStack {
-            TabView(selection: $viewModel.selectedImage) {
-                ForEach(viewModel.imageNames, id: \.self) { image in
-                    Image(uiImage: UIImage(named: image)!)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(20)
-                        .padding(16)
-                        .tag(viewModel.imageNames.firstIndex(of: image) ?? 0)
-                }
-            }
-            .tabViewStyle(.page)
+//            TabView(selection: $viewModel.selectedImage) {
+//                ForEach(viewModel.imageNames, id: \.self) { image in
+//                    Image(uiImage: UIImage(named: image)!)
+//                        .resizable()
+//                        .aspectRatio(contentMode: .fit)
+//                        .cornerRadius(20)
+//                        .padding(16)
+//                        .tag(viewModel.imageNames.firstIndex(of: image) ?? 0)
+//                }
+//            }
+//            .tabViewStyle(.page)
             
             Text("The feast of St. Mary")
                 .font(.system(size: 13))

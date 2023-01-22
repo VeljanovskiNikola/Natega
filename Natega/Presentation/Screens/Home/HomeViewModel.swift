@@ -71,7 +71,7 @@ final class HomeViewModel: ObservableObject {
          readingsCase: LoadReadingsUseCaseType) {
         self.synaxarsCase = synaxarsCase
         self.readingsCase = readingsCase
-        self.setupColors()
+//        self.setupColors()
     }
     
     func loadSynaxars() {
@@ -111,25 +111,25 @@ final class HomeViewModel: ObservableObject {
         
     }
 
-    private func setupColors() {
-        if imageNames.count > 0 {
-            UIImage(imageLiteralResourceName: imageNames[0]).getColors { [weak self] colors in
-                self?.backgroundColor = colors?.background ?? UIColor()
-                self?.primaryColor = colors?.primary ?? UIColor()
-                self?.secondaryColor = colors?.secondary ?? UIColor()
-                self?.detailColor = colors?.detail ?? UIColor()
-                self?.previousBackgroundColor = self?.backgroundColor ?? UIColor()
-                self?.previousPrimaryColor = self?.primaryColor ?? UIColor()
-                self?.previousSecondaryColor = self?.secondaryColor ?? UIColor()
-                self?.previousDetailColor = self?.detailColor ?? UIColor()
-            }
-            nextColors = UIImage(imageLiteralResourceName: imageNames[safeIndex: 1] ?? "stmary").getColors()
-            nextBackgroundColor = nextColors?.background ?? UIColor()
-            nextPrimaryColor = nextColors?.primary ?? UIColor()
-            nextSecondaryColor = nextColors?.secondary ?? UIColor()
-            detailColor = nextColors?.detail ?? UIColor()
-        }
-    }
+//    private func setupColors() {
+//        if imageNames.count > 0 {
+//            UIImage(imageLiteralResourceName: imageNames[0]).getColors { [weak self] colors in
+//                self?.backgroundColor = colors?.background ?? UIColor()
+//                self?.primaryColor = colors?.primary ?? UIColor()
+//                self?.secondaryColor = colors?.secondary ?? UIColor()
+//                self?.detailColor = colors?.detail ?? UIColor()
+//                self?.previousBackgroundColor = self?.backgroundColor ?? UIColor()
+//                self?.previousPrimaryColor = self?.primaryColor ?? UIColor()
+//                self?.previousSecondaryColor = self?.secondaryColor ?? UIColor()
+//                self?.previousDetailColor = self?.detailColor ?? UIColor()
+//            }
+//            nextColors = UIImage(imageLiteralResourceName: imageNames[safeIndex: 1] ?? "Archangel Michael").getColors()
+//            nextBackgroundColor = nextColors?.background ?? UIColor()
+//            nextPrimaryColor = nextColors?.primary ?? UIColor()
+//            nextSecondaryColor = nextColors?.secondary ?? UIColor()
+//            detailColor = nextColors?.detail ?? UIColor()
+//        }
+//    }
         
     func formattedDate() -> String {
         let date = Date()
