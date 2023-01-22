@@ -36,7 +36,7 @@ struct HomeView: View {
                            startPoint: viewModel.start,
                            endPoint: viewModel.end)
             .edgesIgnoringSafeArea(.all)
-
+            
             VStack {
                 date
                 fast
@@ -53,8 +53,8 @@ struct HomeView: View {
         .foregroundColor(.black)
         .background(
             LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.4313035607, green: 0.6823632717, blue: 0.7646967769, alpha: 1)), Color(#colorLiteral(red: 0.9058917165, green: 0.8509779572, blue: 0.8588247299, alpha: 1)), Color(#colorLiteral(red: 0.9843173623, green: 0.96470505, blue: 0.9647064805, alpha: 1))]), startPoint: .top, endPoint: .bottom)
-                            .edgesIgnoringSafeArea(.all)
-
+                .edgesIgnoringSafeArea(.all)
+            
         )
     }
     
@@ -81,7 +81,7 @@ struct HomeView: View {
             .padding(.horizontal, 15)
             .background(Color.superLightBlue.opacity(0.3))
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-
+        
     }
     
     private var image: some View {
@@ -251,7 +251,7 @@ struct HomeView: View {
                     .padding(.horizontal, 30)
                     .background(Color.white.opacity(0.7))
                     .cornerRadius(30)
-
+                    
                     
                     HStack {
                         
@@ -281,4 +281,4 @@ struct HomeView: View {
         UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.white)
         UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.lightPurple)
     }
-
+}
