@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474495A6297DAC07005B3777 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474495A5297DAC06005B3777 /* MotionManager.swift */; };
 		477C537E297D9FED00722487 /* SmallIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477C537D297D9FED00722487 /* SmallIcon.swift */; };
 		4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */; };
 		4786DDAD297D9DCE0067BD2A /* SmallSaintIconCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		474495A5297DAC06005B3777 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		477C537D297D9FED00722487 /* SmallIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIcon.swift; sourceTree = "<group>"; };
 		4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintIconModel.swift; sourceTree = "<group>"; };
 		4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSaintIconCard.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */,
 				477C537D297D9FED00722487 /* SmallIcon.swift */,
 				4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */,
+				474495A5297DAC06005B3777 /* MotionManager.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				4C4A9AE4294E6F1B00C0B279 /* HomeViewModel.swift in Sources */,
 				4C4A9AD1294E5E5F00C0B279 /* ToutbabahatorAPI.swift in Sources */,
 				4C4A9ADD294E6D5B00C0B279 /* Assembler.swift in Sources */,
+				474495A6297DAC07005B3777 /* MotionManager.swift in Sources */,
 				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
 				4CCFA65A295F4C1800342776 /* Reading.swift in Sources */,
 				4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */,
