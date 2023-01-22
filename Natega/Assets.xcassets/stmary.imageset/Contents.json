@@ -2,11 +2,14 @@
   "images" : [
     {
       "filename" : "stmary.pdf",
-      "idiom" : "universal"
+      "idiom" : "iphone"
     }
   ],
   "info" : {
     "author" : "xcode",
     "version" : 1
+  },
+  "properties" : {
+    "template-rendering-intent" : "original"
   }
 }

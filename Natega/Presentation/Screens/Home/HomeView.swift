@@ -13,16 +13,31 @@ struct HomeView: View {
     var body: some View {
         contentView
             .onAppear {
-                viewModel.loadData()
-                setupAppearance()
+                viewModel.loadReadings()
+                viewModel.loadSynaxars()
             }
     }
     
+    @ViewBuilder
     private var contentView: some View {
-        VStack {
-            if viewModel.feastResult == nil {
-                ProgressView()
-            } else {
+        switch viewModel.state {
+        case .loading: loadingView
+        case .ready: readyView
+        }
+    }
+    
+    private var loadingView: some View {
+        ProgressView()
+    }
+    
+    private var readyView: some View {
+        ZStack {
+            LinearGradient(colors: viewModel.colors,
+                           startPoint: viewModel.start,
+                           endPoint: viewModel.end)
+            .edgesIgnoringSafeArea(.all)
+
+            VStack {
                 date
                 fast
                 image
@@ -31,6 +46,8 @@ struct HomeView: View {
                 upcoming
                 Spacer()
             }
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .foregroundColor(.black)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.black)
@@ -53,6 +70,7 @@ struct HomeView: View {
             Text("17 Kiahk")
                 .font(.system(size: 15))
         }
+        .foregroundColor(Color(uiColor: viewModel.primaryColor))
         .padding(.top, 18)
     }
     
@@ -67,20 +85,23 @@ struct HomeView: View {
     }
     
     private var image: some View {
-        TabView {
-            Image(uiImage: UIImage(named: "church")!)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(15)
-                .padding(16)
+        VStack {
+            TabView(selection: $viewModel.selectedImage) {
+                ForEach(viewModel.imageNames, id: \.self) { image in
+                    Image(uiImage: UIImage(named: image)!)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(20)
+                        .padding(16)
+                        .tag(viewModel.imageNames.firstIndex(of: image) ?? 0)
+                }
+            }
+            .tabViewStyle(.page)
             
-            Image(uiImage: UIImage(named: "stmary")!)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(15)
-                .padding(16)
+            Text("The feast of St. Mary")
+                .font(.system(size: 13))
+                .fontWeight(.regular)
         }
-        .tabViewStyle(.page)
     }
     
     private var commemorations: some View {
@@ -88,6 +109,7 @@ struct HomeView: View {
             Text("Commemorations")
                 .font(.system(size: 15))
                 .fontWeight(.semibold)
+                .padding(.top, 20)
             
             HStack {
                 Button {
@@ -119,8 +141,8 @@ struct HomeView: View {
         Group {
             readingsTitle
             readingsFirstRow
-            readingsSecondRow
-            readingsThirdRow
+            //                readingsSecondRow
+            //                readingsThirdRow
         }
     }
     private var readingsTitle: some View {
@@ -136,11 +158,11 @@ struct HomeView: View {
     
     private var readingsFirstRow: some View {
         HStack {
-            ForEach(viewModel.readings[0...2]) { reading in
+            ForEach(viewModel.readings) { reading in
                 Button(action: {
                     // show detail view
                 }, label:{
-                    Text(reading.title ?? "")
+                    Text(reading.type)
                         .font(.system(size: 15, weight: .medium))
                         .foregroundColor(Color.lightTurquoise)
                         .padding(.vertical, 5)
@@ -158,7 +180,7 @@ struct HomeView: View {
                 Button(action: {
                     // show detail view
                 }, label:{
-                    Text(reading.title ?? "")
+                    Text(reading.type)
                         .font(.system(size: 15, weight: .medium))
                         .foregroundColor(Color.softPink)
                         .padding(.vertical, 5)
@@ -176,7 +198,7 @@ struct HomeView: View {
                 Button(action: {
                     // show detail view
                 }, label:{
-                    Text(reading.title ?? "")
+                    Text(reading.type)
                         .font(.system(size: 15, weight: .medium))
                         .foregroundColor(Color.purple)
                         .padding(.vertical, 5)
@@ -191,8 +213,9 @@ struct HomeView: View {
     private var upcoming: some View {
         VStack(alignment: .leading) {
             Text("Upcoming")
-                .font(.system(size: 15, weight: .semibold, design: .rounded))
+                .font(.system(size: 15, weight: .semibold))
                 .padding(.top, 20)
+                .padding(.horizontal, 16)
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 7) {
@@ -200,19 +223,18 @@ struct HomeView: View {
                     HStack {
                         
                         Text("Feast of the Nativity")
-                            .font(.system(size: 15, weight: .medium, design: .rounded))
+                            .font(.system(size: 15, weight: .medium))
                         
                         Image(systemName: "smallcircle.filled.circle.fill")
-                            .font(.system(size: 7, weight: .thin, design: .rounded))
+                            .font(.system(size: 7, weight: .thin))
                         
-                        Text("in 6 days").font(.system(size: 15, weight: .light, design: .rounded))
+                        Text("in 6 days").font(.system(size: 15, weight: .light))
                         
                     }
                     .padding(.vertical, 10)
                     .padding(.horizontal, 30)
                     .background(Color.white.opacity(0.7))
-                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .shadow(color: Color(#colorLiteral(red: 0.8984375, green: 0.9023876190185547, blue: 0.9375, alpha: 1)), radius:40, x:0, y:20)
+                    .cornerRadius(30)
                     
                     HStack {
                         
@@ -228,37 +250,26 @@ struct HomeView: View {
                     .padding(.vertical, 10)
                     .padding(.horizontal, 30)
                     .background(Color.white.opacity(0.7))
-                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .shadow(color: Color(#colorLiteral(red: 0.8984375, green: 0.9023876190185547, blue: 0.9375, alpha: 1)), radius:40, x:0, y:20)
+                    .cornerRadius(30)
+
                     
                     HStack {
                         
                         Text("St Mary's feast")
-                            .font(.system(size: 15, weight: .medium, design: .rounded))
+                            .font(.system(size: 15, weight: .medium))
                         
                         Image(systemName: "smallcircle.filled.circle.fill")
-                            .font(.system(size: 7, weight: .thin, design: .rounded))
+                            .font(.system(size: 7, weight: .thin))
                         
-                        Text("in 9 days").font(.system(size: 15, weight: .light, design: .rounded))
+                        Text("in 9 days").font(.system(size: 15, weight: .light))
                         
                     }
                     .padding(.vertical, 10)
                     .padding(.horizontal, 30)
                     .background(Color.white.opacity(0.7))
-                    .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .shadow(color: Color(#colorLiteral(red: 0.8984375, green: 0.9023876190185547, blue: 0.9375, alpha: 1)), radius:40, x:0, y:20)
-                    
+                    .cornerRadius(30)
                 }
-                    .shadow(color: Color.black.opacity(1), radius:40, x:10, y:50)
-                    
-//                    .shadow(color: Color(.black), radius:10, x:0, y:5)
-                    
-                    
-                }
-//                .frame(height: 500)
-//                .padding(50)
-                
-
+                .padding(.horizontal, 16)
             }
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 16)
