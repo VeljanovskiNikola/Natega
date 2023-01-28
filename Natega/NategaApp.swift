@@ -13,7 +13,11 @@ struct NategaApp: App {
         WindowGroup {
 //            AppCompositionRoot.start
             
-            SmallSaintIconCard()
+//            SmallSaintIconCard()
+            
+//            SmallSaintIconCard()
+            
+            TestHomeView3()
             
         }
     }

@@ -15,38 +15,94 @@ struct SmallSaintIconCard: View {
     
     @State var show = false
     
+    @ObservedObject var motionManager = MotionManager()
+    private let maxDegrees: Double = 30 // clip max rotation angle
+    private let rotationScale: Double = 0.5
+    
+    @State var viewState = CGSize.zero
+    
     var body: some View {
         
         ZStack {
+            
             SmallIconWithName()
-                .scaleEffect(tap ? 1.2: 1)
-                .animation(.spring(response: 0.4, dampingFraction: 0.6))
-                .onTapGesture {
-                        tap = true
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                tap = false
-                        }
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
-                        show.toggle()
-                    }
-                }
+                .scaleEffect(tap ? 1.2 : 1)
 
             if show {
-                LargeIcon()
-                    .padding(.top, 300)
-                // really struggling with ordering the animation... I want the scale effect to happen first, then for largeicon to appear with an animation... why is this so hard to do? the large icon appears after due to dispatchqueue but i can't seem to animate it regardless what i do....
                 
-                /*
-                 
-                 To do next:
-                    - add blur and motion to LargeIconWithMotion
-                    - figure out this dumb animation thing
-                    - the reason we are animating this file, is so that when i pull it into horizontal scroll in HomeView, I can loop through the array of icons for the horizontal scroll view and yet also tap on any one of the cards and the big version of the icon will appear with cool animation
-                    - right now my brain is fried
-                 
-                 */
+                Rectangle()
+                    .fill(Color(hue: 1.0, saturation: 0.0, brightness: 0.951, opacity: 0.376))
+                    .background(.ultraThinMaterial)
+                    .ignoresSafeArea()
+                    .animation(.easeInOut)
+                
+                LargeIcon()
+                    .background(LargeIcon()
+                        .blur(radius: 15)
+                        .rotation3DEffect(
+                            max(min(Angle.radians(motionManager.magnitude * rotationScale), Angle.degrees(maxDegrees)), Angle.degrees(-maxDegrees))
+                            ,
+                            axis: (x: CGFloat(motionManager.x), y: CGFloat(motionManager.y), z: 0.0)
+                        )
+                        .offset(x:8, y: 11)
+                        .opacity(0.65)
+                        .overlay(LargeIcon())
+                    )
+                    .rotation3DEffect(
+                        max(min(Angle.radians(motionManager.magnitude * rotationScale), Angle.degrees(maxDegrees)), Angle.degrees(-maxDegrees))
+                        ,
+                        axis: (x: CGFloat(motionManager.x), y: CGFloat(motionManager.y), z: 0.0)
+                    )
+                    .offset(x: viewState.width, y: viewState.height)
+                    .animation(.easeIn(duration: 0.2))
+                    .transition(.move(edge: .bottom))
+                    .zIndex(1)
+                    .gesture(
+                        DragGesture().onChanged { value in
+
+                            viewState = value.translation
+                            
+                        }
+                            .onEnded { value in
+                                
+                                viewState = .zero
+                                
+                                withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                                    show = false
+                                }
+                                    
+                            }
+
+                    )
             }
             
+        }
+        .onTapGesture {
+            
+            withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                tap = true
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    
+                    withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                        
+                        tap = false
+                        
+                    }
+                    
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.23) {
+                    
+                    withAnimation(.easeIn(duration: 0.2)) {
+                        
+                        show = true
+                        
+                    }
+                    
+                }
+                
+            }
         }
         
     }
@@ -127,8 +183,12 @@ struct LargeIconMotion: View {
     var body: some View {
         
         LargeIcon()
-        
-        //need to add blur and stuff to large icon as well as motion
+            .background(LargeIcon()
+                .blur(radius: 15)
+                .offset(x:8, y: 11)
+                .opacity(0.65)
+                .overlay(LargeIcon())
+            )
         
     }
     

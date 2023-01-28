@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     
+    var iconCard: SaintIconModel = saintIconModels[0]
+    
     var body: some View {
         contentView
             .onAppear {
@@ -79,18 +81,34 @@ struct HomeView: View {
     }
     
     private var image: some View {
+        
         VStack {
-//            TabView(selection: $viewModel.selectedImage) {
-//                ForEach(viewModel.imageNames, id: \.self) { image in
-//                    Image(uiImage: UIImage(named: image)!)
-//                        .resizable()
-//                        .aspectRatio(contentMode: .fit)
-//                        .cornerRadius(20)
-//                        .padding(16)
-//                        .tag(viewModel.imageNames.firstIndex(of: image) ?? 0)
-//                }
-//            }
-//            .tabViewStyle(.page)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                HStack(spacing: -20) {
+                    
+                    ForEach(saintIconModels) { e in
+                        
+                        GeometryReader { geometry in
+                            
+                            SmallIconScroll(iconCard: e)
+                                .rotation3DEffect(
+                                    Angle(degrees: (Double(geometry.frame(in: .global).minX) - 100) / -50 ),
+                                    axis: (x: 0, y: 50, z: 0.0)
+                                )
+                            
+                        }
+                        .frame(width: 350, height: 400)
+                        
+                    }
+                    
+                }
+                .padding(20)
+                .padding(.bottom, 250)
+                
+            }
+            
             
             Text("The feast of St. Mary")
                 .font(.system(size: 13))
