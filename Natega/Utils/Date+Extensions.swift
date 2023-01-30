@@ -13,4 +13,12 @@ extension Date {
         dateFormatter.dateFormat = "dd-MM-yyyy"
         return dateFormatter.string(from: Date())
     }
+    
+    func localDate() -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        guard let date = dateFormatter.date(from: dateFormatter.dateFormat)
+        else { return Date() }
+        return date
+    }
 }

@@ -16,7 +16,6 @@ struct HomeView: View {
         contentView
             .onAppear {
                 viewModel.loadReadings()
-                viewModel.loadSynaxars()
             }
     }
     
@@ -42,9 +41,7 @@ struct HomeView: View {
                 readingsSection
                 upcoming
                 Spacer()
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .foregroundColor(.black)
+           }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.black)
@@ -149,14 +146,7 @@ struct HomeView: View {
         .padding(.horizontal, 16)
     }
     
-    private var readingsSection: some View {
-        Group {
-            readingsTitle
-            readingsFirstRow
-            //                readingsSecondRow
-            //                readingsThirdRow
-        }
-    }
+
     private var readingsTitle: some View {
         HStack {
             Text("Readings")
@@ -166,60 +156,6 @@ struct HomeView: View {
             Spacer()
         }
         .padding(.horizontal, 16)
-    }
-    
-    private var readingsFirstRow: some View {
-        HStack {
-            ForEach(viewModel.readings) { reading in
-                Button(action: {
-                    // show detail view
-                }, label:{
-                    Text(reading.type)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color.lightTurquoise)
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 13)
-                        .background(Color.lightBlue)
-                        .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                })
-            }
-        }
-    }
-    
-    private var readingsSecondRow: some View {
-        HStack {
-            ForEach(viewModel.readings[3...4]) { reading in
-                Button(action: {
-                    // show detail view
-                }, label:{
-                    Text(reading.type)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color.softPink)
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 13)
-                        .background(Color.pink)
-                        .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                })
-            }
-        }
-    }
-    
-    private var readingsThirdRow: some View {
-        HStack {
-            ForEach(viewModel.readings[5...5]) { reading in
-                Button(action: {
-                    // show detail view
-                }, label:{
-                    Text(reading.type)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color.purple)
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 13)
-                        .background(Color.lightPurple)
-                        .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                })
-            }
-        }
     }
     
     private var upcoming: some View {

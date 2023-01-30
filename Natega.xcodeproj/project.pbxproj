@@ -16,9 +16,9 @@
 		4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC1294E54CC00C0B279 /* HomeView.swift */; };
 		4C4A9AC4294E54CD00C0B279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */; };
 		4C4A9AC7294E54CD00C0B279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC6294E54CD00C0B279 /* Preview Assets.xcassets */; };
-		4C4A9AD1294E5E5F00C0B279 /* ToutbabahatorAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD0294E5E5F00C0B279 /* ToutbabahatorAPI.swift */; };
+		4C4A9AD1294E5E5F00C0B279 /* KatamerosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD0294E5E5F00C0B279 /* KatamerosAPI.swift */; };
 		4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD5294E631C00C0B279 /* Synaxar.swift */; };
-		4C4A9AD8294E660700C0B279 /* ToutbabahatorRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD7294E660700C0B279 /* ToutbabahatorRepository.swift */; };
+		4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD7294E660700C0B279 /* KatamerosRepository.swift */; };
 		4C4A9ADA294E66BB00C0B279 /* LoadSynaxarsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD9294E66BB00C0B279 /* LoadSynaxarsUseCase.swift */; };
 		4C4A9ADD294E6D5B00C0B279 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9ADC294E6D5B00C0B279 /* Assembler.swift */; };
 		4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */; };
@@ -38,7 +38,7 @@
 		4CCFA654295A4A0900342776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */; };
 		4CCFA656295CB34200342776 /* Colours+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA655295CB34200342776 /* Colours+Extensions.swift */; };
 		4CCFA658295E054C00342776 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA657295E054C00342776 /* Colours.xcassets */; };
-		4CCFA65A295F4C1800342776 /* Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA659295F4C1800342776 /* Reading.swift */; };
+		4CCFA65A295F4C1800342776 /* Feast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA659295F4C1800342776 /* Feast.swift */; };
 		4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */; };
 		4CCFA65E295F689600342776 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65D295F689600342776 /* ImageNames.swift */; };
 /* End PBXBuildFile section */
@@ -78,9 +78,9 @@
 		4C4A9AC1294E54CC00C0B279 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C4A9AC6294E54CD00C0B279 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		4C4A9AD0294E5E5F00C0B279 /* ToutbabahatorAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToutbabahatorAPI.swift; sourceTree = "<group>"; };
+		4C4A9AD0294E5E5F00C0B279 /* KatamerosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatamerosAPI.swift; sourceTree = "<group>"; };
 		4C4A9AD5294E631C00C0B279 /* Synaxar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synaxar.swift; sourceTree = "<group>"; };
-		4C4A9AD7294E660700C0B279 /* ToutbabahatorRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToutbabahatorRepository.swift; sourceTree = "<group>"; };
+		4C4A9AD7294E660700C0B279 /* KatamerosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatamerosRepository.swift; sourceTree = "<group>"; };
 		4C4A9AD9294E66BB00C0B279 /* LoadSynaxarsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSynaxarsUseCase.swift; sourceTree = "<group>"; };
 		4C4A9ADC294E6D5B00C0B279 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
 		4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembler.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		4CCFA64B295A450300342776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CCFA655295CB34200342776 /* Colours+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colours+Extensions.swift"; sourceTree = "<group>"; };
 		4CCFA657295E054C00342776 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
-		4CCFA659295F4C1800342776 /* Reading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reading.swift; sourceTree = "<group>"; };
+		4CCFA659295F4C1800342776 /* Feast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feast.swift; sourceTree = "<group>"; };
 		4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReadingsUseCase.swift; sourceTree = "<group>"; };
 		4CCFA65D295F689600342776 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -181,7 +181,7 @@
 		4C4A9ACE294E5DB100C0B279 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				4C4A9AD0294E5E5F00C0B279 /* ToutbabahatorAPI.swift */,
+				4C4A9AD0294E5E5F00C0B279 /* KatamerosAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 		4C4A9ACF294E5DB900C0B279 /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				4C4A9AD7294E660700C0B279 /* ToutbabahatorRepository.swift */,
+				4C4A9AD7294E660700C0B279 /* KatamerosRepository.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -216,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4A9AD5294E631C00C0B279 /* Synaxar.swift */,
-				4CCFA659295F4C1800342776 /* Reading.swift */,
+				4CCFA659295F4C1800342776 /* Feast.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -412,16 +412,17 @@
 				4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */,
 				4786DDAD297D9DCE0067BD2A /* SmallSaintIconCard.swift in Sources */,
 				4C4A9AE4294E6F1B00C0B279 /* HomeViewModel.swift in Sources */,
-				4C4A9AD1294E5E5F00C0B279 /* ToutbabahatorAPI.swift in Sources */,
+				4C4A9AD1294E5E5F00C0B279 /* KatamerosAPI.swift in Sources */,
 				4C4A9ADD294E6D5B00C0B279 /* Assembler.swift in Sources */,
 				474495A6297DAC07005B3777 /* MotionManager.swift in Sources */,
 				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
-				4CCFA65A295F4C1800342776 /* Reading.swift in Sources */,
+				4CCFA65A295F4C1800342776 /* Feast.swift in Sources */,
 				4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */,
 				4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */,
 				4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */,
 				4C4A9AD8294E660700C0B279 /* ToutbabahatorRepository.swift in Sources */,
 				4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */,
+				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
 				4C4A9ADA294E66BB00C0B279 /* LoadSynaxarsUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

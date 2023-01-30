@@ -11,7 +11,6 @@ import UIImageColors
 
 final class HomeViewModel: ObservableObject {
     
-    let synaxarsCase: LoadSynaxarsUseCaseType
     let readingsCase: LoadReadingsUseCaseType
     var nextColors: UIImageColors?
     var colors: [Color] {
@@ -25,7 +24,7 @@ final class HomeViewModel: ObservableObject {
     
     // Published properties
     @Published var synaxars: [Synaxar] = []
-    @Published var readings: [Reading] = []
+    @Published var readings: Feast?
     @Published var selectedImage = 0 {
         didSet {
             if oldValue > selectedImage {
@@ -37,7 +36,7 @@ final class HomeViewModel: ObservableObject {
                 }
             } else {
                 withAnimation(Animation.easeInOut(duration: length)) {
-                    backgroundColor = nextBackgroundColor
+                    self.backgroundColor = nextBackgroundColor
                     primaryColor = nextPrimaryColor
                     secondaryColor = nextSecondaryColor
                     detailColor = nextDetailColor
@@ -67,24 +66,9 @@ final class HomeViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
-    init(synaxarsCase: LoadSynaxarsUseCaseType,
-         readingsCase: LoadReadingsUseCaseType) {
-        self.synaxarsCase = synaxarsCase
+    init(readingsCase: LoadReadingsUseCaseType) {
         self.readingsCase = readingsCase
 //        self.setupColors()
-    }
-    
-    func loadSynaxars() {
-        synaxarsCase
-            .execute()
-            .receive(on: RunLoop.main)
-            .sink { completion in
-                // Intentionally empty
-            } receiveValue: { [weak self] synaxars in
-                self?.synaxars = synaxars
-                self?.update(state: .ready)
-            }
-            .store(in: &cancellables)
     }
     
     func loadReadings() {

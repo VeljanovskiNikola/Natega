@@ -13,14 +13,17 @@ protocol LoadSynaxarsUseCaseType {
 }
 
 class LoadSynaxarsUseCase: LoadSynaxarsUseCaseType {
-    let repository: ToutbabahatorRepositoryType
+    let repository: KatamerosRepositoryType
     
-    init(repository: ToutbabahatorRepositoryType) {
+    init(repository: KatamerosRepositoryType) {
         self.repository = repository
     }
     
     // execute request
     func execute() -> AnyPublisher<[Synaxar], Error> {
-        self.repository.getSynaxars()
+        return Future<[Synaxar], Error> { promise in
+            promise(.success([]))
+        }
+        .eraseToAnyPublisher()
     }
 }

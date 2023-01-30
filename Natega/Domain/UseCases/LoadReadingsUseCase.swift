@@ -1,5 +1,5 @@
 //
-//  LoadSynaxarsUseCase.swift
+//  LoadReadingsUseCase.swift
 //  Natega
 //
 //  Created by Nikola Veljanovski on 30.12.22.
@@ -9,18 +9,18 @@ import Foundation
 import Combine
 
 protocol LoadReadingsUseCaseType {
-    func execute() -> AnyPublisher<[Reading], Error>
+    func execute() -> AnyPublisher<Feast, Error>
 }
 
 class LoadReadingsUseCase: LoadReadingsUseCaseType {
-    let repository: ToutbabahatorRepositoryType
+    let repository: KatamerosRepositoryType
     
-    init(repository: ToutbabahatorRepositoryType) {
+    init(repository: KatamerosRepositoryType) {
         self.repository = repository
     }
     
     // execute request
-    func execute() -> AnyPublisher<[Reading], Error> {
+    func execute() -> AnyPublisher<Feast, Error> {
         self.repository.getReadings()
     }
 }
