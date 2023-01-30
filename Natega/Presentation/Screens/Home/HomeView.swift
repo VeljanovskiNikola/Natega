@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     
+    var iconCard: SaintIconModel = saintIconModels[0]
+    
     var body: some View {
         contentView
             .onAppear {
@@ -30,61 +32,80 @@ struct HomeView: View {
     }
     
     private var readyView: some View {
-        VStack {
-            date
-            fast
-            image
-            commemorations
-            readingsTitle
-            upcoming
-            Spacer()
+        ZStack {
+            VStack {
+                date
+                fast
+                image
+                commemorations
+                readingsSection
+                upcoming
+                Spacer()
+           }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .foregroundColor(.black)
         .background(
-            LinearGradient(colors: viewModel.colors,
-                           startPoint: viewModel.start,
-                           endPoint: viewModel.end)
+            LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.431372549, green: 0.6823632717, blue: 0.7646967769, alpha: 1)), Color(#colorLiteral(red: 0.9058917165, green: 0.8509779572, blue: 0.8588247299, alpha: 1)), Color(#colorLiteral(red: 0.9843173623, green: 0.96470505, blue: 0.9647064805, alpha: 1))]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
+            
         )
     }
     
     private var date: some View {
         HStack {
             Text("Today, \(viewModel.formattedDate())")
-                .fontWeight(.medium)
-                .font(.system(size: 15))
+                .font(.system(size: 20, weight: .medium, design: .rounded))
             
             Image(systemName: "smallcircle.filled.circle.fill")
-                .font(.system(size: 7, weight: .thin, design: .rounded))
+                .font(.system(size: 10, weight: .thin, design: .rounded))
             
             Text("17 Kiahk")
-                .font(.system(size: 15))
+                .font(.system(size: 20, weight: .regular, design: .rounded))
         }
-        .foregroundColor(Color(uiColor: viewModel.primaryColor))
+        .foregroundColor(Color.black)
         .padding(.top, 18)
     }
     
     private var fast: some View {
         Text("Nativity Fast")
-            .font(.system(size: 13, weight: .regular, design: .rounded))
-            .padding(.vertical, 5)
-            .padding(.horizontal, 15)
-            .background(RoundedRectangle(cornerRadius: 30).opacity(0.1))
+            .font(.system(size: 17, weight: .regular, design: .rounded))
+            .padding(.vertical, 7)
+            .padding(.horizontal, 20)
+            .background(Color.superLightBlue.opacity(0.3))
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+        
     }
     
     private var image: some View {
+        
         VStack {
-            TabView(selection: $viewModel.selectedImage) {
-                ForEach(viewModel.imageNames, id: \.self) { image in
-                    Image(uiImage: UIImage(named: image)!)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .cornerRadius(20)
-                        .padding(16)
-                        .tag(viewModel.imageNames.firstIndex(of: image) ?? 0)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                HStack(spacing: -20) {
+                    
+                    ForEach(saintIconModels) { e in
+                        
+                        GeometryReader { geometry in
+                            
+                            SmallIconScroll(iconCard: e)
+                                .rotation3DEffect(
+                                    Angle(degrees: (Double(geometry.frame(in: .global).minX) - 100) / -50 ),
+                                    axis: (x: 0, y: 50, z: 0.0)
+                                )
+                            
+                        }
+                        .frame(width: 350, height: 400)
+                        
+                    }
+                    
                 }
+                .padding(20)
+                .padding(.bottom, 250)
+                
             }
-            .tabViewStyle(.page)
+            
             
             Text("The feast of St. Mary")
                 .font(.system(size: 13))
@@ -178,7 +199,7 @@ struct HomeView: View {
                     .padding(.horizontal, 30)
                     .background(Color.white.opacity(0.7))
                     .cornerRadius(30)
-
+                    
                     
                     HStack {
                         
@@ -199,11 +220,13 @@ struct HomeView: View {
                 .padding(.horizontal, 16)
             }
             .frame(maxWidth: .infinity)
+            .padding(.horizontal, 16)
+            .ignoresSafeArea()
         }
     }
     
     func setupAppearance() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = .black
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor(Color.white)
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor(Color.lightPurple)
     }
 }
