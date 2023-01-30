@@ -14,7 +14,6 @@ struct HomeView: View {
         contentView
             .onAppear {
                 viewModel.loadReadings()
-                viewModel.loadSynaxars()
             }
     }
     
@@ -31,25 +30,22 @@ struct HomeView: View {
     }
     
     private var readyView: some View {
-        ZStack {
+        VStack {
+            date
+            fast
+            image
+            commemorations
+            readingsTitle
+            upcoming
+            Spacer()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .foregroundColor(.black)
+        .background(
             LinearGradient(colors: viewModel.colors,
                            startPoint: viewModel.start,
                            endPoint: viewModel.end)
-            .edgesIgnoringSafeArea(.all)
-
-            VStack {
-                date
-                fast
-                image
-                commemorations
-                readingsSection
-                upcoming
-                Spacer()
-            }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .foregroundColor(.black)
-        }
-        
+        )
     }
     
     private var date: some View {
@@ -129,14 +125,7 @@ struct HomeView: View {
         .padding(.horizontal, 16)
     }
     
-    private var readingsSection: some View {
-        Group {
-            readingsTitle
-            readingsFirstRow
-            //                readingsSecondRow
-            //                readingsThirdRow
-        }
-    }
+
     private var readingsTitle: some View {
         HStack {
             Text("Readings")
@@ -146,64 +135,6 @@ struct HomeView: View {
             Spacer()
         }
         .padding(.horizontal, 16)
-    }
-    
-    private var readingsFirstRow: some View {
-        HStack {
-            ForEach(viewModel.readings) { reading in
-                Button(action: {
-                    // show detail view
-                }, label:{
-                    Text(reading.type)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color(#colorLiteral(red: 0.26, green: 0.41, blue: 0.47, alpha: 1)))
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 13)
-                        .background(
-                            Rectangle().fill (
-                                Color.background.opacity(1))
-                        ).cornerRadius(12)
-                })
-            }
-        }
-    }
-    
-    private var readingsSecondRow: some View {
-        HStack {
-            ForEach(viewModel.readings[3...4]) { reading in
-                Button(action: {
-                    // show detail view
-                }, label:{
-                    Text(reading.type)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color(#colorLiteral(red: 0.5, green: 0.3, blue: 0.35, alpha: 1)))
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 13)
-                        .background(
-                            Rectangle().fill(Color.brown.opacity(1))
-                        ).cornerRadius(12)
-                })
-            }
-        }
-    }
-    
-    private var readingsThirdRow: some View {
-        HStack {
-            ForEach(viewModel.readings[5...5]) { reading in
-                Button(action: {
-                    // show detail view
-                }, label:{
-                    Text(reading.type)
-                        .font(.system(size: 15, weight: .medium))
-                        .foregroundColor(Color(#colorLiteral(red: 0.5, green: 0.3, blue: 0.35, alpha: 1)))
-                        .padding(.vertical, 5)
-                        .padding(.horizontal, 13)
-                        .background(
-                            Rectangle().fill(Color.purple.opacity(0.8))
-                        ).cornerRadius(12)
-                })
-            }
-        }
     }
     
     private var upcoming: some View {

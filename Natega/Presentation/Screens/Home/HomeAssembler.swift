@@ -15,12 +15,10 @@ class HomeViewAssembler: HomeAssembler { }
 
 extension HomeViewAssembler {
     func resolve() -> HomeView {
-        let apiClient = ToutbabahatorAPI()
-        let repository = ToutbabahatorRepository(apiClient: apiClient)
-        let synaxarsCase = LoadSynaxarsUseCase(repository: repository)
+        let apiClient = KatamerosAPI()
+        let repository = KatamerosRepository(apiClient: apiClient)
         let readingsCase = LoadReadingsUseCase(repository: repository)
-        let viewModel = HomeViewModel(synaxarsCase: synaxarsCase,
-                                      readingsCase: readingsCase)
+        let viewModel = HomeViewModel(readingsCase: readingsCase)
         return HomeView(viewModel: viewModel)
     }
 }
