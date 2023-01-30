@@ -29,7 +29,6 @@ struct KatamerosAPI: KatamerosAPIType {
     // MARK: - Helpers
     private func constructURL() -> URL? {
         let date = Date()
-        print(date.localDate())
         var components = URLComponents()
         components.scheme = "https"
         components.host = "katameros.azurewebsites.net"

@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Feast
 struct Feast: Codable {
-    let title: String
+    let title: String?
     let bible: Bible
     let bibles: [Bible]
     let sections: [Section]
@@ -12,7 +12,7 @@ struct Feast: Codable {
 // MARK: - Bible
 struct Bible: Codable {
     let id: Int
-    let name: String
+    let name: String?
     let languageID: Int
 
     enum CodingKeys: String, CodingKey {
@@ -24,20 +24,20 @@ struct Bible: Codable {
 // MARK: - Section
 struct Section: Codable {
     let id: Int
-    let title: String
+    let title: String?
     let subSections: [SubSection]
 }
 
 // MARK: - SubSection
 struct SubSection: Codable {
     let id: Int
-    let title: String
+    let title: String?
     let introduction: String?
     let readings: [Reading]
 }
 
 // MARK: - Reading
-struct Reading: Codable {
+struct Reading: Codable, Identifiable {
     let id: Int
     let title, introduction, conclusion: String?
     let passages: [Passage]?
@@ -45,10 +45,11 @@ struct Reading: Codable {
 }
 
 // MARK: - Passage
-struct Passage: Codable {
-    let bookID: Int
-    let bookTranslation: String
-    let chapter: Int
+struct Passage: Codable, Identifiable {
+    let id: UUID = UUID()
+    let bookID: Int?
+    let bookTranslation: String?
+    let chapter: Int?
     let ref: String
     let verses: [Verse]
 
@@ -59,7 +60,7 @@ struct Passage: Codable {
 }
 
 // MARK: - Verse
-struct Verse: Codable {
+struct Verse: Codable, Identifiable {
     let id, bibleID, bookID, chapter: Int
     let number: Int
     let text: String

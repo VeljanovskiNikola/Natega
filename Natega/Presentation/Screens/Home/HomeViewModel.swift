@@ -23,8 +23,9 @@ final class HomeViewModel: ObservableObject {
 
     
     // Published properties
-    @Published var synaxars: [Synaxar] = []
+    @Published var synaxars: [Reading] = []
     @Published var readings: Feast?
+    @Published var presentablePassages: [Passage] = []
     @Published var selectedImage = 0 {
         didSet {
             if oldValue > selectedImage {
@@ -80,6 +81,8 @@ final class HomeViewModel: ObservableObject {
             }
             receiveValue: { [weak self] readings in
                 self?.readings = readings
+                self?.setSynaxars()
+                self?.setPassages()
                 self?.update(state: .ready)
             }
             .store(in: &cancellables)
@@ -135,6 +138,33 @@ final class HomeViewModel: ObservableObject {
         case loading
         case ready
     }
+    
+    private func setSynaxars() {
+        let sections = readings.map { $0.sections }
+        let liturgy = sections?.first(where: { $0.title == "Liturgy" })
+        let synaxars = liturgy?.subSections.first(where: { $0.title == "Synaxarium" })
+        let readings = synaxars?.readings
+        self.synaxars = readings ?? []
+    }
+    
+    private func setPassages() {
+        let sections = readings.map { $0.sections }
+        let matins = sections?.first(where: { $0.title == "Matins" })
+        let matinsSubSection = matins?.subSections.first(where: { $0.id == 1 })
+        let matinsReadings = matinsSubSection?.readings.first(where: { $0.id == 2 })
+        if let matinsPassage = matinsReadings?.passages?.first {
+            self.presentablePassages.append(matinsPassage)
+        }
+        let liturgy = sections?.first(where: { $0.title == "Liturgy" })
+        if let liturgyPassages = liturgy?.subSections.flatMap({ $0.readings }).compactMap({ $0.passages }).flatMap({ $0 }) {
+            presentablePassages = presentablePassages + liturgyPassages
+        }
+        let vespers = sections?.first(where: { $0.title == "Vespers" })
+        if let vesperPassages = vespers?.subSections.flatMap({ $0.readings }).compactMap({ $0.passages }).flatMap({ $0 }) {
+            presentablePassages = presentablePassages + vesperPassages
+        }
+    }
+    
 }
 
 extension Array {
