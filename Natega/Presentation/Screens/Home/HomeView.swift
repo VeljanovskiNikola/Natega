@@ -98,7 +98,7 @@ struct HomeView: View {
                     
                     //MARK: - Date
                     HStack {
-                        Text("Today, 26th Jan")
+                        Text("Today, \(viewModel.formattedDate())")
                             .font(.system(size: 20, weight: .semibold, design: .rounded))
                         
                         Image(systemName: "smallcircle.filled.circle.fill")
