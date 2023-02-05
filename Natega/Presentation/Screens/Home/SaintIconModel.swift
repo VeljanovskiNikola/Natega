@@ -18,7 +18,7 @@ struct SaintIconModel: Identifiable {
 
 var saintIconModels = [
 
-    SaintIconModel(image: #imageLiteral(resourceName: "Also Pope Kyrillos VI Colorized"), name: "Pope Kyrillos VI", textBackgroundColour: #colorLiteral(red: 0.2784550488, green: 0.0509499386, blue: 0.03923816234, alpha: 1)),
+    SaintIconModel(image: #imageLiteral(resourceName: "Also Pope Kyrillos VI Colorized"), name: "Pope Kyrillos VI", textBackgroundColour: #colorLiteral(red: 0.2034267187, green: 0.03849809244, blue: 0.02292532101, alpha: 1)),
     SaintIconModel(image: #imageLiteral(resourceName: "Christ Walking on Water"), name: "Christ Walking on Water", textBackgroundColour: #colorLiteral(red: 0.1176237389, green: 0.1764753461, blue: 0.3019545376, alpha: 1))
 //    SaintIconModel(image: #imageLiteral(resourceName: "Baptism of Christ - Epiphany"), name: "Baptism of Christ - Epiphany", textBackgroundColour: #colorLiteral(red: 0.3842259645, green: 0.6392288804, blue: 0.8784164786, alpha: 1)),
 //    SaintIconModel(image: #imageLiteral(resourceName: "Pope cyril with relics of St Mark"), name: "Pope Kyrillos VI Transporting Relics of St Mark To Egypt", textBackgroundColour: #colorLiteral(red: 0.04706653208, green: 0, blue: 1.355371182e-06, alpha: 1)),
