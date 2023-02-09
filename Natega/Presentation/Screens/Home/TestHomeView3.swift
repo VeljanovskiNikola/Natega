@@ -167,13 +167,13 @@ struct TestHomeView3: View {
                                 
                                 HStack {
                                     
-                                    Text("Feast of the Cross")
+                                    Text("Just kidding")
                                         .font(.system(size: 20, weight: .medium, design: .rounded))
                                     
                                     Image(systemName: "smallcircle.filled.circle.fill")
                                         .font(.system(size: 7, weight: .thin, design: .rounded))
                                     
-                                    Text("in 2 days")
+                                    Text("gotcha 😆")
                                         .font(.system(size: 20, weight: .regular, design: .rounded))
                                     
                                 }
@@ -185,14 +185,29 @@ struct TestHomeView3: View {
                                 
                                 HStack {
                                     
-                                    Text("St Mary's feast")
+                                    Text("Live data for upcoming feasts")
                                         .font(.system(size: 20, weight: .medium, design: .rounded))
                                     
                                     Image(systemName: "smallcircle.filled.circle.fill")
                                         .font(.system(size: 7, weight: .thin))
                                     
-                                    Text("in 9 days")
+                                    Text("with")
                                         .font(.system(size: 20, weight: .regular, design: .rounded))
+                                    
+                                    HStack (spacing: 2) {
+                                        
+                                        Text("Natega Plus")
+                                            .font(.system(size: 20, weight: .medium, design: .rounded))
+                                        Image(systemName: "wand.and.stars")
+                                            .font(.system(size: 20, weight: .regular, design: .rounded))
+                                        
+                                    }
+                                    .padding(.vertical, 6)
+                                    .padding(.horizontal, 9)
+                                    .background(Color(hue: 1.0, saturation: 0.0, brightness: 0.894, opacity: 0.73))
+                                    .mask(RoundedRectangle(cornerRadius: 5, style: .continuous))
+                                    
+                                    
                                     
                                 }
                                 .padding(.vertical, 15)
