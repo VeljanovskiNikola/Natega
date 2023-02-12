@@ -15,6 +15,7 @@
 		4C34034129884AC3007DAB84 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4C34034029884AC3007DAB84 /* PartialSheet */; };
 		4C34034329884BAC007DAB84 /* SynaxariumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */; };
 		4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403442988689F007DAB84 /* PassagesDetailView.swift */; };
+		4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403462997C8B3007DAB84 /* PresentableSection.swift */; };
 		4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */; };
 		4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC1294E54CC00C0B279 /* HomeView.swift */; };
 		4C4A9AC4294E54CD00C0B279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSaintIconCard.swift; sourceTree = "<group>"; };
 		4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynaxariumDetailView.swift; sourceTree = "<group>"; };
 		4C3403442988689F007DAB84 /* PassagesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassagesDetailView.swift; sourceTree = "<group>"; };
+		4C3403462997C8B3007DAB84 /* PresentableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableSection.swift; sourceTree = "<group>"; };
 		4C4A9ABC294E54CC00C0B279 /* Natega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natega.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NategaApp.swift; sourceTree = "<group>"; };
 		4C4A9AC1294E54CC00C0B279 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				4C4A9AD5294E631C00C0B279 /* Synaxar.swift */,
 				4CCFA659295F4C1800342776 /* Feast.swift */,
+				4C3403462997C8B3007DAB84 /* PresentableSection.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */,
 				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
 				4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */,
+				4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */,
 				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
 				4C4A9ADA294E66BB00C0B279 /* LoadSynaxarsUseCase.swift in Sources */,
 			);

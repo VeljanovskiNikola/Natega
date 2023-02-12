@@ -15,7 +15,7 @@ struct HomeView: View {
     @State var tap = false
     @State private var currentSynaxar: Reading?
     @State private var currentPassage: Passage?
-
+    
     
     private var chevronRightOpacity: CGFloat {
         viewModel.synaxars.count > 1 ? 1 : 0.5
@@ -32,7 +32,7 @@ struct HomeView: View {
             .onAppear {
                 viewModel.loadReadings()
             }
-        }
+    }
     
     @ViewBuilder
     private var contentView: some View {
@@ -170,37 +170,29 @@ struct HomeView: View {
                             .padding(.bottom, 10)
                         
                         //MARK: - Readings lazyVGrid
-                        VStack(alignment: .leading) {
-                            ScrollView(.vertical, showsIndicators: false) {
-                                LazyVGrid (
-                                    columns: [
-                                        GridItem(.fixed(80), spacing: 40),
-                                        GridItem(.fixed(80), spacing: 40)
-                                    ], spacing: 24) {
-                                        
-                                        ForEach(viewModel.presentablePassages) { passage in
-                                            Button {
-                                                currentPassage = passage
-                                                showPassages = true
-                                            } label: {
-                                                ZStack {
-                                                    RoundedRectangle(cornerRadius: 16,
-                                                                     style: .continuous)
-                                                    .fill(Color.gray)
-                                                    .frame(width: 70, height: 70)
-                                                    
-                                                    Text(passage.ref)
-                                                        .foregroundColor(.black)
-                                                        .padding(.horizontal, 8)
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(viewModel.presentableSections) { presentableSection in
+                                    HStack {
+                                        VStack {
+                                            ForEach(presentableSection.passages) { passage in
+                                                Button {
+                                                    showPassages = true
+                                                    currentPassage = passage
+                                                } label: {
+                                                    Text("\(passage.bookTranslation ?? "") \(passage.ref)")
                                                 }
                                             }
+                                            Text("\(presentableSection.subSectionTitle) ∘ \(presentableSection.title)")
+                                                .font(.caption2)
                                         }
                                     }
+                                    .foregroundColor(.white)
+                                    .padding(8)
+                                    .background(Rectangle().fill(Color.darkBlue))
+                                    .cornerRadius(16)
+                                }
                             }
-                            .padding(.horizontal, 50)
-                            .frame(height: 200)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.bottom, 10)
                         }
                         
                         //MARK: - Upcoming feasts

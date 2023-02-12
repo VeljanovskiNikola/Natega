@@ -22,7 +22,7 @@ struct Bible: Codable {
 }
 
 // MARK: - Section
-struct Section: Codable {
+struct Section: Codable, Identifiable {
     let id: Int
     let title: String?
     let subSections: [SubSection]
@@ -45,13 +45,21 @@ struct Reading: Codable, Identifiable {
 }
 
 // MARK: - Passage
-struct Passage: Codable, Identifiable {
+struct Passage: Codable, Identifiable, Equatable {
     let id: UUID = UUID()
     let bookID: Int?
     let bookTranslation: String?
     let chapter: Int?
     let ref: String
     let verses: [Verse]
+    
+    static func == (lhs: Passage, rhs: Passage) -> Bool {
+        lhs.id == rhs.id &&
+        lhs.bookID == rhs.bookID &&
+        lhs.bookTranslation == rhs.bookTranslation &&
+        lhs.chapter == rhs.chapter &&
+        lhs.ref == rhs.ref
+    }
 
     enum CodingKeys: String, CodingKey {
         case bookID = "bookId"

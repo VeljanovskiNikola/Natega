@@ -6,20 +6,26 @@
 //
 
 import SwiftUI
+import UIImageColors
 
 struct SaintIconModel: Identifiable {
-    
     let id = UUID()
     var image: UIImage
     var name: String
-    var textBackgroundColour: UIColor //use UIColors library to pull this, for now I've hardcoded it
-
+    var textBackgroundColour: UIColor {
+        getImageColor().primary
+    }
+    
+    func getImageColor() -> UIImageColors {
+        image.getColors() ?? UIImageColors(background: .black,
+                                           primary: .white,
+                                           secondary: .black, detail: .blue)
+    }
 }
 
 var saintIconModels = [
-
-    SaintIconModel(image: #imageLiteral(resourceName: "Also Pope Kyrillos VI Colorized"), name: "Pope Kyrillos VI", textBackgroundColour: #colorLiteral(red: 0.2784550488, green: 0.0509499386, blue: 0.03923816234, alpha: 1)),
-    SaintIconModel(image: #imageLiteral(resourceName: "Christ Walking on Water"), name: "Christ Walking on Water", textBackgroundColour: #colorLiteral(red: 0.1176237389, green: 0.1764753461, blue: 0.3019545376, alpha: 1))
+    SaintIconModel(image: #imageLiteral(resourceName: "Also Pope Kyrillos VI Colorized"), name: "Pope Kyrillos VI"),
+    SaintIconModel(image: #imageLiteral(resourceName: "Christ Walking on Water"), name: "Christ Walking on Water")
 //    SaintIconModel(image: #imageLiteral(resourceName: "Baptism of Christ - Epiphany"), name: "Baptism of Christ - Epiphany", textBackgroundColour: #colorLiteral(red: 0.3842259645, green: 0.6392288804, blue: 0.8784164786, alpha: 1)),
 //    SaintIconModel(image: #imageLiteral(resourceName: "Pope cyril with relics of St Mark"), name: "Pope Kyrillos VI Transporting Relics of St Mark To Egypt", textBackgroundColour: #colorLiteral(red: 0.04706653208, green: 0, blue: 1.355371182e-06, alpha: 1)),
 //    SaintIconModel(image: #imageLiteral(resourceName: "IMG_7110 2"), name: "💙", textBackgroundColour: #colorLiteral(red: 0.2823027372, green: 0.4156957269, blue: 0.6470468044, alpha: 1)),

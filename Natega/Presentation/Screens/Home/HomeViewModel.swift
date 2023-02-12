@@ -20,9 +20,9 @@ final class HomeViewModel: ObservableObject {
         ]
     }
     
-
-    
     // Published properties
+    @Published var presentableSections: [PresentableSection] = []
+    @Published var sections: [Section] = []
     @Published var synaxars: [Reading] = []
     @Published var readings: Feast?
     @Published var presentablePassages: [Passage] = []
@@ -83,6 +83,7 @@ final class HomeViewModel: ObservableObject {
                 self?.readings = readings
                 self?.setSynaxars()
                 self?.setPassages()
+                self?.setPresentableSections()
                 self?.update(state: .ready)
             }
             .store(in: &cancellables)
@@ -165,6 +166,21 @@ final class HomeViewModel: ObservableObject {
         }
     }
     
+    private func setPresentableSections() {
+        let sections = readings.map { $0.sections }
+        self.sections = sections ?? []
+        sections?.forEach({ section in
+            let subSections = section.subSections.filter { $0.title != "Synaxarium" }
+            subSections.forEach { subSection in
+                 subSection.readings.forEach({
+                     let passages = $0.passages
+                     presentableSections.append(PresentableSection(passages: passages ?? [],
+                                                                   subSectionTitle: subSection.title ?? "",
+                                                                   title: section.title ?? ""))
+                 })
+            }
+        })
+    }
 }
 
 extension Array {

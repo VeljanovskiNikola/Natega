@@ -11,21 +11,18 @@ struct PassagesDetailView: View {
     let passage: Passage?
     
     var body: some View {
-            VStack {
-                VStack {
-                    Text("Psalms: \(passage?.ref ?? "")")
-                    Text("Gospel: \(passage?.ref ?? "")")
-                }
+        VStack {
+            Text("\(passage?.bookTranslation ?? "") \(passage?.ref ?? "")")
                 .font(.system(.headline))
-                
-                ScrollView {
-                    ForEach(passage?.verses ?? []) { verse in
-                        Text(verse.text)
-                            .padding(.horizontal, 16)
-                            .multilineTextAlignment(.center)
-                    }
+            
+            ScrollView {
+                ForEach(passage?.verses ?? []) { verse in
+                    Text(verse.text)
+                        .padding(.horizontal, 16)
+                        .multilineTextAlignment(.center)
                 }
-                .frame(height: UIScreen.main.bounds.height / 2)
+            }
+            .frame(height: UIScreen.main.bounds.height / 2)
         }
     }
 }
