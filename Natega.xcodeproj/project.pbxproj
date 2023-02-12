@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		474495A6297DAC07005B3777 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474495A5297DAC06005B3777 /* MotionManager.swift */; };
+		474A352A29994C9C00E4E7FF /* SheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474A352929994C9C00E4E7FF /* SheetModel.swift */; };
 		476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B39012983E3FB00CFFADC /* TestHomeView3.swift */; };
 		477C537E297D9FED00722487 /* SmallIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477C537D297D9FED00722487 /* SmallIcon.swift */; };
 		4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */; };
@@ -72,6 +73,7 @@
 
 /* Begin PBXFileReference section */
 		474495A5297DAC06005B3777 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
+		474A352929994C9C00E4E7FF /* SheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModel.swift; sourceTree = "<group>"; };
 		476B39012983E3FB00CFFADC /* TestHomeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeView3.swift; sourceTree = "<group>"; };
 		477C537D297D9FED00722487 /* SmallIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIcon.swift; sourceTree = "<group>"; };
 		4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintIconModel.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */,
 				474495A5297DAC06005B3777 /* MotionManager.swift */,
 				476B39012983E3FB00CFFADC /* TestHomeView3.swift */,
+				474A352929994C9C00E4E7FF /* SheetModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				4CCFA65E295F689600342776 /* ImageNames.swift in Sources */,
 				4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */,
 				4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */,
+				474A352A29994C9C00E4E7FF /* SheetModel.swift in Sources */,
 				4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */,
 				4C34034329884BAC007DAB84 /* SynaxariumDetailView.swift in Sources */,
 				4786DDAD297D9DCE0067BD2A /* SmallSaintIconCard.swift in Sources */,
