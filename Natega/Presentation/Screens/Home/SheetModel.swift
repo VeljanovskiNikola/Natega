@@ -25,23 +25,53 @@ struct SheetModel: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     
-                    VStack {
+                    VStack (spacing: 10) {
                         
                         RoundedRectangle(cornerRadius: 12, style: .continuous)
                             .frame(width: 40, height: 5)
                             .foregroundColor(.black.opacity(0.3))
                             .padding(.top, 10)
+                            .padding(.bottom, 10)
                         
-                        Text("Hello half sheet")
-                            .font(.system(size: 30, weight: .bold, design: .rounded))
-                            .foregroundColor(.black)
-                            .padding(.bottom, 20)
-                        
-                        Button(action: { showSheet = false }) {
-                            Text("Tap me to close sheet")
-                                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                        HStack {
+                            
+                            Button(action: { showSheet = false }) {
+                                Image(systemName: "chevron.down")
+                                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                                    .foregroundColor(.black)
+                                    .padding(10)
+                                    .background(.gray)
+                                    .mask(Circle())
+                                    .padding(.leading, -4)
+                                    
+                            }
+                            
+                            Spacer()
+                            
+                            Text("Matins Gospel")
+                                .font(.system(size: 20, weight: .bold, design: .rounded))
+                                .padding(.leading, -15)
+                            
+                            Spacer()
+                            
                         }
+                        .padding(.bottom, 10)
+                        
+                        Text("Psalms 11:12 - 14:9")
+                            .font(.system(size: 20, weight: .medium, design: .rounded))
+                        
+                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                            .font(.system(size: 20, weight: .regular, design: .rounded))
+                            .padding(.bottom, 10)
+                        
+                        Text("Matt 14: 22 - 23:19")
+                            .font(.system(size: 20, weight: .medium, design: .rounded))
+                        
+                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                            .font(.system(size: 20, weight: .regular, design: .rounded))
+                        
                     }
+                    .frame(width: 350) //this should be done via geometry reader to take width of screen and divide by a certain amount to give user space on edges of VStack to pull up manipulate sheet up and down.
                 }
             }
             .edgesIgnoringSafeArea(.bottom)
