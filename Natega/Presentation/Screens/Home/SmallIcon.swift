@@ -11,7 +11,7 @@ struct SmallIconScroll: View {
     
     var iconCard: SaintIconModel = saintIconModels[0]
     
-    @State var tap = false
+    @State private var tapIcon = false
     
     var body: some View {
         
@@ -46,18 +46,18 @@ struct SmallIconScroll: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous)))
         )
         .frame(maxWidth: 300, maxHeight: 350)
-        .scaleEffect(tap ? 1.1 : 1)
+        .scaleEffect(tapIcon ? 1.1 : 1)
         .onTapGesture {
             
             withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                 
-                tap = true
+                tapIcon = true
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                     
                     withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                         
-                        tap = false
+                        tapIcon = false
                         
                     }
                     

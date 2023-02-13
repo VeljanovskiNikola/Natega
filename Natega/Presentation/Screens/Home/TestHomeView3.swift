@@ -9,7 +9,13 @@ import SwiftUI
 
 struct TestHomeView3: View {
     
-    @State var tap = false
+    @State var tapFeast = false
+    
+    @State var tapNategaPlus = false
+    
+    @State var showSheet: Bool? = nil
+    
+    @State var tapIcon = false
     
     var body: some View {
         
@@ -40,18 +46,18 @@ struct TestHomeView3: View {
                         .padding(.horizontal, 20)
                         .background(Color.superLightBlue.opacity(0.3))
                         .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                        .scaleEffect(tap ? 1.08 : 1)
+                        .scaleEffect(tapFeast ? 1.08 : 1)
                         .onTapGesture {
                             
                             withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                                 
-                                tap = true
+                                tapFeast = true
                                 
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                     
                                     withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                                         
-                                        tap = false
+                                        tapFeast = false
                                         
                                     }
                                     
@@ -75,6 +81,26 @@ struct TestHomeView3: View {
                                             Angle(degrees: (Double(geometry.frame(in: .global).minX) - 100) / -50 ),
                                             axis: (x: 0, y: 50, z: 0.0)
                                         )
+                                        .scaleEffect(tapIcon ? 1.1 : 1)
+                                        .onTapGesture {
+                                            
+                                            withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                                                
+                                                tapIcon = true
+                                                
+                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                                    
+                                                    withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                                                        
+                                                        tapIcon = false
+                                                        
+                                                    }
+                                                    
+                                                }
+                                                
+                                                
+                                            }
+                                        }
                                 }
                                 .frame(width: 350, height: 400)
                                 
@@ -92,7 +118,7 @@ struct TestHomeView3: View {
                         Text("Commemorations")
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                         
-                        VStack(alignment: .leading) {
+                        HStack {
                             TabDesign()
                         }
                         .frame(width: 300, height: 150)
@@ -168,21 +194,121 @@ struct TestHomeView3: View {
                                 
                                 HStack {
                                     
-                                    Text("St Mary's feast")
+                                    Text("Live data for upcoming feasts")
                                         .font(.system(size: 20, weight: .medium, design: .rounded))
                                     
                                     Image(systemName: "smallcircle.filled.circle.fill")
                                         .font(.system(size: 7, weight: .thin))
                                     
-                                    Text("in 9 days")
+                                    Text("with")
                                         .font(.system(size: 20, weight: .regular, design: .rounded))
+                                    
+                                    HStack (spacing: 2) {
+                                        
+                                        Text("Natega Plus")
+                                            .font(.system(size: 20, weight: .regular, design: .rounded))
+                                            .underline()
+                                        Image(systemName: "wand.and.stars")
+                                            .font(.system(size: 20, weight: .regular, design: .rounded))
+                                        
+                                    }
+                                    .scaleEffect(tapNategaPlus ? 1.1 : 1)
+                                    .onTapGesture{
+                                        
+                                        withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                                            
+                                            tapNategaPlus = true
+                                            
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                                
+                                                withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                                                    
+                                                    tapNategaPlus = false
+                                                    
+                                                }
+                                                
+                                            }
+                                            
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                                                
+                                                withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
+                                                    
+                                                    showSheet = true
+                                                    
+                                                }
+                                                
+                                            }
+                                            
+                                            
+                                        }
+                                    }
+                                    .halfSheet(showSheet: $showSheet) {
+                                        
+                                        ZStack {
+                                            
+                                            Color.white
+                                            
+                                            ScrollView(.vertical, showsIndicators: false) {
+                                                
+                                                VStack (spacing: 10) {
+                                                    
+                                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                                        .frame(width: 40, height: 5)
+                                                        .foregroundColor(.black.opacity(0.3))
+                                                        .padding(.top, 10)
+                                                        .padding(.bottom, 10)
+                                                    
+                                                    HStack {
+                                                        
+                                                        Button(action: { showSheet = false }) {
+                                                            Image(systemName: "chevron.down")
+                                                                .font(.system(size: 20, weight: .bold, design: .rounded))
+                                                                .foregroundColor(.black)
+                                                                .padding(10)
+                                                                .background(.gray)
+                                                                .mask(Circle())
+                                                                .padding(.leading, -4)
+                                                                
+                                                        }
+                                                        
+                                                        Spacer()
+                                                        
+                                                        Text("Matins Gospel")
+                                                            .font(.system(size: 20, weight: .bold, design: .rounded))
+                                                            .padding(.leading, -15)
+                                                        
+                                                        Spacer()
+                                                        
+                                                    }
+                                                    .padding(.bottom, 10)
+                                                    
+                                                    Text("Psalms 11:12 - 14:9")
+                                                        .font(.system(size: 20, weight: .medium, design: .rounded))
+                                                    
+                                                    Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                                                        .font(.system(size: 20, weight: .regular, design: .rounded))
+                                                        .padding(.bottom, 10)
+                                                    
+                                                    Text("Matt 14: 22 - 23:19")
+                                                        .font(.system(size: 20, weight: .medium, design: .rounded))
+                                                    
+                                                    Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                                                        .font(.system(size: 20, weight: .regular, design: .rounded))
+                                                    
+                                                }
+                                                .frame(width: 320) //this should be done via geometry reader to take width of screen and divide by a certain amount to give user space on edges of VStack to pull up manipulate sheet up and down.
+                                            }
+                                        }
+                                        .edgesIgnoringSafeArea(.bottom)
+                                    } onDismiss: {
+                                        print("sheet dismissed")
+                                    }
                                     
                                 }
                                 .padding(.vertical, 15)
                                 .padding(.horizontal, 35)
                                 .background(Color.white.opacity(0.7))
                                 .cornerRadius(30)
-
 
                             }
                         }

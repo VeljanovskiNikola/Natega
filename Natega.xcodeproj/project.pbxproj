@@ -10,6 +10,7 @@
 		474495A6297DAC07005B3777 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474495A5297DAC06005B3777 /* MotionManager.swift */; };
 		474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */; };
 		474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */; };
+		474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D6299A81FC00B2D0D1 /* SheetModel.swift */; };
 		476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B39012983E3FB00CFFADC /* TestHomeView3.swift */; };
 		477C537E297D9FED00722487 /* SmallIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477C537D297D9FED00722487 /* SmallIcon.swift */; };
 		4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */; };
@@ -77,6 +78,7 @@
 		474495A5297DAC06005B3777 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsModel.swift; sourceTree = "<group>"; };
 		474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsCard.swift; sourceTree = "<group>"; };
+		474703D6299A81FC00B2D0D1 /* SheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModel.swift; sourceTree = "<group>"; };
 		476B39012983E3FB00CFFADC /* TestHomeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeView3.swift; sourceTree = "<group>"; };
 		477C537D297D9FED00722487 /* SmallIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIcon.swift; sourceTree = "<group>"; };
 		4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintIconModel.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				476B39012983E3FB00CFFADC /* TestHomeView3.swift */,
 				474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */,
 				474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */,
+				474703D6299A81FC00B2D0D1 /* SheetModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */,
 				4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */,
 				4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */,
+				474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */,
 				4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */,
 				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
 				4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */,
