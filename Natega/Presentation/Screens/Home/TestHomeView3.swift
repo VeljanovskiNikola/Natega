@@ -106,29 +106,21 @@ struct TestHomeView3: View {
                             .padding(.bottom, 10)
                         
                         //MARK: - Readings lazyVGrid
-                        ScrollView(.vertical, showsIndicators: false) {
+                        ScrollView(.horizontal, showsIndicators: false) {
                             
-                            LazyVGrid (
+                            HStack(spacing: -10) {
                                 
-                                columns: [
-                                    GridItem(.fixed(80), spacing: 40),
-                                    GridItem(.fixed(80), spacing: 40)
-                                ], spacing: 8) {
-                                    
-                                    ForEach(0 ..< 20) { item in
+                                ForEach(readingsModel) { e in
                                         
-                                            RoundedRectangle(cornerRadius: 16, style: .continuous)
-                                                .fill(Color.gray)
-                                                .frame(width: 109, height: 117)
-                                    }
-                                    
+                                        ReadingsCard(readingModel: e)
+                                        .padding(.bottom, 20)
                                     
                                 }
+                                
+                            }
                             
                         }
-                        .padding(.horizontal, 50)
-                        .frame(width: 370, height: 200)
-                        .padding(.bottom, 10)
+                        .padding(.top, -20)
                         
                         //MARK: - Upcoming feasts
                         Text("Upcoming feasts")
@@ -158,13 +150,13 @@ struct TestHomeView3: View {
                                 
                                 HStack {
                                     
-                                    Text("Feast of the Cross")
+                                    Text("Just kidding")
                                         .font(.system(size: 20, weight: .medium, design: .rounded))
                                     
                                     Image(systemName: "smallcircle.filled.circle.fill")
                                         .font(.system(size: 7, weight: .thin, design: .rounded))
                                     
-                                    Text("in 2 days")
+                                    Text("gotcha 😆")
                                         .font(.system(size: 20, weight: .regular, design: .rounded))
                                     
                                 }
