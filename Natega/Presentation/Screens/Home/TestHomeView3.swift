@@ -119,9 +119,26 @@ struct TestHomeView3: View {
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                         
                         HStack {
+                            
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "chevron.left")
+                                    .font(.system(size: 17, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color.black.opacity(0.5))
+                            }
+                            
                             TabDesign()
+                            
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "chevron.right")
+                                    .font(.system(size: 17, weight: .bold, design: .rounded))
+                                    .foregroundColor(Color.black.opacity(1))
+                            }
                         }
-                        .frame(width: 300, height: 150)
+                        .frame(width: 400, height: 150)
 //                        .background(.blue.opacity(0.2))
 //                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                         .padding(.top, -40)
@@ -219,7 +236,7 @@ struct TestHomeView3: View {
                                             
                                             tapNategaPlus = true
                                             
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.15) {
                                                 
                                                 withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                                                     
@@ -229,7 +246,7 @@ struct TestHomeView3: View {
                                                 
                                             }
                                             
-                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) {
+                                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
                                                 
                                                 withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                                                     
@@ -248,56 +265,66 @@ struct TestHomeView3: View {
                                             
                                             Color.white
                                             
-                                            ScrollView(.vertical, showsIndicators: false) {
+                                            VStack {
+                                               
+                                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                                    .frame(width: 40, height: 5)
+                                                    .foregroundColor(.black.opacity(0.3))
+                                                    .padding(.top, 10)
+                                                    .padding(.bottom, 10)
                                                 
-                                                VStack (spacing: 10) {
+                                                ScrollView(.vertical, showsIndicators: false) {
                                                     
-                                                    RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                                        .frame(width: 40, height: 5)
-                                                        .foregroundColor(.black.opacity(0.3))
-                                                        .padding(.top, 10)
-                                                        .padding(.bottom, 10)
-                                                    
-                                                    HStack {
+                                                    VStack (spacing: 10) {
                                                         
-                                                        Button(action: { showSheet = false }) {
-                                                            Image(systemName: "chevron.down")
+
+                                                        
+                                                        HStack {
+                                                            
+                                                            Button(action: { showSheet = false }) {
+                                                                Image(systemName: "chevron.down")
+                                                                    .font(.system(size: 20, weight: .bold, design: .rounded))
+                                                                    .foregroundColor(.black)
+                                                                    .padding(10)
+                                                                    .background(.gray)
+                                                                    .mask(Circle())
+                                                                    .padding(.leading, -4)
+                                                                    
+                                                            }
+                                                            
+                                                            Spacer()
+                                                            
+                                                            Text("Matins Gospel")
                                                                 .font(.system(size: 20, weight: .bold, design: .rounded))
-                                                                .foregroundColor(.black)
-                                                                .padding(10)
-                                                                .background(.gray)
-                                                                .mask(Circle())
-                                                                .padding(.leading, -4)
-                                                                
+                                                                .padding(.leading, -15)
+                                                            
+                                                            Spacer()
+                                                            
                                                         }
+                                                        .padding(.bottom, 10)
                                                         
-                                                        Spacer()
+                                                        Text("Psalms 11:12 - 14:9")
+                                                            .font(.system(size: 20, weight: .medium, design: .rounded))
                                                         
-                                                        Text("Matins Gospel")
-                                                            .font(.system(size: 20, weight: .bold, design: .rounded))
-                                                            .padding(.leading, -15)
+                                                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                                                            .font(.system(size: 20, weight: .regular, design: .rounded))
+                                                            .padding(.bottom, 10)
                                                         
-                                                        Spacer()
+                                                        Text("Matt 14: 22 - 23:19")
+                                                            .font(.system(size: 20, weight: .medium, design: .rounded))
+                                                        
+                                                        Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
+                                                            .font(.system(size: 20, weight: .regular, design: .rounded))
                                                         
                                                     }
-                                                    .padding(.bottom, 10)
-                                                    
-                                                    Text("Psalms 11:12 - 14:9")
-                                                        .font(.system(size: 20, weight: .medium, design: .rounded))
-                                                    
-                                                    Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
-                                                        .font(.system(size: 20, weight: .regular, design: .rounded))
-                                                        .padding(.bottom, 10)
-                                                    
-                                                    Text("Matt 14: 22 - 23:19")
-                                                        .font(.system(size: 20, weight: .medium, design: .rounded))
-                                                    
-                                                    Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
-                                                        .font(.system(size: 20, weight: .regular, design: .rounded))
-                                                    
+                                                    .frame(width: 320) //this should be done via geometry reader to take width of screen and divide by a certain amount to give user space on edges of VStack to pull up manipulate sheet up and down.
                                                 }
-                                                .frame(width: 320) //this should be done via geometry reader to take width of screen and divide by a certain amount to give user space on edges of VStack to pull up manipulate sheet up and down.
+                                                .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(lineWidth: 10).fill(Color.white).shadow(color: Color.white, radius: 10, x: 0, y:1))
+                                                
+                                                
                                             }
+                                            
+
                                         }
                                         .edgesIgnoringSafeArea(.bottom)
                                     } onDismiss: {
@@ -338,16 +365,20 @@ struct TabDesign: View {
             
                 Text("The Appearance of the Body of St. Apolidus (Hippolytus), Pope of Rome")
                     .multilineTextAlignment(.center)
+                    .font(.system(size: 20, weight: .regular, design: .rounded))
                 Text("The Martyrdom of the Saints Abakir, John, the Three Virgins and Their Mother")
                     .multilineTextAlignment(.center)
+                    .font(.system(size: 20, weight: .regular, design: .rounded))
                 Text("The Martyrdom of Sts. Agathon, Peter, John, Amun and Amuna and Their Mother, Rebecca")
                     .multilineTextAlignment(.center)
+                    .font(.system(size: 20, weight: .regular, design: .rounded))
                 Text("Fourth")
                     .multilineTextAlignment(.center)
+                    .font(.system(size: 20, weight: .regular, design: .rounded))
             
         }
         .tabViewStyle(.page)
-        .indexViewStyle(.page(backgroundDisplayMode: .always))
+//        .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
 }
 

@@ -18,18 +18,18 @@ struct ReadingsCard: View {
             HStack {
                 
                 Text("\(readingModel.bookTranslation0)")
-                    .font(.system(size: 20, weight: .regular, design: .rounded))
+                    .font(.system(size: 18, weight: .regular, design: .rounded))
                 Text("\(readingModel.bookRef0)")
-                    .font(.system(size: 20, weight: .regular, design: .rounded))
+                    .font(.system(size: 18, weight: .regular, design: .rounded))
                 
             }
             
             HStack {
                 
                 Text("\(readingModel.bookTranslation1)")
-                    .font(.system(size: 20, weight: .regular, design: .rounded))
+                    .font(.system(size: 18, weight: .regular, design: .rounded))
                 Text("\(readingModel.bookRef1)")
-                    .font(.system(size: 20, weight: .regular, design: .rounded))
+                    .font(.system(size: 18, weight: .regular, design: .rounded))
                 
             }
             .padding(.bottom, 7)
@@ -37,11 +37,11 @@ struct ReadingsCard: View {
             HStack (spacing: 3) {
                 
                 Text("\(readingModel.subSectionsTitle)")
-                    .font(.system(size: 17, weight: .light, design: .rounded))
+                    .font(.system(size: 15, weight: .light, design: .rounded))
                 Image(systemName: "smallcircle.filled.circle.fill")
                     .font(.system(size: 5, weight: .ultraLight, design: .rounded))
                 Text("\(readingModel.sectionsTitle)")
-                    .font(.system(size: 17, weight: .light, design: .rounded))
+                    .font(.system(size: 15, weight: .light, design: .rounded))
             }
             
             
