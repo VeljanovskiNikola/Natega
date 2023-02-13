@@ -92,28 +92,13 @@ struct TestHomeView3: View {
                         Text("Commemorations")
                             .font(.system(size: 20, weight: .bold, design: .rounded))
                         
-                        HStack {
-                            
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "chevron.left")
-                                    .font(.system(size: 17, weight: .bold, design: .rounded))
-                                    .foregroundColor(Color.black.opacity(0.5))
-                            }
-                            Text("The Departure of Saint Christodoulos")
-                                .font(.system(size: 20, weight: .regular, design: .rounded))
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "chevron.right")
-                                    .font(.system(size: 17, weight: .bold, design: .rounded))
-                                    .foregroundColor(Color.black.opacity(1))
-                            }
-                            
+                        VStack(alignment: .leading) {
+                            TabDesign()
                         }
-                        .padding(.bottom, 10)
-                        
+                        .frame(width: 300, height: 150)
+//                        .background(.blue.opacity(0.2))
+//                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                        .padding(.top, -40)
                         
                         //MARK: - Readings
                         Text("Readings")
@@ -225,6 +210,26 @@ struct TestHomeView3: View {
                 .edgesIgnoringSafeArea(.all)
             
         )
+    }
+}
+
+struct TabDesign: View {
+    var body: some View {
+        
+        TabView {
+            
+                Text("The Appearance of the Body of St. Apolidus (Hippolytus), Pope of Rome")
+                    .multilineTextAlignment(.center)
+                Text("The Martyrdom of the Saints Abakir, John, the Three Virgins and Their Mother")
+                    .multilineTextAlignment(.center)
+                Text("The Martyrdom of Sts. Agathon, Peter, John, Amun and Amuna and Their Mother, Rebecca")
+                    .multilineTextAlignment(.center)
+                Text("Fourth")
+                    .multilineTextAlignment(.center)
+            
+        }
+        .tabViewStyle(.page)
+        .indexViewStyle(.page(backgroundDisplayMode: .always))
     }
 }
 
