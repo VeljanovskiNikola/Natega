@@ -131,6 +131,13 @@ final class HomeViewModel: ObservableObject {
         return "\(day) " + "\(month)"
     }
     
+    var copticDate: String {
+        var text = Date.copticDate()
+        let modifiedText = text.split(separator: ",")
+        text = String(modifiedText[0])
+        return text
+    }
+    
     private func update(state: State) {
         self.state = state
     }

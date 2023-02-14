@@ -21,4 +21,13 @@ extension Date {
         else { return Date() }
         return date
     }
+    
+    static func copticDate() -> String {
+        let dateFormatter = DateFormatter()
+        let calendar = Calendar(identifier: .coptic)
+        dateFormatter.dateStyle = .medium
+        dateFormatter.eraSymbols = ["", ""]
+        dateFormatter.calendar = calendar
+        return dateFormatter.string(from: Date())
+    }
 }

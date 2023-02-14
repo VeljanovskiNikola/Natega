@@ -104,7 +104,7 @@ struct HomeView: View {
                         Image(systemName: "smallcircle.filled.circle.fill")
                             .font(.system(size: 10, weight: .thin, design: .rounded))
                         
-                        Text("17 Kiahk")
+                        Text(viewModel.copticDate)
                             .font(.system(size: 20, weight: .regular, design: .rounded))
                     }
                     .foregroundColor(Color.black)
