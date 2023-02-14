@@ -161,7 +161,7 @@ final class CustomHostingController<Content: View>: UIHostingController<Content>
             
             // i added the code below so that you can scroll when you have medium view
             // here is good article for customising sheet in UIKit - https://sarunw.com/posts/bottom-sheet-in-ios-15-with-uisheetpresentationcontroller/#scrolling
-            presentationController.prefersScrollingExpandsWhenScrolledToEdge = false
+            presentationController.prefersScrollingExpandsWhenScrolledToEdge = true
             
             //MARK: - sheet corner radius:
             presentationController.preferredCornerRadius = 30

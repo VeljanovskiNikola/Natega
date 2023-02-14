@@ -120,27 +120,10 @@ struct TestHomeView3: View {
                         
                         HStack {
                             
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "chevron.left")
-                                    .font(.system(size: 17, weight: .bold, design: .rounded))
-                                    .foregroundColor(Color.black.opacity(0.5))
-                            }
-                            
                             TabDesign()
-                            
-                            Button {
-                                
-                            } label: {
-                                Image(systemName: "chevron.right")
-                                    .font(.system(size: 17, weight: .bold, design: .rounded))
-                                    .foregroundColor(Color.black.opacity(1))
-                            }
+
                         }
                         .frame(width: 400, height: 150)
-//                        .background(.blue.opacity(0.2))
-//                        .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
                         .padding(.top, -40)
                         
                         //MARK: - Readings
@@ -281,24 +264,9 @@ struct TestHomeView3: View {
                                                         
                                                         HStack {
                                                             
-                                                            Button(action: { showSheet = false }) {
-                                                                Image(systemName: "chevron.down")
-                                                                    .font(.system(size: 20, weight: .bold, design: .rounded))
-                                                                    .foregroundColor(.black)
-                                                                    .padding(10)
-                                                                    .background(.gray)
-                                                                    .mask(Circle())
-                                                                    .padding(.leading, -4)
-                                                                    
-                                                            }
-                                                            
-                                                            Spacer()
-                                                            
-                                                            Text("Matins Gospel")
+                                                            Text("Natega Plus")
                                                                 .font(.system(size: 20, weight: .bold, design: .rounded))
-                                                                .padding(.leading, -15)
-                                                            
-                                                            Spacer()
+                                                                .padding()
                                                             
                                                         }
                                                         .padding(.bottom, 10)
@@ -315,12 +283,11 @@ struct TestHomeView3: View {
                                                         
                                                         Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
                                                             .font(.system(size: 20, weight: .regular, design: .rounded))
+                                                            .padding(.bottom, 50)
                                                         
                                                     }
-                                                    .frame(width: 320) //this should be done via geometry reader to take width of screen and divide by a certain amount to give user space on edges of VStack to pull up manipulate sheet up and down.
+                                                    .frame(width: 350) //this should be done via geometry reader to take width of screen and divide by a certain amount to give user space on edges of VStack to pull up manipulate sheet up and down.
                                                 }
-                                                .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous).stroke(lineWidth: 10).fill(Color.white).shadow(color: Color.white, radius: 10, x: 0, y:1))
-                                                
                                                 
                                             }
                                             
@@ -330,7 +297,7 @@ struct TestHomeView3: View {
                                     } onDismiss: {
                                         print("sheet dismissed")
                                     }
-                                    
+
                                 }
                                 .padding(.vertical, 15)
                                 .padding(.horizontal, 35)
@@ -340,7 +307,7 @@ struct TestHomeView3: View {
                             }
                         }
                         .padding(.horizontal, 5)
-                        .padding(.bottom, 20)
+                        .padding(.bottom, 50)
                             
                     }
                     .padding(.top, -40)
@@ -353,7 +320,6 @@ struct TestHomeView3: View {
         .background(
             LinearGradient(gradient: .init(colors: [Color(#colorLiteral(red: 0.431372549, green: 0.6823632717, blue: 0.7646967769, alpha: 1)), Color(#colorLiteral(red: 0.9058917165, green: 0.8509779572, blue: 0.8588247299, alpha: 1)), Color(#colorLiteral(red: 0.9843173623, green: 0.96470505, blue: 0.9647064805, alpha: 1))]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
-            
         )
     }
 }
