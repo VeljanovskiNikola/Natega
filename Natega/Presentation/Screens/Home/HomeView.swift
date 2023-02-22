@@ -175,16 +175,30 @@ struct HomeView: View {
                                 ForEach(viewModel.presentableSections) { presentableSection in
                                     HStack {
                                         VStack {
-                                            ForEach(presentableSection.passages) { passage in
-                                                Button {
-                                                    showPassages = true
-                                                    currentPassage = passage
-                                                } label: {
-                                                    Text("\(passage.bookTranslation ?? "") \(passage.ref)")
+                                            if viewModel.hasOneName(for: presentableSection) {
+                                                Text("\(presentableSection.passages.first?.bookTranslation ?? "")")
+                                                ForEach(presentableSection.passages) { passage in
+                                                    Button {
+                                                        showPassages = true
+                                                        currentPassage = passage
+                                                    } label: {
+                                                        Text("\(passage.ref)")
+                                                    }
                                                 }
+                                                Text("\(presentableSection.subSectionTitle) ∘ \(presentableSection.title)")
+                                                    .font(.caption2)
+                                            } else {
+                                                ForEach(presentableSection.passages) { passage in
+                                                    Button {
+                                                        showPassages = true
+                                                        currentPassage = passage
+                                                    } label: {
+                                                        Text("\(passage.bookTranslation ?? "") \(passage.ref)")
+                                                    }
+                                                }
+                                                Text("\(presentableSection.subSectionTitle) ∘ \(presentableSection.title)")
+                                                    .font(.caption2)
                                             }
-                                            Text("\(presentableSection.subSectionTitle) ∘ \(presentableSection.title)")
-                                                .font(.caption2)
                                         }
                                     }
                                     .foregroundColor(.white)
