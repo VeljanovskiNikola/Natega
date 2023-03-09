@@ -8,21 +8,11 @@
 import SwiftUI
 
 struct PassagesDetailView: View {
-    let passage: Passage?
+    let presentableSection: PresentableSection?
     
     var body: some View {
         VStack {
-            Text("\(passage?.bookTranslation ?? "") \(passage?.ref ?? "")")
-                .font(.system(.headline))
-            
-            ScrollView {
-                ForEach(passage?.verses ?? []) { verse in
-                    Text(verse.text)
-                        .padding(.horizontal, 16)
-                        .multilineTextAlignment(.center)
-                }
-            }
-            .frame(height: UIScreen.main.bounds.height / 2)
+            Text("Hello world")
         }
     }
 }

@@ -14,7 +14,7 @@ struct HomeView: View {
     @State private var showPassages = false
     @State var tap = false
     @State private var currentSynaxar: Reading?
-    @State private var currentPassage: Passage?
+    @State private var currentPresentableSection: PresentableSection?
     
     
     private var chevronRightOpacity: CGFloat {
@@ -27,7 +27,7 @@ struct HomeView: View {
                 SynaxariumDetailView(reading: currentSynaxar)
             })
             .partialSheet(isPresented: $showPassages, content: {
-                PassagesDetailView(passage: currentPassage)
+                PassagesDetailView(presentableSection: currentPresentableSection)
             })
             .onAppear {
                 viewModel.loadReadings()
@@ -180,7 +180,7 @@ struct HomeView: View {
                                                 ForEach(presentableSection.passages) { passage in
                                                     Button {
                                                         showPassages = true
-                                                        currentPassage = passage
+                                                        currentPresentableSection = presentableSection
                                                     } label: {
                                                         Text("\(passage.ref)")
                                                     }
@@ -191,7 +191,7 @@ struct HomeView: View {
                                                 ForEach(presentableSection.passages) { passage in
                                                     Button {
                                                         showPassages = true
-                                                        currentPassage = passage
+                                                        currentPresentableSection = presentableSection
                                                     } label: {
                                                         Text("\(passage.bookTranslation ?? "") \(passage.ref)")
                                                     }

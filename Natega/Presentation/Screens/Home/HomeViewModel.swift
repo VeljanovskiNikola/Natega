@@ -176,19 +176,23 @@ final class HomeViewModel: ObservableObject {
     private func setPresentableSections() {
         let sections = readings.map { $0.sections }
         self.sections = sections ?? []
+        var psalmAndGospels = [SubSection]()
         sections?.forEach({ section in
             let subSections = section.subSections.filter { $0.title != "Synaxarium" }
-            let psalmAndGospels = section.subSections.filter { $0.title == "Psalm & Gospel" }
-            let final = subSections.filter { $0.title != "Psalm & Gospel" }
-            if psalmAndGospels.count > 0 {
-                psalmAndGospels.forEach { pg in
-                    let passages = pg.readings.flatMap { $0.passages ?? [] }
-                    presentableSections.append(PresentableSection(passages: passages,
-                                                                  subSectionTitle: pg.title ?? "",
-                                                                  title: section.title ?? ""))
+            subSections.forEach { subSection in
+                if subSection.title == "Psalm & Gospel" {
+                    psalmAndGospels.append(subSection)
+                    return
                 }
-            }
-            final.forEach { subSection in
+                if psalmAndGospels.count > 0 {
+                    psalmAndGospels.forEach({
+                        let passages = $0.readings.flatMap { $0.passages ?? [] }
+                        presentableSections.append(PresentableSection(passages: passages,
+                                                                      subSectionTitle: subSection.title ?? "",
+                                                                      title: section.title ?? ""))
+                    })
+                    psalmAndGospels = []
+                }
                  subSection.readings.forEach({
                      let passages = $0.passages
                      presentableSections.append(PresentableSection(passages: passages ?? [],

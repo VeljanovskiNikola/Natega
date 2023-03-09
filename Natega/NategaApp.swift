@@ -11,9 +11,9 @@ import SwiftUI
 struct NategaApp: App {
     var body: some Scene {
         WindowGroup {
-//            AppCompositionRoot.start
+            AppCompositionRoot.start
             
-            TestHomeView3()
+//            T estHomeView3()
             
         }
     }
