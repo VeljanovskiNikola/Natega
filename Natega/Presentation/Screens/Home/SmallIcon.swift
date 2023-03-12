@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct SmallIconScroll: View {
-    
     var iconCard: SaintIconModel = saintIconModels[0]
-    
     @State private var tapIcon = false
     
     var body: some View {
-        
         VStack {
-            
             Text("\(iconCard.name)")
                 .font(Font.system(size: 15, design: .rounded).weight(.semibold))
                 .foregroundColor(.white)
@@ -29,7 +25,7 @@ struct SmallIconScroll: View {
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))// this modifier to push text to bottom of VStack
                 
         }
-        .background( Image(uiImage: iconCard.image)
+        .background(Image(uiImage: iconCard.image)
             .resizable()
             .scaledToFill()
             .frame(maxWidth: 300, maxHeight: 350)
@@ -38,7 +34,7 @@ struct SmallIconScroll: View {
             .blur(radius: 10)
             .offset(x:8, y: 11)
             .opacity(0.65)
-            .overlay( Image(uiImage: iconCard.image)
+            .overlay(Image(uiImage: iconCard.image)
                 .resizable()
                 .scaledToFill()
                 .frame(maxWidth: 300, maxHeight: 350)
@@ -48,25 +44,15 @@ struct SmallIconScroll: View {
         .frame(maxWidth: 300, maxHeight: 350)
         .scaleEffect(tapIcon ? 1.1 : 1)
         .onTapGesture {
-            
             withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
-                
                 tapIcon = true
-                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                    
                     withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
-                        
                         tapIcon = false
-                        
                     }
-                    
                 }
-                
-                
             }
         }
-        
     }
 }
 

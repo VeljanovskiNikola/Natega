@@ -12,6 +12,7 @@ import UIImageColors
 final class HomeViewModel: ObservableObject {
     
     let readingsCase: LoadReadingsUseCaseType
+    let loadJsonCase: LoadJsonUseCaseProtocol
     var nextColors: UIImageColors?
     var colors: [Color] {
         [
@@ -20,12 +21,15 @@ final class HomeViewModel: ObservableObject {
         ]
     }
     
+    var saintIconModels: [SaintIconModel] = []
+    
     // Published properties
     @Published var presentableSections: [PresentableSection] = []
     @Published var sections: [Section] = []
     @Published var synaxars: [Reading] = []
     @Published var readings: Feast?
     @Published var presentablePassages: [Passage] = []
+    @Published var iconModels: [IconModel] = []
     @Published var selectedImage = 0 {
         didSet {
             if oldValue > selectedImage {
@@ -67,8 +71,10 @@ final class HomeViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
-    init(readingsCase: LoadReadingsUseCaseType) {
+    init(readingsCase: LoadReadingsUseCaseType,
+         loadJsonCase: LoadJsonUseCaseProtocol) {
         self.readingsCase = readingsCase
+        self.loadJsonCase = loadJsonCase
 //        self.setupColors()
     }
     
@@ -89,6 +95,20 @@ final class HomeViewModel: ObservableObject {
     .store(in: &cancellables)
     }
     
+    func loadJson() {
+        let icons: AnyPublisher<[IconModel], Error> = loadJsonCase.execute(fileName: "icons2023")
+        icons.sink { completion in
+            print(completion)
+        } receiveValue: { [weak self] model in
+            if let dataForToday = model.filter({ $0.copticDate == self?.copticDate }).first {
+                dataForToday.saintIcon.forEach({
+                    self?.saintIconModels.append(SaintIconModel(name: $0))
+                })
+            }
+        }
+        .store(in: &cancellables)
+    }
+    
     func onChange(newValue: Int) {
         nextColors = UIImage(imageLiteralResourceName: imageNames[safeIndex: newValue + 1] ?? "stmary").getColors()
         withAnimation(Animation.easeInOut(duration: length)) {
@@ -97,6 +117,11 @@ final class HomeViewModel: ObservableObject {
             nextSecondaryColor = nextColors?.secondary ?? UIColor()
         }
         
+    }
+    
+    func onAppear() {
+        loadReadings()
+        loadJson()
     }
     
     //    private func setupColors() {
@@ -205,6 +230,10 @@ final class HomeViewModel: ObservableObject {
     
     func hasOneName(for section: PresentableSection) -> Bool {
         section.passages.dropFirst().allSatisfy({ $0.bookTranslation == section.passages.first?.bookTranslation })
+    }
+    
+    private func getIcons() {
+        
     }
 }
 

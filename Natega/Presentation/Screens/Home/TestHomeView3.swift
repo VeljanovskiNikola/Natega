@@ -58,12 +58,9 @@ struct TestHomeView3: View {
                                     withAnimation(.spring(response: 0.4, dampingFraction: 0.6)) {
                                         
                                         tapFeast = false
-                                        
                                     }
                                     
                                 }
-                                
-                                
                             }
                         }
                     

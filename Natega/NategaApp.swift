@@ -13,7 +13,7 @@ struct NategaApp: App {
         WindowGroup {
             AppCompositionRoot.start
             
-//            T estHomeView3()
+//            TestHomeView3()
             
         }
     }

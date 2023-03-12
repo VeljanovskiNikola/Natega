@@ -19,6 +19,12 @@
 		4C34034329884BAC007DAB84 /* SynaxariumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */; };
 		4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403442988689F007DAB84 /* PassagesDetailView.swift */; };
 		4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403462997C8B3007DAB84 /* PresentableSection.swift */; };
+		4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034A29BA646F007DAB84 /* ButtonStyle.swift */; };
+		4C34034E29BE8364007DAB84 /* icons2023.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C34034D29BE8364007DAB84 /* icons2023.json */; };
+		4C34035029BE83F5007DAB84 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034F29BE83F5007DAB84 /* IconModel.swift */; };
+		4C34035229BE8546007DAB84 /* JSONManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */; };
+		4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */; };
+		4C34035629BE8746007DAB84 /* JSONRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035529BE8746007DAB84 /* JSONRepository.swift */; };
 		4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */; };
 		4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC1294E54CC00C0B279 /* HomeView.swift */; };
 		4C4A9AC4294E54CD00C0B279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */; };
@@ -63,7 +69,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		4CCFA636295A447400342776 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
@@ -86,6 +92,12 @@
 		4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynaxariumDetailView.swift; sourceTree = "<group>"; };
 		4C3403442988689F007DAB84 /* PassagesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassagesDetailView.swift; sourceTree = "<group>"; };
 		4C3403462997C8B3007DAB84 /* PresentableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableSection.swift; sourceTree = "<group>"; };
+		4C34034A29BA646F007DAB84 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		4C34034D29BE8364007DAB84 /* icons2023.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons2023.json; sourceTree = "<group>"; };
+		4C34034F29BE83F5007DAB84 /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
+		4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerProtocol.swift; sourceTree = "<group>"; };
+		4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonUseCase.swift; sourceTree = "<group>"; };
+		4C34035529BE8746007DAB84 /* JSONRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepository.swift; sourceTree = "<group>"; };
 		4C4A9ABC294E54CC00C0B279 /* Natega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natega.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NategaApp.swift; sourceTree = "<group>"; };
 		4C4A9AC1294E54CC00C0B279 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -139,6 +151,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C34034C29BE832B007DAB84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C34034D29BE8364007DAB84 /* icons2023.json */,
+				4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */,
+				4CCFA657295E054C00342776 /* Colours.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		4C4A9AB3294E54CC00C0B279 = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +190,7 @@
 				4C4A9AD2294E620800C0B279 /* Domain */,
 				4C4A9ACD294E5DAA00C0B279 /* Data */,
 				4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */,
-				4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */,
-				4CCFA657295E054C00342776 /* Colours.xcassets */,
+				4C34034C29BE832B007DAB84 /* Resources */,
 				4C4A9AC5294E54CD00C0B279 /* Preview Content */,
 			);
 			path = Natega;
@@ -196,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4A9AD0294E5E5F00C0B279 /* KatamerosAPI.swift */,
+				4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -204,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4A9AD7294E660700C0B279 /* KatamerosRepository.swift */,
+				4C34035529BE8746007DAB84 /* JSONRepository.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -222,6 +245,7 @@
 			children = (
 				4C4A9AD9294E66BB00C0B279 /* LoadSynaxarsUseCase.swift */,
 				4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */,
+				4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -232,6 +256,7 @@
 				4C4A9AD5294E631C00C0B279 /* Synaxar.swift */,
 				4CCFA659295F4C1800342776 /* Feast.swift */,
 				4C3403462997C8B3007DAB84 /* PresentableSection.swift */,
+				4C34034F29BE83F5007DAB84 /* IconModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -285,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4A9AE92953818500C0B279 /* Date+Extensions.swift */,
+				4C34034A29BA646F007DAB84 /* ButtonStyle.swift */,
 				4CCFA655295CB34200342776 /* Colours+Extensions.swift */,
 				4CCFA65D295F689600342776 /* ImageNames.swift */,
 			);
@@ -405,6 +431,7 @@
 				4C4A9AC7294E54CD00C0B279 /* Preview Assets.xcassets in Resources */,
 				4CCFA658295E054C00342776 /* Colours.xcassets in Resources */,
 				4C4A9AC4294E54CD00C0B279 /* Assets.xcassets in Resources */,
+				4C34034E29BE8364007DAB84 /* icons2023.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,9 +451,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C34035629BE8746007DAB84 /* JSONRepository.swift in Sources */,
 				4CCFA656295CB34200342776 /* Colours+Extensions.swift in Sources */,
 				477C537E297D9FED00722487 /* SmallIcon.swift in Sources */,
 				4CCFA64D295A450300342776 /* NategaWidget.intentdefinition in Sources */,
+				4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */,
 				476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */,
 				4CCFA65E295F689600342776 /* ImageNames.swift in Sources */,
 				4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */,
@@ -442,7 +471,10 @@
 				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
 				4CCFA65A295F4C1800342776 /* Feast.swift in Sources */,
 				474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */,
+				4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */,
 				4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */,
+				4C34035229BE8546007DAB84 /* JSONManagerProtocol.swift in Sources */,
+				4C34035029BE83F5007DAB84 /* IconModel.swift in Sources */,
 				4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */,
 				4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */,
 				474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */,

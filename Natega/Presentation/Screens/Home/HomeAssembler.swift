@@ -18,7 +18,10 @@ extension HomeViewAssembler {
         let apiClient = KatamerosAPI()
         let repository = KatamerosRepository(apiClient: apiClient)
         let readingsCase = LoadReadingsUseCase(repository: repository)
-        let viewModel = HomeViewModel(readingsCase: readingsCase)
+        let jsonApiClient = JSONManager()
+        let jsonRepository = JSONRepository(apiClient: jsonApiClient)
+        let jsonCase = LoadJsonUseCase(repository: jsonRepository)
+        let viewModel = HomeViewModel(readingsCase: readingsCase, loadJsonCase: jsonCase)
         return HomeView(viewModel: viewModel)
     }
 }

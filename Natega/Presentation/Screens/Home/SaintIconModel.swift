@@ -10,10 +10,13 @@ import UIImageColors
 
 struct SaintIconModel: Identifiable {
     let id = UUID()
-    var image: UIImage
     var name: String
     var textBackgroundColour: UIColor {
         getImageColor().primary
+    }
+    
+    var image: UIImage {
+        UIImage(named: name) ?? UIImage()
     }
     
     func getImageColor() -> UIImageColors {
@@ -24,8 +27,8 @@ struct SaintIconModel: Identifiable {
 }
 
 var saintIconModels = [
-    SaintIconModel(image: #imageLiteral(resourceName: "Also Pope Kyrillos VI Colorized"), name: "Pope Kyrillos VI"),
-    SaintIconModel(image: #imageLiteral(resourceName: "Christ Walking on Water"), name: "Christ Walking on Water")
+    SaintIconModel(name: "Also Pope Kyrillos VI Colorized"),
+    SaintIconModel(name: "Christ Walking on Water")
 //    SaintIconModel(image: #imageLiteral(resourceName: "Baptism of Christ - Epiphany"), name: "Baptism of Christ - Epiphany", textBackgroundColour: #colorLiteral(red: 0.3842259645, green: 0.6392288804, blue: 0.8784164786, alpha: 1)),
 //    SaintIconModel(image: #imageLiteral(resourceName: "Pope cyril with relics of St Mark"), name: "Pope Kyrillos VI Transporting Relics of St Mark To Egypt", textBackgroundColour: #colorLiteral(red: 0.04706653208, green: 0, blue: 1.355371182e-06, alpha: 1)),
 //    SaintIconModel(image: #imageLiteral(resourceName: "IMG_7110 2"), name: "💙", textBackgroundColour: #colorLiteral(red: 0.2823027372, green: 0.4156957269, blue: 0.6470468044, alpha: 1)),
