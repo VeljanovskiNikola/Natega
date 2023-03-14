@@ -10,8 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel: HomeViewModel
     @State private var tapNategaPlus = false
-    @State private var showSheet: Bool? = nil
+    @State private var showSynaxars: Bool? = false
+    @State private var showReadings: Bool? = false
     @State private var tapIcon = false
+    @State private var reading: Reading?
     
     var body: some View {
         contentView
@@ -40,6 +42,7 @@ struct HomeView: View {
             fastView
                 .padding(.top, 16)
             iconsView
+            commemorations
         }
     }
     
@@ -89,6 +92,39 @@ struct HomeView: View {
                     .frame(width: 350, height: 400)
                 }
             }
+        }
+    }
+    
+    private var commemorations: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text("Commemorations")
+                .font(.system(size: 20, weight: .bold))
+                .padding(.horizontal, 16)
+            HStack {
+                TabView {
+                    ForEach(viewModel.synaxars, id: \.title) { reading in
+                        Button {
+                            showSynaxars = true
+                            self.reading = reading
+                        } label: {
+                            Text(reading.title ?? "")
+                                .padding(.bottom, 32)
+                                .padding(.horizontal, 16)
+                        }
+                        .halfSheet(showSheet: $showSynaxars) {
+                            HalfSheetView(reading: $reading)
+                        } onDismiss: {
+                            print("dismissed")
+                        }
+                    }
+                    
+                }
+            }
+            .lineLimit(2)
+            .multilineTextAlignment(.center)
+            .font(.system(size: 20, weight: .regular, design: .rounded))
+            .tabViewStyle(.page)
+            .frame(height: 120)
         }
     }
     

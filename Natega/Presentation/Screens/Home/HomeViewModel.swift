@@ -101,12 +101,19 @@ final class HomeViewModel: ObservableObject {
             print(completion)
         } receiveValue: { [weak self] model in
             if let dataForToday = model.filter({ $0.copticDate == self?.copticDate }).first {
+                self?.checkIfEmpty(data: dataForToday)
                 dataForToday.saintIcon.forEach({
                     self?.saintIconModels.append(SaintIconModel(name: $0))
                 })
             }
         }
         .store(in: &cancellables)
+    }
+    
+    private func checkIfEmpty(data: IconModel) {
+        if data.saintIcon.isEmpty {
+            saintIconModels.append(SaintIconModel(name: "placeholder"))
+        }
     }
     
     func onChange(newValue: Int) {

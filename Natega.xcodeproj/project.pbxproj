@@ -39,6 +39,7 @@
 		4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */; };
 		4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE92953818500C0B279 /* Date+Extensions.swift */; };
 		4C4A9AED29575C2C00C0B279 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 4C4A9AEC29575C2C00C0B279 /* UIImageColors */; };
+		4CC7931229C10C0000535818 /* HalfSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7931129C10C0000535818 /* HalfSheetView.swift */; };
 		4CCFA63F295A450200342776 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA622295A447300342776 /* WidgetKit.framework */; };
 		4CCFA640295A450200342776 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA624295A447300342776 /* SwiftUI.framework */; };
 		4CCFA643295A450200342776 /* NategaWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA642295A450200342776 /* NategaWidgetBundle.swift */; };
@@ -113,6 +114,7 @@
 		4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCompositionRoot.swift; sourceTree = "<group>"; };
 		4C4A9AE7294E781F00C0B279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C4A9AE92953818500C0B279 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		4CC7931129C10C0000535818 /* HalfSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetView.swift; sourceTree = "<group>"; };
 		4CCFA622295A447300342776 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4CCFA624295A447300342776 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4CCFA63E295A450200342776 /* NategaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NategaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -290,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				4C4A9AC1294E54CC00C0B279 /* HomeView.swift */,
+				4CC7931129C10C0000535818 /* HalfSheetView.swift */,
 				4C3403442988689F007DAB84 /* PassagesDetailView.swift */,
 				4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */,
 				4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */,
@@ -470,6 +473,7 @@
 				474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */,
 				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
 				4CCFA65A295F4C1800342776 /* Feast.swift in Sources */,
+				4CC7931229C10C0000535818 /* HalfSheetView.swift in Sources */,
 				474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */,
 				4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */,
 				4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */,

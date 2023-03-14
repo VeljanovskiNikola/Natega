@@ -16,7 +16,7 @@ struct SaintIconModel: Identifiable {
     }
     
     var image: UIImage {
-        UIImage(named: name) ?? UIImage()
+        UIImage(named: name) ?? UIImage(named: "placeholder")!
     }
     
     func getImageColor() -> UIImageColors {

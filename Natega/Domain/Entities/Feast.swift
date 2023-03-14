@@ -37,11 +37,15 @@ struct SubSection: Codable {
 }
 
 // MARK: - Reading
-struct Reading: Codable, Identifiable {
-    let id: Int
+struct Reading: Codable, Identifiable, Hashable {
+    var id: Int
     let title, introduction, conclusion: String?
     let passages: [Passage]?
     let html: String?
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
 }
 
 // MARK: - Passage
