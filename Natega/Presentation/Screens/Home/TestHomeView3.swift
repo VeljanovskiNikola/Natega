@@ -152,19 +152,14 @@ struct TestHomeView3: View {
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 7) {
-                                
                                 HStack {
-                                    
                                     Text("Feast of the Nativity")
                                         .font(.system(size: 20, weight: .medium, design: .rounded))
 //                                        .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 0.235))
-                                    
                                     Image(systemName: "smallcircle.filled.circle.fill")
                                         .font(.system(size: 7, weight: .thin))
-                                    
                                     Text("in 6 days")
                                         .font(.system(size: 20, weight: .regular, design: .rounded))
-                                    
                                 }
                                 .padding(.vertical, 15)
                                 .padding(.horizontal, 35)

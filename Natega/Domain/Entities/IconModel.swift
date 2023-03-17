@@ -10,10 +10,11 @@ import Foundation
 struct IconModel: Decodable {
     let copticDate, feastName, liturgicalInformation: String
     let saintIcon: [String]
-    let upcomingEvents: [UpcomingEvent]
+    let upcomingEvents: [UpcomingFeast]
     let year: String
 }
 
-struct UpcomingEvent: Decodable {
+struct UpcomingFeast: Decodable, Identifiable {
+    var id: String { name }
     let name, time: String
 }

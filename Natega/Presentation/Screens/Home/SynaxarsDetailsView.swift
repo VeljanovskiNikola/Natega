@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HalfSheetView: View {
+struct SynaxarsDetailsView: View {
     @Binding var reading: Reading?
     
     var body: some View {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SynaxariumDetailView: View {
+struct SynaxarDetailView: View {
     let reading: Reading?
     
     var body: some View {

@@ -30,6 +30,7 @@ final class HomeViewModel: ObservableObject {
     @Published var readings: Feast?
     @Published var presentablePassages: [Passage] = []
     @Published var iconModels: [IconModel] = []
+    @Published var upcomingFeasts: [UpcomingFeast] = []
     @Published var selectedImage = 0 {
         didSet {
             if oldValue > selectedImage {
@@ -105,6 +106,7 @@ final class HomeViewModel: ObservableObject {
                 dataForToday.saintIcon.forEach({
                     self?.saintIconModels.append(SaintIconModel(name: $0))
                 })
+                self?.upcomingFeasts = dataForToday.upcomingEvents
             }
         }
         .store(in: &cancellables)
@@ -239,9 +241,6 @@ final class HomeViewModel: ObservableObject {
         section.passages.dropFirst().allSatisfy({ $0.bookTranslation == section.passages.first?.bookTranslation })
     }
     
-    private func getIcons() {
-        
-    }
 }
 
 extension Array {

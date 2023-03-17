@@ -16,7 +16,6 @@
 		4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */; };
 		4786DDAD297D9DCE0067BD2A /* SmallSaintIconCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */; };
 		4C34034129884AC3007DAB84 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4C34034029884AC3007DAB84 /* PartialSheet */; };
-		4C34034329884BAC007DAB84 /* SynaxariumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */; };
 		4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403442988689F007DAB84 /* PassagesDetailView.swift */; };
 		4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403462997C8B3007DAB84 /* PresentableSection.swift */; };
 		4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034A29BA646F007DAB84 /* ButtonStyle.swift */; };
@@ -25,6 +24,8 @@
 		4C34035229BE8546007DAB84 /* JSONManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */; };
 		4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */; };
 		4C34035629BE8746007DAB84 /* JSONRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035529BE8746007DAB84 /* JSONRepository.swift */; };
+		4C3D1F5B29C4FBC700940B62 /* ReadingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D1F5A29C4FBC700940B62 /* ReadingsView.swift */; };
+		4C3D1F5D29C4FCA900940B62 /* ReadingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D1F5C29C4FCA900940B62 /* ReadingDetailsView.swift */; };
 		4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */; };
 		4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC1294E54CC00C0B279 /* HomeView.swift */; };
 		4C4A9AC4294E54CD00C0B279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */; };
@@ -39,7 +40,7 @@
 		4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */; };
 		4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE92953818500C0B279 /* Date+Extensions.swift */; };
 		4C4A9AED29575C2C00C0B279 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 4C4A9AEC29575C2C00C0B279 /* UIImageColors */; };
-		4CC7931229C10C0000535818 /* HalfSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7931129C10C0000535818 /* HalfSheetView.swift */; };
+		4CC7931229C10C0000535818 /* SynaxarsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */; };
 		4CCFA63F295A450200342776 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA622295A447300342776 /* WidgetKit.framework */; };
 		4CCFA640295A450200342776 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA624295A447300342776 /* SwiftUI.framework */; };
 		4CCFA643295A450200342776 /* NategaWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA642295A450200342776 /* NategaWidgetBundle.swift */; };
@@ -90,7 +91,6 @@
 		477C537D297D9FED00722487 /* SmallIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIcon.swift; sourceTree = "<group>"; };
 		4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintIconModel.swift; sourceTree = "<group>"; };
 		4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSaintIconCard.swift; sourceTree = "<group>"; };
-		4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynaxariumDetailView.swift; sourceTree = "<group>"; };
 		4C3403442988689F007DAB84 /* PassagesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassagesDetailView.swift; sourceTree = "<group>"; };
 		4C3403462997C8B3007DAB84 /* PresentableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableSection.swift; sourceTree = "<group>"; };
 		4C34034A29BA646F007DAB84 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
@@ -99,6 +99,8 @@
 		4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerProtocol.swift; sourceTree = "<group>"; };
 		4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonUseCase.swift; sourceTree = "<group>"; };
 		4C34035529BE8746007DAB84 /* JSONRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepository.swift; sourceTree = "<group>"; };
+		4C3D1F5A29C4FBC700940B62 /* ReadingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsView.swift; sourceTree = "<group>"; };
+		4C3D1F5C29C4FCA900940B62 /* ReadingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingDetailsView.swift; sourceTree = "<group>"; };
 		4C4A9ABC294E54CC00C0B279 /* Natega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natega.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NategaApp.swift; sourceTree = "<group>"; };
 		4C4A9AC1294E54CC00C0B279 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -114,7 +116,7 @@
 		4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCompositionRoot.swift; sourceTree = "<group>"; };
 		4C4A9AE7294E781F00C0B279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4C4A9AE92953818500C0B279 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
-		4CC7931129C10C0000535818 /* HalfSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSheetView.swift; sourceTree = "<group>"; };
+		4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynaxarsDetailsView.swift; sourceTree = "<group>"; };
 		4CCFA622295A447300342776 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		4CCFA624295A447300342776 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		4CCFA63E295A450200342776 /* NategaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NategaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,11 +294,12 @@
 			isa = PBXGroup;
 			children = (
 				4C4A9AC1294E54CC00C0B279 /* HomeView.swift */,
-				4CC7931129C10C0000535818 /* HalfSheetView.swift */,
+				4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */,
 				4C3403442988689F007DAB84 /* PassagesDetailView.swift */,
-				4C34034229884BAC007DAB84 /* SynaxariumDetailView.swift */,
+				4C3D1F5C29C4FCA900940B62 /* ReadingDetailsView.swift */,
 				4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */,
 				4C4A9AE3294E6F1B00C0B279 /* HomeViewModel.swift */,
+				4C3D1F5A29C4FBC700940B62 /* ReadingsView.swift */,
 				4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */,
 				477C537D297D9FED00722487 /* SmallIcon.swift */,
 				4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */,
@@ -464,7 +467,6 @@
 				4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */,
 				4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */,
 				4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */,
-				4C34034329884BAC007DAB84 /* SynaxariumDetailView.swift in Sources */,
 				4786DDAD297D9DCE0067BD2A /* SmallSaintIconCard.swift in Sources */,
 				4C4A9AE4294E6F1B00C0B279 /* HomeViewModel.swift in Sources */,
 				4C4A9AD1294E5E5F00C0B279 /* KatamerosAPI.swift in Sources */,
@@ -473,12 +475,14 @@
 				474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */,
 				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
 				4CCFA65A295F4C1800342776 /* Feast.swift in Sources */,
-				4CC7931229C10C0000535818 /* HalfSheetView.swift in Sources */,
+				4C3D1F5B29C4FBC700940B62 /* ReadingsView.swift in Sources */,
+				4CC7931229C10C0000535818 /* SynaxarsDetailsView.swift in Sources */,
 				474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */,
 				4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */,
 				4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */,
 				4C34035229BE8546007DAB84 /* JSONManagerProtocol.swift in Sources */,
 				4C34035029BE83F5007DAB84 /* IconModel.swift in Sources */,
+				4C3D1F5D29C4FCA900940B62 /* ReadingDetailsView.swift in Sources */,
 				4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */,
 				4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */,
 				474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */,

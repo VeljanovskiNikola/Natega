@@ -14,6 +14,7 @@ struct HomeView: View {
     @State private var showReadings: Bool? = false
     @State private var tapIcon = false
     @State private var reading: Reading?
+    @State private var presentableSection: PresentableSection?
     
     var body: some View {
         contentView
@@ -43,6 +44,10 @@ struct HomeView: View {
                 .padding(.top, 16)
             iconsView
             commemorations
+            readings
+            upcomingEvents
+                .padding(.top, 16)
+                .padding(.horizontal, 16)
         }
     }
     
@@ -100,7 +105,7 @@ struct HomeView: View {
             Text("Commemorations")
                 .font(.system(size: 20, weight: .bold))
                 .padding(.horizontal, 16)
-            HStack {
+            HStack(spacing: 0) {
                 TabView {
                     ForEach(viewModel.synaxars, id: \.title) { reading in
                         Button {
@@ -108,14 +113,12 @@ struct HomeView: View {
                             self.reading = reading
                         } label: {
                             Text(reading.title ?? "")
-                                .padding(.bottom, 32)
+                                .padding(.bottom, 16)
                                 .padding(.horizontal, 16)
                         }
                         .halfSheet(showSheet: $showSynaxars) {
-                            HalfSheetView(reading: $reading)
-                        } onDismiss: {
-                            print("dismissed")
-                        }
+                            SynaxarsDetailsView(reading: $reading)
+                        } onDismiss: {}
                     }
                     
                 }
@@ -124,7 +127,57 @@ struct HomeView: View {
             .multilineTextAlignment(.center)
             .font(.system(size: 20, weight: .regular, design: .rounded))
             .tabViewStyle(.page)
-            .frame(height: 120)
+            .frame(height: 110)
+        }
+    }
+    
+    private var readings: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(viewModel.presentableSections) { section in
+                    Button {
+                        presentableSection = section
+                        showReadings = true
+                    } label: {
+                        ReadingSection(presentableSection: section,
+                                       hasOneName: viewModel.hasOneName(for: section))
+                    }
+                    .buttonStyle(GrowingButton())
+                }
+            }
+        }
+        .halfSheet(showSheet: $showReadings) {
+            if let presentableSection = presentableSection {
+                ReadingDetailsView(section: presentableSection)
+            }
+        } onDismiss: {}
+    }
+    
+    private var upcomingEvents: some View {
+        VStack(alignment: .leading) {
+            Text("Upcoming feasts")
+                .font(.system(size: 20, weight: .bold))
+                .padding(.bottom, 10)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 7) {
+                    ForEach(viewModel.upcomingFeasts) { feast in
+                        HStack {
+                            Text(feast.name)
+                                .font(.system(size: 20, weight: .medium, design: .rounded))
+                            Image(systemName: "smallcircle.filled.circle.fill")
+                                .font(.system(size: 7, weight: .thin))
+                            Text(feast.time)
+                                .font(.system(size: 20, weight: .regular, design: .rounded))
+                        }
+                        .padding(.vertical, 15)
+                        .padding(.horizontal, 35)
+                        .background(Color.white.opacity(0.7))
+                        .cornerRadius(30)
+
+                    }
+                }
+            }
         }
     }
     
