@@ -22,10 +22,11 @@ struct SynaxarsDetailsView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack (spacing: 10) {
                         Text(reading?.title ?? "")
-                            .font(.system(size: 20, weight: .bold))
+                            .font(Font.system(size: 20, design: .rounded).weight(.medium))
                         Text(reading?.html ?? "")
+                            .font(Font.system(size: 20, design: .rounded).weight(.light))
                     }
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
                     .padding(.bottom, 24)
                 }
             }

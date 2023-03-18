@@ -113,7 +113,7 @@ struct HomeView: View {
                             self.reading = reading
                         } label: {
                             Text(reading.title ?? "")
-                                .padding(.bottom, 16)
+                                .padding(.bottom, 25)
                                 .padding(.horizontal, 16)
                         }
                         .halfSheet(showSheet: $showSynaxars) {
@@ -128,6 +128,7 @@ struct HomeView: View {
             .font(.system(size: 20, weight: .regular, design: .rounded))
             .tabViewStyle(.page)
             .frame(height: 110)
+            .padding(.top, -10)
         }
     }
     
