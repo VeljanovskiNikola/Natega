@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ReadingDetailsView: View {
-    let section: PresentableSection
+    let section: PresentableSection?
     
     var body: some View {
         ZStack {
@@ -21,7 +21,7 @@ struct ReadingDetailsView: View {
                     .padding(.bottom, 10)
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 10) {
-                        ForEach(section.passages) { passage in
+                        ForEach(section?.passages ?? []) { passage in
                             Text(passage.bookTranslation ?? "")
                                 .font(.system(size: 20, weight: .bold))
                             VStack(spacing: 16) {
