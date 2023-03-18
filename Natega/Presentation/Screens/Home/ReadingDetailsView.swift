@@ -21,7 +21,7 @@ struct ReadingDetailsView: View {
                     .padding(.bottom, 10)
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 10) {
-                        ForEach(section.passages) { passage in
+                        ForEach(section?.passages ?? []) { passage in
                             HStack(spacing: 10) {
                                 
                                 Text(passage.bookTranslation ?? "")
