@@ -31,35 +31,12 @@ final class HomeViewModel: ObservableObject {
     @Published var presentablePassages: [Passage] = []
     @Published var iconModels: [IconModel] = []
     @Published var upcomingFeasts: [UpcomingFeast] = []
-    @Published var selectedImage = 0 {
-        didSet {
-            if oldValue > selectedImage {
-                withAnimation(Animation.easeInOut(duration: length)) {
-                    backgroundColor = previousBackgroundColor
-                    primaryColor = previousPrimaryColor
-                    secondaryColor = previousSecondaryColor
-                    detailColor = previousDetailColor
-                }
-            } else {
-                withAnimation(Animation.easeInOut(duration: length)) {
-                    self.backgroundColor = nextBackgroundColor
-                    primaryColor = nextPrimaryColor
-                    secondaryColor = nextSecondaryColor
-                    detailColor = nextDetailColor
-                }
-            }
-        }
-    }
-    @Published var imageNames = ["stmary", "church"]
     @Published var state: State = .loading
-    @Published var opacity: CGFloat = 1
-    @Published var start = UnitPoint(x: 0.5, y: 0)
-    @Published var end = UnitPoint(x: 0.5, y: 1)
-    // Private properties
     @Published var backgroundColor: UIColor = .clear
     @Published var primaryColor: UIColor = .clear
     @Published var secondaryColor: UIColor = .clear
     @Published var detailColor: UIColor = .clear
+    // Private properties
     private var nextBackgroundColor: UIColor = .clear
     private var previousBackgroundColor: UIColor = .clear
     private var nextPrimaryColor: UIColor = .clear
@@ -68,7 +45,6 @@ final class HomeViewModel: ObservableObject {
     private var previousDetailColor: UIColor = .clear
     private var nextDetailColor: UIColor = .clear
     private var previousSecondaryColor: UIColor = .clear
-    private let length : CGFloat = 0.5
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
@@ -76,7 +52,6 @@ final class HomeViewModel: ObservableObject {
          loadJsonCase: LoadJsonUseCaseProtocol) {
         self.readingsCase = readingsCase
         self.loadJsonCase = loadJsonCase
-//        self.setupColors()
     }
     
     func loadReadings() {
@@ -89,7 +64,6 @@ final class HomeViewModel: ObservableObject {
     receiveValue: { [weak self] readings in
         self?.readings = readings
         self?.setSynaxars()
-        self?.setPassages()
         self?.setPresentableSections()
         self?.update(state: .ready)
     }
@@ -116,16 +90,6 @@ final class HomeViewModel: ObservableObject {
         if data.saintIcon.isEmpty {
             saintIconModels.append(SaintIconModel(name: "placeholder"))
         }
-    }
-    
-    func onChange(newValue: Int) {
-        nextColors = UIImage(imageLiteralResourceName: imageNames[safeIndex: newValue + 1] ?? "stmary").getColors()
-        withAnimation(Animation.easeInOut(duration: length)) {
-            nextBackgroundColor = nextColors?.background ?? UIColor()
-            nextPrimaryColor = nextColors?.primary ?? UIColor()
-            nextSecondaryColor = nextColors?.secondary ?? UIColor()
-        }
-        
     }
     
     func onAppear() {
@@ -185,8 +149,7 @@ final class HomeViewModel: ObservableObject {
         let sections = readings.map { $0.sections }
         let liturgy = sections?.first(where: { $0.title == "Liturgy" })
         let synaxars = liturgy?.subSections.first(where: { $0.title == "Synaxarium" })
-        let readings = synaxars?.readings
-        self.synaxars = readings ?? []
+        self.synaxars = synaxars?.readings ?? []
     }
     
     private func setPassages() {

@@ -107,8 +107,8 @@ struct HomeView: View {
                 TabView {
                     ForEach(viewModel.synaxars, id: \.title) { reading in
                         Button {
-                            showSynaxars = true
                             self.reading = reading
+                            showSynaxars = true
                         } label: {
                             Text(reading.title ?? "")
                                 .lineLimit(1)
@@ -116,12 +116,11 @@ struct HomeView: View {
                                 .padding(.bottom, 5)
                                 .padding(.horizontal, 16)
                         }
-                        .halfSheet(showSheet: $showSynaxars) {
-                            SynaxarsDetailsView(reading: $reading)
-                        } onDismiss: {}
                     }
-                    
                 }
+                .halfSheet(showSheet: $showSynaxars) {
+                    SynaxarsDetailsView(reading: $reading)
+                } onDismiss: { self.reading = nil }
             }
             .multilineTextAlignment(.center)
             .font(.system(size: 20, weight: .regular, design: .rounded))
@@ -134,7 +133,6 @@ struct HomeView: View {
     
     private var readings: some View {
         VStack (alignment: .leading) {
-            
             Text("Daily readings")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .padding(.horizontal, 16)
@@ -155,10 +153,8 @@ struct HomeView: View {
             }
             .padding(.top, -10)
             .halfSheet(showSheet: $showReadings) {
-                if let presentableSection = presentableSection {
-                    ReadingDetailsView(section: presentableSection)
-                }
-            } onDismiss: {}
+                ReadingDetailsView(section: presentableSection)
+            } onDismiss: { self.presentableSection = nil }
         }
         .foregroundColor(.black)
     }
