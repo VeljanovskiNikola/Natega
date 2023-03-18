@@ -21,19 +21,28 @@ struct ReadingDetailsView: View {
                     .padding(.bottom, 10)
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 10) {
-                        ForEach(section?.passages ?? []) { passage in
-                            Text(passage.bookTranslation ?? "")
-                                .font(.system(size: 20, weight: .bold))
-                            VStack(spacing: 16) {
+                        ForEach(section.passages) { passage in
+                            HStack(spacing: 10) {
+                                
+                                Text(passage.bookTranslation ?? "")
+                                    .font(Font.system(size: 20, design: .rounded).weight(.medium))
+                                
                                 Text(passage.ref)
-                                    .fontWeight(.bold)
+                                    .font(Font.system(size: 20, design: .rounded).weight(.medium))
+                                
+                            }
+                            .multilineTextAlignment(.center)
+                            
+                            VStack(spacing: 16) {
                                 ForEach(passage.verses) { verse in
                                     Text(verse.text)
+                                        .font(Font.system(size: 20, design: .rounded).weight(.light))
+                                        .multilineTextAlignment(.leading)
                                 }
                             }
+                            .padding(.bottom, 20)
                         }
                     }
-                    .multilineTextAlignment(.center)
                     .padding(.bottom, 24)
                 }
             }

@@ -12,7 +12,7 @@ struct SaintIconModel: Identifiable {
     let id = UUID()
     var name: String
     var textBackgroundColour: UIColor {
-        getImageColor().primary
+        getImageColor().background
     }
     
     var image: UIImage {

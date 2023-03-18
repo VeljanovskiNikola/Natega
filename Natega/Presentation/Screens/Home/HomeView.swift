@@ -55,13 +55,13 @@ struct HomeView: View {
     private var dateView: some View {
         HStack {
             Text("Today, \(viewModel.formattedDate())")
-                .font(.system(size: 20, weight: .semibold))
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
             
             Image(systemName: "smallcircle.filled.circle.fill")
-                .font(.system(size: 10, weight: .thin))
+                .font(.system(size: 10, weight: .thin, design: .rounded))
             
             Text(viewModel.copticDate)
-                .font(.system(size: 20, weight: .regular))
+                .font(.system(size: 20, weight: .regular, design: .rounded))
         }
         .foregroundColor(.black)
     }
@@ -69,41 +69,41 @@ struct HomeView: View {
     //MARK: - Fast
     private var fastView: some View {
         Text("Nativity Fast")
-            .font(.system(size: 17, weight: .medium))
+            .font(.system(size: 17, weight: .medium, design: .rounded))
             .foregroundColor(.black)
             .padding(.vertical, 7)
             .padding(.horizontal, 20)
             .background(Color.superLightBlue.opacity(0.3))
-            .cornerRadius(30)
+            .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
     }
     
     private var iconsView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 24) {
+            HStack(spacing: -20) {
                 ForEach(viewModel.saintIconModels) { iconModel in
                     GeometryReader { proxy in
                         Button { } label: {
                             SaintIconImageView(iconModel: iconModel)
-                                .padding(.top, 40)
-                                .padding(.bottom, 32)
-                                .padding(.horizontal, 16)
+                                .padding(.top, 20)
+                                .padding(.horizontal, 5)
                         }
                         .buttonStyle(GrowingButton())
                         .rotation3DEffect(
-                            .degrees(proxy.frame(in: .global).minX / 10),
-                            axis: (x: 1, y: 1, z: 0.0)
+                            Angle(degrees: (Double(proxy.frame(in: .global).minX) - 100) / -50 ),
+                            axis: (x: 0, y: 50, z: 0.0)
                         )
                     }
-                    .frame(width: 350, height: 400)
+                    .frame(width: 350, height: 410)
                 }
             }
+            .padding(10)
         }
     }
     
     private var commemorations: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Commemorations")
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 20, weight: .bold, design: .rounded))
                 .padding(.horizontal, 16)
             HStack(spacing: 0) {
                 TabView {
@@ -113,7 +113,9 @@ struct HomeView: View {
                             self.reading = reading
                         } label: {
                             Text(reading.title ?? "")
-                                .padding(.bottom, 16)
+                                .lineLimit(1)
+                                .multilineTextAlignment(.leading)
+                                .padding(.bottom, 5)
                                 .padding(.horizontal, 16)
                         }
                         .halfSheet(showSheet: $showSynaxars) {
@@ -123,34 +125,44 @@ struct HomeView: View {
                     
                 }
             }
-            .lineLimit(2)
             .multilineTextAlignment(.center)
             .font(.system(size: 20, weight: .regular, design: .rounded))
             .tabViewStyle(.page)
             .frame(height: 110)
+            .padding(.top, -25)
         }
     }
     
     private var readings: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(viewModel.presentableSections) { section in
-                    Button {
-                        presentableSection = section
-                        showReadings = true
-                    } label: {
-                        ReadingSection(presentableSection: section,
-                                       hasOneName: viewModel.hasOneName(for: section))
+        VStack (alignment: .leading) {
+            
+            Text("Daily readings")
+                .font(.system(size: 20, weight: .bold, design: .rounded))
+                .padding(.horizontal, 16)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack (spacing: -10) {
+                    ForEach(viewModel.presentableSections) { section in
+                        Button {
+                            presentableSection = section
+                            showReadings = true
+                        } label: {
+                            ReadingSection(presentableSection: section,
+                                           hasOneName: viewModel.hasOneName(for: section))
+                        }
+                        .buttonStyle(GrowingButton())
                     }
-                    .buttonStyle(GrowingButton())
                 }
             }
+            .padding(.top, -10)
+            .halfSheet(showSheet: $showReadings) {
+                if let presentableSection = presentableSection {
+                    ReadingDetailsView(section: presentableSection)
+                }
+            } onDismiss: {}
+            
         }
-        .halfSheet(showSheet: $showReadings) {
-            if let presentableSection = presentableSection {
-                ReadingDetailsView(section: presentableSection)
-            }
-        } onDismiss: {}
+
     }
     
     private var upcomingEvents: some View {
@@ -173,7 +185,7 @@ struct HomeView: View {
                         .padding(.vertical, 15)
                         .padding(.horizontal, 35)
                         .background(Color.white.opacity(0.7))
-                        .cornerRadius(30)
+                        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
 
                     }
                 }
@@ -191,26 +203,43 @@ struct HomeView: View {
 }
 
 private struct SaintIconImageView: View {
+    
     let iconModel: SaintIconModel
     
     var body: some View {
         Image(iconModel.name)
             .resizable()
-            .scaledToFit()
+            .scaledToFill()
+            .frame(maxWidth: 300, maxHeight: 350)
+            .clipped()
+            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .overlay(alignment: .bottom) {
                 Text(iconModel.name)
-                    .font(.system(size: 15, weight: .semibold))
+                    .font(Font.system(size: 15, design: .rounded).weight(.semibold))
                     .multilineTextAlignment(.center)
                     .padding(5)
+                    .padding(.horizontal, 3)
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
-                    .background(Color(iconModel.textBackgroundColour).opacity(0.9))
+                    .background(Color(iconModel.textBackgroundColour).opacity(0.8))
             }
-            .cornerRadius(12)
+            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .background(Image(iconModel.name)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: 300, maxHeight: 350)
+                .clipped()
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                .blur(radius: 10)
+                .offset(x:8, y: 11)
+                .opacity(0.65)
+                .overlay(Image(iconModel.name)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: 300, maxHeight: 350)
+                    .clipped()
+                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous)))
+            )
             .frame(maxWidth: 300, maxHeight: 350)
-            .shadow(color: .black.opacity(0.7),
-                    radius: 8,
-                    x: 0,
-                    y: 0)
     }
 }

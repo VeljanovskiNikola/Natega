@@ -10,10 +10,7 @@ import SwiftUI
 struct GrowingButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .scaleEffect(configuration.isPressed ? 1.1 : 1)
-            .animation(.spring(response: 0.4,
-                               dampingFraction: 0.6),
-                       value: configuration.isPressed)
-            
+            .scaleEffect(configuration.isPressed ? 1.08 : 1)
+            .animation(.spring(response: 0.4, dampingFraction: 0.6), value: configuration.isPressed)
     }
 }

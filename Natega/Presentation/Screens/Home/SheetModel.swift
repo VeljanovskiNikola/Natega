@@ -125,8 +125,6 @@ struct HalfSheetHelper<Content: View>: UIViewControllerRepresentable {
                 let sheetController = CustomHostingController(rootView: sheetView)
                 sheetController.presentationController?.delegate = context.coordinator
                 uiViewController.present(sheetController, animated: true)
-            } else {
-                uiViewController.dismiss(animated: true, completion: onDismiss)
             }
         }
     }
