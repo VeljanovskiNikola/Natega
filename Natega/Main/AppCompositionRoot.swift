@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import PartialSheet
 
 final class AppCompositionRoot {
     static let assembler = DefaultAssembler()
@@ -16,6 +15,6 @@ final class AppCompositionRoot {
     }
     
     static var start: some View {
-        assembler.resolve().attachPartialSheetToRoot()
+        assembler.resolve()
     }
 }

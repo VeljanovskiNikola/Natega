@@ -1,5 +1,5 @@
 //
-//  ImageNames.swift
+//  Image+Extensions.swift
 //  Natega
 //
 //  Created by Nikola Veljanovski on 30.12.22.

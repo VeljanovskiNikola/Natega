@@ -7,17 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		474495A6297DAC07005B3777 /* MotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474495A5297DAC06005B3777 /* MotionManager.swift */; };
 		474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */; };
 		474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */; };
 		474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D6299A81FC00B2D0D1 /* SheetModel.swift */; };
-		475986A829C6175E00B239CB /* TestVerticalTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 475986A729C6175E00B239CB /* TestVerticalTabBar.swift */; };
 		476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B39012983E3FB00CFFADC /* TestHomeView3.swift */; };
 		477C537E297D9FED00722487 /* SmallIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477C537D297D9FED00722487 /* SmallIcon.swift */; };
 		4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */; };
-		4786DDAD297D9DCE0067BD2A /* SmallSaintIconCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */; };
-		4C34034129884AC3007DAB84 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 4C34034029884AC3007DAB84 /* PartialSheet */; };
-		4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403442988689F007DAB84 /* PassagesDetailView.swift */; };
 		4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403462997C8B3007DAB84 /* PresentableSection.swift */; };
 		4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034A29BA646F007DAB84 /* ButtonStyle.swift */; };
 		4C34034E29BE8364007DAB84 /* icons2023.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C34034D29BE8364007DAB84 /* icons2023.json */; };
@@ -56,7 +51,7 @@
 		4CCFA658295E054C00342776 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA657295E054C00342776 /* Colours.xcassets */; };
 		4CCFA65A295F4C1800342776 /* Feast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA659295F4C1800342776 /* Feast.swift */; };
 		4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */; };
-		4CCFA65E295F689600342776 /* ImageNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65D295F689600342776 /* ImageNames.swift */; };
+		4CCFA65E295F689600342776 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65D295F689600342776 /* Image+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,16 +79,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		474495A5297DAC06005B3777 /* MotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionManager.swift; sourceTree = "<group>"; };
 		474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsModel.swift; sourceTree = "<group>"; };
 		474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsCard.swift; sourceTree = "<group>"; };
 		474703D6299A81FC00B2D0D1 /* SheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModel.swift; sourceTree = "<group>"; };
-		475986A729C6175E00B239CB /* TestVerticalTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVerticalTabBar.swift; sourceTree = "<group>"; };
 		476B39012983E3FB00CFFADC /* TestHomeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeView3.swift; sourceTree = "<group>"; };
 		477C537D297D9FED00722487 /* SmallIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIcon.swift; sourceTree = "<group>"; };
 		4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintIconModel.swift; sourceTree = "<group>"; };
-		4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallSaintIconCard.swift; sourceTree = "<group>"; };
-		4C3403442988689F007DAB84 /* PassagesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassagesDetailView.swift; sourceTree = "<group>"; };
 		4C3403462997C8B3007DAB84 /* PresentableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableSection.swift; sourceTree = "<group>"; };
 		4C34034A29BA646F007DAB84 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		4C34034D29BE8364007DAB84 /* icons2023.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons2023.json; sourceTree = "<group>"; };
@@ -132,7 +123,7 @@
 		4CCFA657295E054C00342776 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
 		4CCFA659295F4C1800342776 /* Feast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feast.swift; sourceTree = "<group>"; };
 		4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReadingsUseCase.swift; sourceTree = "<group>"; };
-		4CCFA65D295F689600342776 /* ImageNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNames.swift; sourceTree = "<group>"; };
+		4CCFA65D295F689600342776 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +131,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C34034129884AC3007DAB84 /* PartialSheet in Frameworks */,
 				4C4A9AED29575C2C00C0B279 /* UIImageColors in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,20 +287,16 @@
 			children = (
 				4C4A9AC1294E54CC00C0B279 /* HomeView.swift */,
 				4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */,
-				4C3403442988689F007DAB84 /* PassagesDetailView.swift */,
 				4C3D1F5C29C4FCA900940B62 /* ReadingDetailsView.swift */,
 				4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */,
 				4C4A9AE3294E6F1B00C0B279 /* HomeViewModel.swift */,
 				4C3D1F5A29C4FBC700940B62 /* ReadingsView.swift */,
-				4786DDAC297D9DCE0067BD2A /* SmallSaintIconCard.swift */,
 				477C537D297D9FED00722487 /* SmallIcon.swift */,
 				4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */,
-				474495A5297DAC06005B3777 /* MotionManager.swift */,
 				476B39012983E3FB00CFFADC /* TestHomeView3.swift */,
 				474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */,
 				474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */,
 				474703D6299A81FC00B2D0D1 /* SheetModel.swift */,
-				475986A729C6175E00B239CB /* TestVerticalTabBar.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -321,7 +307,7 @@
 				4C4A9AE92953818500C0B279 /* Date+Extensions.swift */,
 				4C34034A29BA646F007DAB84 /* ButtonStyle.swift */,
 				4CCFA655295CB34200342776 /* Colours+Extensions.swift */,
-				4CCFA65D295F689600342776 /* ImageNames.swift */,
+				4CCFA65D295F689600342776 /* Image+Extensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -368,7 +354,6 @@
 			name = Natega;
 			packageProductDependencies = (
 				4C4A9AEC29575C2C00C0B279 /* UIImageColors */,
-				4C34034029884AC3007DAB84 /* PartialSheet */,
 			);
 			productName = Natega;
 			productReference = 4C4A9ABC294E54CC00C0B279 /* Natega.app */;
@@ -420,7 +405,6 @@
 			mainGroup = 4C4A9AB3294E54CC00C0B279;
 			packageReferences = (
 				4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */,
-				4C34033F29884AC3007DAB84 /* XCRemoteSwiftPackageReference "PartialSheet" */,
 			);
 			productRefGroup = 4C4A9ABD294E54CC00C0B279 /* Products */;
 			projectDirPath = "";
@@ -466,15 +450,13 @@
 				4CCFA64D295A450300342776 /* NategaWidget.intentdefinition in Sources */,
 				4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */,
 				476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */,
-				4CCFA65E295F689600342776 /* ImageNames.swift in Sources */,
+				4CCFA65E295F689600342776 /* Image+Extensions.swift in Sources */,
 				4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */,
 				4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */,
 				4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */,
-				4786DDAD297D9DCE0067BD2A /* SmallSaintIconCard.swift in Sources */,
 				4C4A9AE4294E6F1B00C0B279 /* HomeViewModel.swift in Sources */,
 				4C4A9AD1294E5E5F00C0B279 /* KatamerosAPI.swift in Sources */,
 				4C4A9ADD294E6D5B00C0B279 /* Assembler.swift in Sources */,
-				474495A6297DAC07005B3777 /* MotionManager.swift in Sources */,
 				474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */,
 				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
 				4CCFA65A295F4C1800342776 /* Feast.swift in Sources */,
@@ -482,14 +464,12 @@
 				4CC7931229C10C0000535818 /* SynaxarsDetailsView.swift in Sources */,
 				474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */,
 				4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */,
-				4C3403452988689F007DAB84 /* PassagesDetailView.swift in Sources */,
 				4C34035229BE8546007DAB84 /* JSONManagerProtocol.swift in Sources */,
 				4C34035029BE83F5007DAB84 /* IconModel.swift in Sources */,
 				4C3D1F5D29C4FCA900940B62 /* ReadingDetailsView.swift in Sources */,
 				4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */,
 				4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */,
 				474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */,
-				475986A829C6175E00B239CB /* TestVerticalTabBar.swift in Sources */,
 				4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */,
 				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
 				4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */,
@@ -792,14 +772,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4C34033F29884AC3007DAB84 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jathu/UIImageColors";
@@ -811,11 +783,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4C34034029884AC3007DAB84 /* PartialSheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4C34033F29884AC3007DAB84 /* XCRemoteSwiftPackageReference "PartialSheet" */;
-			productName = PartialSheet;
-		};
 		4C4A9AEC29575C2C00C0B279 /* UIImageColors */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */;
