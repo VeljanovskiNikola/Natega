@@ -113,7 +113,9 @@ struct HomeView: View {
                             self.reading = reading
                         } label: {
                             Text(reading.title ?? "")
-                                .padding(.bottom, 25)
+                                .lineLimit(1)
+                                .multilineTextAlignment(.leading)
+                                .padding(.bottom, 5)
                                 .padding(.horizontal, 16)
                         }
                         .halfSheet(showSheet: $showSynaxars) {
@@ -123,35 +125,44 @@ struct HomeView: View {
                     
                 }
             }
-            .lineLimit(2)
             .multilineTextAlignment(.center)
             .font(.system(size: 20, weight: .regular, design: .rounded))
             .tabViewStyle(.page)
             .frame(height: 110)
-            .padding(.top, -10)
+            .padding(.top, -25)
         }
     }
     
     private var readings: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack {
-                ForEach(viewModel.presentableSections) { section in
-                    Button {
-                        presentableSection = section
-                        showReadings = true
-                    } label: {
-                        ReadingSection(presentableSection: section,
-                                       hasOneName: viewModel.hasOneName(for: section))
+        VStack (alignment: .leading) {
+            
+            Text("Daily readings")
+                .font(.system(size: 20, weight: .bold, design: .rounded))
+                .padding(.horizontal, 16)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack (spacing: -10) {
+                    ForEach(viewModel.presentableSections) { section in
+                        Button {
+                            presentableSection = section
+                            showReadings = true
+                        } label: {
+                            ReadingSection(presentableSection: section,
+                                           hasOneName: viewModel.hasOneName(for: section))
+                        }
+                        .buttonStyle(GrowingButton())
                     }
-                    .buttonStyle(GrowingButton())
                 }
             }
+            .padding(.top, -10)
+            .halfSheet(showSheet: $showReadings) {
+                if let presentableSection = presentableSection {
+                    ReadingDetailsView(section: presentableSection)
+                }
+            } onDismiss: {}
+            
         }
-        .halfSheet(showSheet: $showReadings) {
-            if let presentableSection = presentableSection {
-                ReadingDetailsView(section: presentableSection)
-            }
-        } onDismiss: {}
+
     }
     
     private var upcomingEvents: some View {
@@ -174,7 +185,7 @@ struct HomeView: View {
                         .padding(.vertical, 15)
                         .padding(.horizontal, 35)
                         .background(Color.white.opacity(0.7))
-                        .cornerRadius(30)
+                        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
 
                     }
                 }
