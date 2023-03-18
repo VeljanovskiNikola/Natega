@@ -25,6 +25,7 @@ extension Date {
     static func copticDate() -> String {
         let dateFormatter = DateFormatter()
         let calendar = Calendar(identifier: .coptic)
+        dateFormatter.locale = Locale.init(identifier: "en_US")
         dateFormatter.dateStyle = .medium
         dateFormatter.eraSymbols = ["", ""]
         dateFormatter.calendar = calendar

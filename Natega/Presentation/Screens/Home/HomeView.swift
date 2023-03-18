@@ -46,7 +46,6 @@ struct HomeView: View {
             readings
             upcomingEvents
                 .padding(.top, 16)
-                .padding(.horizontal, 16)
         }
     }
     
@@ -130,6 +129,7 @@ struct HomeView: View {
             .frame(height: 110)
             .padding(.top, -25)
         }
+        .foregroundColor(.black)
     }
     
     private var readings: some View {
@@ -159,9 +159,8 @@ struct HomeView: View {
                     ReadingDetailsView(section: presentableSection)
                 }
             } onDismiss: {}
-            
         }
-
+        .foregroundColor(.black)
     }
     
     private var upcomingEvents: some View {
@@ -169,6 +168,7 @@ struct HomeView: View {
             Text("Upcoming feasts")
                 .font(.system(size: 20, weight: .bold))
                 .padding(.bottom, 10)
+                .padding(.horizontal, 16)
 
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 7) {
@@ -185,11 +185,12 @@ struct HomeView: View {
                         .padding(.horizontal, 35)
                         .background(Color.white.opacity(0.7))
                         .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-
                     }
                 }
+                .padding(.horizontal, 16)
             }
         }
+        .foregroundColor(.black)
     }
     
     private var backgroundColor: some View {
