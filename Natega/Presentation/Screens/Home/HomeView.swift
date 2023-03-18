@@ -209,7 +209,7 @@ private struct SaintIconImageView: View {
                     .padding(.horizontal, 3)
                     .foregroundColor(.white)
                     .frame(maxWidth: .infinity)
-                    .background(Color(iconModel.textBackgroundColour).opacity(0.9))
+                    .background(Color(iconModel.textBackgroundColour).opacity(0.8))
             }
             .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
             .background(Image(iconModel.name)
