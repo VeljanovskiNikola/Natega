@@ -8,7 +8,7 @@
 import Foundation
 
 struct IconModel: Decodable {
-    let copticDate, feastName, liturgicalInformation: String
+    let copticDate, feastName, liturgicalInformation: String?
     let saintIcon: [String]
     let upcomingEvents: [UpcomingFeast]
     let year: String

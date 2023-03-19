@@ -6,7 +6,7 @@ struct Feast: Codable {
     let bible: Bible
     let bibles: [Bible]
     let sections: [Section]
-    let copticDate: String
+    let copticDate: String?
 }
 
 // MARK: - Bible
