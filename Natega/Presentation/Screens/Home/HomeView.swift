@@ -140,6 +140,7 @@ struct HomeView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack (spacing: -10) {
                     ForEach(viewModel.presentableSections) { section in
+                        //another ForEach to loop through array of Colours
                         Button {
                             presentableSection = section
                             showReadings = true
@@ -162,7 +163,7 @@ struct HomeView: View {
     private var upcomingEvents: some View {
         VStack(alignment: .leading) {
             Text("Upcoming feasts")
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 20, weight: .bold, design: .rounded))
                 .padding(.bottom, 10)
                 .padding(.horizontal, 16)
 
@@ -185,6 +186,7 @@ struct HomeView: View {
                 }
                 .padding(.horizontal, 16)
             }
+            .padding(.bottom, 35)
         }
         .foregroundColor(.black)
     }
