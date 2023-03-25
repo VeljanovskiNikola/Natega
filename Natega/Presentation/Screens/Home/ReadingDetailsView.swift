@@ -22,15 +22,11 @@ struct ReadingDetailsView: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 10) {
                         ForEach(section?.passages ?? []) { passage in
-                            HStack(spacing: 10) {
-                                
+                            VStack(spacing: 10) {
                                 Text(passage.bookTranslation ?? "")
-                                    .font(Font.system(size: 20, design: .rounded).weight(.medium))
-                                
                                 Text(passage.ref)
-                                    .font(Font.system(size: 20, design: .rounded).weight(.medium))
-                                
                             }
+                            .font(.system(size: 20, weight: .medium))
                             .multilineTextAlignment(.center)
                             
                             VStack(spacing: 16) {

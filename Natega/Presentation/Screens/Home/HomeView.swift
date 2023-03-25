@@ -14,25 +14,23 @@ struct HomeView: View {
     @State private var tapIcon = false
     @State private var reading: Reading?
     @State private var presentableSection: PresentableSection?
+    @State private var imageTapped = false
+    @State private var readingTapped = false
     
     var body: some View {
         contentView
             .onAppear(perform: viewModel.onAppear)
             .buttonStyle(.plain)
+            .redacted(reason: viewModel.state == .loading ? .placeholder : [])
     }
     
     //MARK: - Content
     @ViewBuilder
     private var contentView: some View {
-        switch viewModel.state {
-        case .loading:
-            ProgressView()
-        case .ready:
-            ScrollView(showsIndicators: false) {
-                readyView
-            }
-            .background(backgroundColor)
+        ScrollView(showsIndicators: false) {
+            readyView
         }
+        .background(backgroundColor)
     }
     
     private var readyView: some View {

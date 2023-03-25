@@ -17,11 +17,21 @@ struct ReadingSection: View {
                 Text("\(presentableSection.passages.first?.bookTranslation ?? "")")
                 HStack(spacing: 3) {
                     ForEach(presentableSection.passages) { passage in
-                        Text(passage.ref)
-                            .lineLimit(1)
-                            .minimumScaleFactor(0.5)
+                        if presentableSection.passages.count > 1 {
+                            if passage == presentableSection.passages.last {
+                                Text(passage.ref)
+                            } else {
+                                Text(passage.ref)
+                                Text("&")
+                            }
+                        } else {
+                            Text("\(passage.ref)")
+                                .lineLimit(1)
+                        }
                     }
                 }
+                .minimumScaleFactor(0.5)
+
 
                 Text("\(presentableSection.subSectionTitle) ∘ \(presentableSection.title)")
                     .font(.caption2)
