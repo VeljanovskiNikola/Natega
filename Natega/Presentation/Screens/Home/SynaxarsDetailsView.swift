@@ -32,6 +32,7 @@ struct SynaxarsDetailsView: View {
                 }
             }
             .frame(width: 350)
+            .foregroundColor(.black)
         }
         .edgesIgnoringSafeArea(.bottom)
 

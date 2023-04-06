@@ -1,6 +1,6 @@
 [
     {
-        "copticDate": "Baramhat 16",
+        "copticDate": "Baramhat 28",
         "feastName": "Annual",
         "liturgicalInformation": "Annual tune",
         "saintIcon": ["Archangel Michael", "Christ Praying in the Garden", "Also Pope Kyrillos VI Colorized", "Christ Walking on Water"],
@@ -18,10 +18,10 @@
         "year": "2023"
     },
     {
-        "copticDate": "Toubah 9",
+        "copticDate": "Baramhat 29",
         "feastName": "Annual",
         "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Church"],
+        "saintIcon": ["Also Pope Kyrillos VI Colorized"],
         "feastIcon": [],
         "upcomingEvents": [
             {
@@ -36,7 +36,7 @@
         "year": "2023"
     },
     {
-        "copticDate": "Toubah 10",
+        "copticDate": "Baramhat 30",
         "feastName": "Paramoun (preparation for) the Holy Epiphany",
         "liturgicalInformation": "Annual tune",
         "saintIcon": ["Baptism of Christ - Epiphany", "Also baptism of Christ - Epiphany"],

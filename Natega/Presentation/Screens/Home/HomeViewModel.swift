@@ -130,10 +130,7 @@ final class HomeViewModel: ObservableObject {
     }
     
     var copticDate: String {
-        var text = Date.copticDate()
-        let modifiedText = text.split(separator: ",")
-        text = String(modifiedText[0])
-        return text
+       Date.copticDate()
     }
     
     private func update(state: State) {

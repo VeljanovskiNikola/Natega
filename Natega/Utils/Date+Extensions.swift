@@ -23,12 +23,12 @@ extension Date {
     }
     
     static func copticDate() -> String {
-        let dateFormatter = DateFormatter()
         let calendar = Calendar(identifier: .coptic)
-        dateFormatter.locale = Locale.init(identifier: "en_US")
-        dateFormatter.dateStyle = .medium
-        dateFormatter.eraSymbols = ["", ""]
-        dateFormatter.calendar = calendar
-        return dateFormatter.string(from: Date())
+        let date = Date()
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        let monthName = calendar.monthSymbols[month - 1]
+
+        return "\(monthName) \(day)"
     }
 }
