@@ -91,7 +91,10 @@ struct NategaWidgetEntryView : View {
         ZStack {
             Image(uiImage: entry.image)
                 .resizable()
-                .aspectRatio(1, contentMode: .fit)
+                .scaledToFill()
+                .frame(maxWidth: 300, maxHeight: 200)
+                .clipped()
+                .offset(y: 15)
         
             textDate
                 .lineLimit(1)
