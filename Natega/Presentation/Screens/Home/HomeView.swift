@@ -22,6 +22,9 @@ struct HomeView: View {
             .onAppear(perform: viewModel.onAppear)
             .buttonStyle(.plain)
             .redacted(reason: viewModel.state == .loading ? .placeholder : [])
+            .animation(.easeInOut(duration: 0.5))
+            .transition(.opacity)
+
     }
     
     //MARK: - Content
@@ -144,17 +147,19 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack (spacing: -10) {
-                    ForEach(viewModel.presentableSections) { section in
+                    ForEach(viewModel.presentableSections.indices, id: \.self) { index in
                         Button {
-                            presentableSection = section
+                            presentableSection = viewModel.presentableSections[index]
                             showReadings = true
                         } label: {
-                            ReadingSection(presentableSection: section,
-                                           hasOneName: viewModel.hasOneName(for: section))
+                            ReadingSection(presentableSection: viewModel.presentableSections[index],
+                                           hasOneName: viewModel.hasOneName(for: viewModel.presentableSections[index]),
+                                           readingsColour: readingsColours[index % readingsColours.count])
                         }
                         .buttonStyle(GrowingButton())
                     }
                 }
+                .padding(.bottom, 8)
             }
             .padding(.top, -10)
             .halfSheet(showSheet: $showReadings) {

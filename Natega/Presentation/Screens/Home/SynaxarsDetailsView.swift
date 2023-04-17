@@ -24,6 +24,7 @@ struct SynaxarsDetailsView: View {
                         Text(reading?.title ?? "")
                             .font(Font.system(size: 20, design: .rounded).weight(.medium))
                             .multilineTextAlignment(.center)
+                            .padding(5)
                         Text(reading?.html ?? "")
                             .font(Font.system(size: 20, design: .rounded).weight(.light))
                             .multilineTextAlignment(.leading)

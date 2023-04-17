@@ -22,12 +22,15 @@ struct Provider: TimelineProvider {
     }
     
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-        let entry = SimpleEntry(date: Date(),
-                                image: UIImage(named: "placeholder")!,
-                                imageName: "placeholder",
-                                color: color)
-        completion(entry)
+        // Call getTimeline and return the first entry in the resulting timeline
+        getTimeline(in: context) { timeline in
+            guard let entry = timeline.entries.first else {
+                fatalError("No timeline entries found.")
+            }
+            completion(entry)
+        }
     }
+
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
         var entries: [SimpleEntry] = []
@@ -86,43 +89,62 @@ struct NategaWidgetEntryView : View {
     let date = Date()
     var entry: Provider.Entry
     let color: UIColor
-    
+
     var body: some View {
-        ZStack {
-            Image(uiImage: entry.image)
-                .resizable()
-                .scaledToFill()
-                .frame(maxWidth: 300, maxHeight: 200)
-                .clipped()
-                .offset(y: 15)
-        
-            textDate
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                .padding(.vertical, 5)
-                .padding(.horizontal, 8)
-                .cornerRadius(12)
-                .background(
-                    Rectangle()
-                        .fill(Color(uiColor: color).opacity(0.5)))
-                .cornerRadius(12)
-                .padding(.top, 100)
-                .padding(.horizontal, 8)
+        GeometryReader { geometry in
+            ZStack {
+
+                Image(uiImage: entry.image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: 300, maxHeight: 200)
+                    .clipped()
+                    .blur(radius: 5)
+
+                Image(uiImage: entry.image)
+                    .resizable()
+                    .scaledToFill()
+                    .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                    .frame(maxWidth: 180, maxHeight: 180)
+                    .scaleEffect(1.1)
+                    .offset(y: 15)
+                
+                
+                GeometryReader { geometry in
+                    VStack(alignment: .center) {
+                        Text(entry.imageName)
+                            .font(.system(size: 13, weight: .semibold, design: .rounded))
+                            .foregroundColor(.white)
+                            .minimumScaleFactor(0.8)
+                            .truncationMode(.tail)
+                            .multilineTextAlignment(.center)
+                            .lineLimit(2)
+                            .padding(6)
+                            .background(Color.black.opacity(0.4))
+                            .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            .padding(10)
+                    }
+                    .frame(maxWidth: 170, maxHeight: 170, alignment: .bottom)
+                }
+
+  
+
+
+
+                        
+                
+            }
+            .onAppear {
+                print("widget on appear")
+            }
+            .onDisappear {
+                print("widget on disappear")
+            }
         }
-        .onAppear {
-            print("widget on appear")
-        }
-        .onDisappear {
-            print("widget on disappear")
-        }
-    }
-    
-    private var textDate: some View {
-        Text(entry.imageName)
-            .fontWeight(.semibold)
-            .foregroundColor(.white)
     }
 }
+
+
 
 struct NategaWidget: Widget {
     let kind: String = "NategaWidget"
@@ -133,7 +155,7 @@ struct NategaWidget: Widget {
             NategaWidgetEntryView(entry: entry, color: entry.color ?? .black)
         }
                             .configurationDisplayName("Natega Widget")
-                            .description("Showing the current feast")
+                            .description("Coptic icon that updates daily")
                             .supportedFamilies([.systemSmall])
     }
 }
