@@ -102,23 +102,30 @@ struct HomeView: View {
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .padding(.horizontal, 16)
             HStack(spacing: 0) {
-                TabView {
-                    ForEach(viewModel.synaxars, id: \.title) { reading in
-                        Button {
-                            self.reading = reading
-                            showSynaxars = true
-                        } label: {
-                            Text(reading.title ?? "")
-                                .lineLimit(1)
-                                .multilineTextAlignment(.leading)
-                                .padding(.bottom, 5)
-                                .padding(.horizontal, 16)
+                if viewModel.synaxars.isEmpty {
+                    // Add an empty view or placeholder here
+                    Text("As today is a Major Feast of the Lord, the Synaxarium is not read today")
+                        .padding(.bottom, 5)
+                        .padding(.horizontal, 16)
+                } else {
+                    TabView {
+                        ForEach(viewModel.synaxars, id: \.title) { reading in
+                            Button {
+                                self.reading = reading
+                                showSynaxars = true
+                            } label: {
+                                Text(reading.title ?? "")
+                                    .lineLimit(1)
+                                    .multilineTextAlignment(.leading)
+                                    .padding(.bottom, 5)
+                                    .padding(.horizontal, 16)
+                            }
                         }
                     }
+                    .halfSheet(showSheet: $showSynaxars) {
+                        SynaxarsDetailsView(reading: $reading)
+                    } onDismiss: { self.reading = nil }
                 }
-                .halfSheet(showSheet: $showSynaxars) {
-                    SynaxarsDetailsView(reading: $reading)
-                } onDismiss: { self.reading = nil }
             }
             .multilineTextAlignment(.center)
             .font(.system(size: 20, weight: .regular, design: .rounded))
