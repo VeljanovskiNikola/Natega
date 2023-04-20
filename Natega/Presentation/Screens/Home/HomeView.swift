@@ -74,6 +74,7 @@ struct HomeView: View {
             .padding(.horizontal, 20)
             .background(Color.superLightBlue.opacity(0.3))
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .modifier(TapToScaleModifier())
     }
     
     private var iconsView: some View {
@@ -86,6 +87,7 @@ struct HomeView: View {
                                 .padding(.top, 20)
                                 .padding(.horizontal, 5)
                         }
+                        .modifier(TapToScaleModifier())
                         .buttonStyle(GrowingButton())
                         .rotation3DEffect(
                             Angle(degrees: (Double(proxy.frame(in: .global).minX) - 100) / -50 ),
@@ -123,6 +125,7 @@ struct HomeView: View {
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 16)
                             }
+                            .modifier(TapToScaleModifier())
                         }
                     }
                     .halfSheet(showSheet: $showSynaxars) {
