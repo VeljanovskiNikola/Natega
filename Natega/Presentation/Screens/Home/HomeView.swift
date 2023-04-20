@@ -159,6 +159,7 @@ struct HomeView: View {
                                            hasOneName: viewModel.hasOneName(for: viewModel.presentableSections[index]),
                                            readingsColour: readingsColours[index % readingsColours.count])
                         }
+                        .modifier(TapToScaleModifier())
                         .buttonStyle(GrowingButton())
                     }
                 }
