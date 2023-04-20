@@ -67,7 +67,7 @@ struct HomeView: View {
     
     //MARK: - Fast
     private var fastView: some View {
-        Text("Nativity Fast")
+        Text("The Holy Fifty Days of the Resurrection")
             .font(.system(size: 17, weight: .medium, design: .rounded))
             .foregroundColor(.black)
             .padding(.vertical, 7)
@@ -107,7 +107,7 @@ struct HomeView: View {
             HStack(spacing: 0) {
                 if viewModel.synaxars.isEmpty {
                     // Add an empty view or placeholder here
-                    Text("As today is a Major Feast of the Lord, the Synaxarium is not read today")
+                    Text("As today is a Major Feast of the Lord, the Synaxarium is not read today.")
                         .padding(.bottom, 5)
                         .padding(.horizontal, 16)
                 } else {
@@ -172,7 +172,7 @@ struct HomeView: View {
     private var upcomingEvents: some View {
         VStack(alignment: .leading) {
             Text("Upcoming feasts")
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .padding(.bottom, 10)
                 .padding(.horizontal, 16)
 
