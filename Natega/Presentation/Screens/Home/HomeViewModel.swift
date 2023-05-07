@@ -20,10 +20,15 @@ final class HomeViewModel: ObservableObject {
             Color(uiColor: backgroundColor)
         ]
     }
-    
+    var fastView: String {
+        isShowingFeastName ? feastName ?? "" : liturgicalInformation ?? ""
+    }
+    var feastName: String?
+    var liturgicalInformation: String?
     var saintIconModels: [SaintIconModel] = []
     
     // Published properties
+    @Published var isShowingFeastName = true
     @Published var presentableSections: [PresentableSection] = []
     @Published var sections: [Section] = []
     @Published var synaxars: [Reading] = []
@@ -75,15 +80,28 @@ final class HomeViewModel: ObservableObject {
         icons.sink { completion in
             print(completion)
         } receiveValue: { [weak self] model in
-            if let dataForToday = model.filter({ $0.copticDate == self?.copticDate }).first {
+            print(Date.currentYear)
+            let dataForCurrentYear = model.filter { $0.year == Date.currentYear }
+            if let dataForToday = dataForCurrentYear.filter({ $0.copticDate == self?.copticDate }).first {
                 self?.checkIfEmpty(data: dataForToday)
                 dataForToday.saintIcon.forEach({
                     self?.saintIconModels.append(SaintIconModel(name: $0))
                 })
+                self?.feastName = dataForToday.feastName
+                self?.liturgicalInformation = dataForToday.liturgicalInformation
                 self?.upcomingFeasts = dataForToday.upcomingEvents
             }
         }
         .store(in: &cancellables)
+    }
+    
+    func showLiturgicalInfo() {
+        guard let liturgicalInformation = liturgicalInformation else { return }
+        let text = liturgicalInformation.replacingOccurrences(of: ", ", with: "\n\n")
+        self.liturgicalInformation = text
+        withAnimation(.easeInOut) {
+            isShowingFeastName.toggle()
+        }
     }
     
     private func checkIfEmpty(data: IconModel) {

@@ -16,6 +16,9 @@ struct HomeView: View {
     @State private var presentableSection: PresentableSection?
     @State private var imageTapped = false
     @State private var readingTapped = false
+    @State private var selectedIcon: SaintIconModel?
+    @State private var selectedCommemoration: Reading?
+    @State private var selectedPresentableSection: PresentableSection?
     
     var body: some View {
         contentView
@@ -64,13 +67,14 @@ struct HomeView: View {
     
     //MARK: - Fast
     private var fastView: some View {
-        Text("Nativity Fast")
+        Text(viewModel.fastView)
             .font(.system(size: 17, weight: .medium, design: .rounded))
             .foregroundColor(.black)
             .padding(.vertical, 7)
             .padding(.horizontal, 20)
             .background(Color.superLightBlue.opacity(0.3))
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .onTapGesture(perform: viewModel.showLiturgicalInfo)
     }
     
     private var iconsView: some View {
@@ -78,18 +82,26 @@ struct HomeView: View {
             HStack(spacing: -20) {
                 ForEach(viewModel.saintIconModels) { iconModel in
                     GeometryReader { proxy in
-                        Button { } label: {
-                            SaintIconImageView(iconModel: iconModel)
-                                .padding(.top, 20)
-                                .padding(.horizontal, 5)
-                        }
-                        .buttonStyle(GrowingButton())
-                        .rotation3DEffect(
-                            Angle(degrees: (Double(proxy.frame(in: .global).minX) - 100) / -50 ),
-                            axis: (x: 0, y: 50, z: 0.0)
-                        )
+                        SaintIconImageView(iconModel: iconModel)
+                            .padding(.top, 20)
+                            .padding(.horizontal, 5)
+                            .rotation3DEffect(
+                                Angle(degrees: (Double(proxy.frame(in: .global).minX) - 100) / -50 ),
+                                axis: (x: 0, y: 50, z: 0.0)
+                            )
                     }
                     .frame(width: 350, height: 410)
+                    .scaleEffect(selectedIcon == iconModel ? 1.2 : 1.0)
+                    .onTapGesture {
+                        withAnimation {
+                            selectedIcon = iconModel
+                        }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            withAnimation {
+                                selectedIcon = nil
+                            }
+                        }
+                    }
                 }
             }
             .padding(10)
@@ -113,6 +125,19 @@ struct HomeView: View {
                                 .multilineTextAlignment(.leading)
                                 .padding(.bottom, 5)
                                 .padding(.horizontal, 16)
+                                .scaleEffect(selectedCommemoration == reading ? 1.1 : 1.0)
+                                .onTapGesture {
+                                    withAnimation {
+                                        selectedCommemoration = reading
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                        withAnimation {
+                                            selectedCommemoration = nil
+                                            self.reading = reading
+                                            showSynaxars = true
+                                        }
+                                    }
+                                }
                         }
                     }
                 }
@@ -144,8 +169,20 @@ struct HomeView: View {
                         } label: {
                             ReadingSection(presentableSection: section,
                                            hasOneName: viewModel.hasOneName(for: section))
+                            .scaleEffect(selectedPresentableSection == section ? 1.2 : 1.0)
+                            .onTapGesture {
+                                withAnimation {
+                                    selectedPresentableSection = section
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                    withAnimation {
+                                        selectedPresentableSection = nil
+                                        presentableSection = section
+                                        showReadings = true
+                                    }
+                                }
+                            }
                         }
-                        .buttonStyle(GrowingButton())
                     }
                 }
             }

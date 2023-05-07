@@ -16,8 +16,8 @@ struct Provider: TimelineProvider {
     
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(),
-                    image: UIImage(named: "stmary")!,
-                    imageName: "Saint Mary",
+                    image: UIImage(named: "placeholder")!,
+                    imageName: "Placeholder",
                     color: color)
     }
     
@@ -45,6 +45,12 @@ struct Provider: TimelineProvider {
             let entry = SimpleEntry(date: Date(),
                                     image: UIImage(named: imageName) ?? UIImage(named: "placeholder")!,
                                     imageName: imageName,
+                                    color: color)
+            entries.append(entry)
+        } else {
+            let entry = SimpleEntry(date: Date(),
+                                    image: UIImage(named: "placeholder")!,
+                                    imageName: nil,
                                     color: color)
             entries.append(entry)
         }
@@ -78,7 +84,7 @@ struct WidgetData: Decodable {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let image: UIImage
-    let imageName: String
+    let imageName: String?
     var color: UIColor?
 }
 
@@ -92,19 +98,20 @@ struct NategaWidgetEntryView : View {
             Image(uiImage: entry.image)
                 .resizable()
                 .aspectRatio(1, contentMode: .fit)
-        
-            textDate
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                .padding(.vertical, 5)
-                .padding(.horizontal, 8)
-                .cornerRadius(12)
-                .background(
-                    Rectangle()
-                        .fill(Color(uiColor: color).opacity(0.5)))
-                .cornerRadius(12)
-                .padding(.top, 100)
-                .padding(.horizontal, 8)
+            if let _ = entry.imageName {
+                textDate
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+                    .padding(.vertical, 5)
+                    .padding(.horizontal, 8)
+                    .cornerRadius(12)
+                    .background(
+                        Rectangle()
+                            .fill(Color(uiColor: color).opacity(0.5)))
+                    .cornerRadius(12)
+                    .padding(.top, 100)
+                    .padding(.horizontal, 8)
+            }
         }
         .onAppear {
             print("widget on appear")
@@ -115,7 +122,7 @@ struct NategaWidgetEntryView : View {
     }
     
     private var textDate: some View {
-        Text(entry.imageName)
+        Text(entry.imageName ?? "")
             .fontWeight(.semibold)
             .foregroundColor(.white)
     }

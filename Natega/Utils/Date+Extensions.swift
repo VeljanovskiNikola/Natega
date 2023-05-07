@@ -14,6 +14,10 @@ extension Date {
         return dateFormatter.string(from: Date())
     }
     
+    static var currentYear: String {
+        String(Calendar.current.component(.year, from: Date()))
+    }
+    
     func localDate() -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
