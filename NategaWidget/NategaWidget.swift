@@ -16,8 +16,8 @@ struct Provider: TimelineProvider {
     
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(),
-                    image: UIImage(named: "stmary")!,
-                    imageName: "Saint Mary",
+                    image: UIImage(named: "placeholder")!,
+                    imageName: "Placeholder",
                     color: color)
     }
     
@@ -48,6 +48,12 @@ struct Provider: TimelineProvider {
             let entry = SimpleEntry(date: Date(),
                                     image: UIImage(named: imageName) ?? UIImage(named: "placeholder")!,
                                     imageName: imageName,
+                                    color: color)
+            entries.append(entry)
+        } else {
+            let entry = SimpleEntry(date: Date(),
+                                    image: UIImage(named: "placeholder")!,
+                                    imageName: nil,
                                     color: color)
             entries.append(entry)
         }
@@ -81,7 +87,7 @@ struct WidgetData: Decodable {
 struct SimpleEntry: TimelineEntry {
     let date: Date
     let image: UIImage
-    let imageName: String
+    let imageName: String?
     var color: UIColor?
 }
 
@@ -125,14 +131,7 @@ struct NategaWidgetEntryView : View {
                             .padding(10)
                     }
                     .frame(maxWidth: 170, maxHeight: 170, alignment: .bottom)
-                }
-
-  
-
-
-
-                        
-                
+                }                
             }
             .onAppear {
                 print("widget on appear")
@@ -141,6 +140,12 @@ struct NategaWidgetEntryView : View {
                 print("widget on disappear")
             }
         }
+    }
+    
+    private var textDate: some View {
+        Text(entry.imageName ?? "")
+            .fontWeight(.semibold)
+            .foregroundColor(.white)
     }
 }
 

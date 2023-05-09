@@ -8,7 +8,7 @@
 import SwiftUI
 import UIImageColors
 
-struct SaintIconModel: Identifiable {
+struct SaintIconModel: Identifiable, Equatable {
     let id = UUID()
     var name: String
     var textBackgroundColour: UIColor {

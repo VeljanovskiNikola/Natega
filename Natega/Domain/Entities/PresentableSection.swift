@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PresentableSection: Identifiable {
+struct PresentableSection: Identifiable, Equatable {
     let id = UUID()
     let passages: [Passage]
     let subSectionTitle: String
