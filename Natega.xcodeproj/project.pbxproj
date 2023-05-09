@@ -13,6 +13,7 @@
 		476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B39012983E3FB00CFFADC /* TestHomeView3.swift */; };
 		477C537E297D9FED00722487 /* SmallIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477C537D297D9FED00722487 /* SmallIcon.swift */; };
 		4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */; };
+		478963AB29ED8DDD00EEE0FF /* ReadingsColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478963AA29ED8DDD00EEE0FF /* ReadingsColours.swift */; };
 		4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403462997C8B3007DAB84 /* PresentableSection.swift */; };
 		4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034A29BA646F007DAB84 /* ButtonStyle.swift */; };
 		4C34034E29BE8364007DAB84 /* icons2023.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C34034D29BE8364007DAB84 /* icons2023.json */; };
@@ -87,6 +88,7 @@
 		476B39012983E3FB00CFFADC /* TestHomeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeView3.swift; sourceTree = "<group>"; };
 		477C537D297D9FED00722487 /* SmallIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIcon.swift; sourceTree = "<group>"; };
 		4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintIconModel.swift; sourceTree = "<group>"; };
+		478963AA29ED8DDD00EEE0FF /* ReadingsColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsColours.swift; sourceTree = "<group>"; };
 		4C3403462997C8B3007DAB84 /* PresentableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableSection.swift; sourceTree = "<group>"; };
 		4C34034A29BA646F007DAB84 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		4C34034D29BE8364007DAB84 /* icons2023.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons2023.json; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */,
 				474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */,
 				474703D6299A81FC00B2D0D1 /* SheetModel.swift */,
+				478963AA29ED8DDD00EEE0FF /* ReadingsColours.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				477C537E297D9FED00722487 /* SmallIcon.swift in Sources */,
 				4CCFA64D295A450300342776 /* NategaWidget.intentdefinition in Sources */,
 				4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */,
+				478963AB29ED8DDD00EEE0FF /* ReadingsColours.swift in Sources */,
 				476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */,
 				4CCFA65E295F689600342776 /* Image+Extensions.swift in Sources */,
 				4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */,
@@ -631,7 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Natega/Preview Content\"";
-				DEVELOPMENT_TEAM = 76YKNW8C9R;
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Natega/Info.plist;
@@ -646,7 +650,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -666,7 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Natega/Preview Content\"";
-				DEVELOPMENT_TEAM = 76YKNW8C9R;
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Natega/Info.plist;
@@ -681,7 +685,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -700,19 +704,19 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 76YKNW8C9R;
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NategaWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NategaWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega1.NategaWidget1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2.NategaWidget2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -730,19 +734,19 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 76YKNW8C9R;
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NategaWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NategaWidget;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega1.NategaWidget1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2.NategaWidget2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;

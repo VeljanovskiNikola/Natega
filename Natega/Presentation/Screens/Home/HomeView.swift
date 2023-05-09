@@ -25,6 +25,9 @@ struct HomeView: View {
             .onAppear(perform: viewModel.onAppear)
             .buttonStyle(.plain)
             .redacted(reason: viewModel.state == .loading ? .placeholder : [])
+            .animation(.easeInOut(duration: 0.5))
+            .transition(.opacity)
+
     }
     
     //MARK: - Content
@@ -74,6 +77,7 @@ struct HomeView: View {
             .padding(.horizontal, 20)
             .background(Color.superLightBlue.opacity(0.3))
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .modifier(TapToScaleModifier())
             .onTapGesture(perform: viewModel.showLiturgicalInfo)
     }
     
@@ -114,17 +118,25 @@ struct HomeView: View {
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .padding(.horizontal, 16)
             HStack(spacing: 0) {
-                TabView {
-                    ForEach(viewModel.synaxars, id: \.title) { reading in
-                        Button {
-                            self.reading = reading
-                            showSynaxars = true
-                        } label: {
-                            Text(reading.title ?? "")
-                                .lineLimit(1)
-                                .multilineTextAlignment(.leading)
-                                .padding(.bottom, 5)
-                                .padding(.horizontal, 16)
+                if viewModel.synaxars.isEmpty {
+                    // Add an empty view or placeholder here
+                    Text("As today is a Major Feast of the Lord, the Synaxarium is not read today.")
+                        .padding(.bottom, 5)
+                        .padding(.horizontal, 16)
+                } else {
+                    TabView {
+                        ForEach(viewModel.synaxars, id: \.title) { reading in
+                            Button {
+                                self.reading = reading
+                                showSynaxars = true
+                            } label: {
+                                Text(reading.title ?? "")
+                                    .lineLimit(1)
+                                    .multilineTextAlignment(.leading)
+                                    .padding(.bottom, 5)
+                                    .padding(.horizontal, 16)
+                            }
+                            .modifier(TapToScaleModifier())
                                 .scaleEffect(selectedCommemoration == reading ? 1.1 : 1.0)
                                 .onTapGesture {
                                     withAnimation {
@@ -140,10 +152,10 @@ struct HomeView: View {
                                 }
                         }
                     }
+                    .halfSheet(showSheet: $showSynaxars) {
+                        SynaxarsDetailsView(reading: $reading)
+                    } onDismiss: { self.reading = nil }
                 }
-                .halfSheet(showSheet: $showSynaxars) {
-                    SynaxarsDetailsView(reading: $reading)
-                } onDismiss: { self.reading = nil }
             }
             .multilineTextAlignment(.center)
             .font(.system(size: 20, weight: .regular, design: .rounded))
@@ -162,13 +174,15 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack (spacing: -10) {
-                    ForEach(viewModel.presentableSections) { section in
+                    ForEach(viewModel.presentableSections.indices, id: \.self) { index in
                         Button {
-                            presentableSection = section
+                            presentableSection = viewModel.presentableSections[index]
                             showReadings = true
                         } label: {
-                            ReadingSection(presentableSection: section,
-                                           hasOneName: viewModel.hasOneName(for: section))
+                            ReadingSection(presentableSection: viewModel.presentableSections[index],
+                                           hasOneName: viewModel.hasOneName(for: viewModel.presentableSections[index]),
+                                           readingsColour: readingsColours[index % readingsColours.count])
+                        }
                             .scaleEffect(selectedPresentableSection == section ? 1.2 : 1.0)
                             .onTapGesture {
                                 withAnimation {
@@ -182,9 +196,8 @@ struct HomeView: View {
                                     }
                                 }
                             }
-                        }
-                    }
                 }
+                .padding(.bottom, 8)
             }
             .padding(.top, -10)
             .halfSheet(showSheet: $showReadings) {
@@ -197,7 +210,7 @@ struct HomeView: View {
     private var upcomingEvents: some View {
         VStack(alignment: .leading) {
             Text("Upcoming feasts")
-                .font(.system(size: 20, weight: .bold))
+                .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .padding(.bottom, 10)
                 .padding(.horizontal, 16)
 

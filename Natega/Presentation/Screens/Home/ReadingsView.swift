@@ -10,6 +10,7 @@ import SwiftUI
 struct ReadingSection: View {
     let presentableSection: PresentableSection
     let hasOneName: Bool
+    let readingsColour: ReadingsColours
     
     var body: some View {
         VStack {
@@ -17,21 +18,11 @@ struct ReadingSection: View {
                 Text("\(presentableSection.passages.first?.bookTranslation ?? "")")
                 HStack(spacing: 3) {
                     ForEach(presentableSection.passages) { passage in
-                        if presentableSection.passages.count > 1 {
-                            if passage == presentableSection.passages.last {
-                                Text(passage.ref)
-                            } else {
-                                Text(passage.ref)
-                                Text("&")
-                            }
-                        } else {
-                            Text("\(passage.ref)")
-                                .lineLimit(1)
-                        }
+                        Text(passage.ref)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.5)
                     }
                 }
-                .minimumScaleFactor(0.5)
-
 
                 Text("\(presentableSection.subSectionTitle) ∘ \(presentableSection.title)")
                     .font(.caption2)
@@ -45,15 +36,16 @@ struct ReadingSection: View {
                     .padding(.top, -5)
             }
         }
-        .foregroundColor(.white)
+        .foregroundColor(Color(readingsColour.fontColour))
         .font(.system(size: 18, weight: .regular, design: .rounded))
         .padding(.horizontal, 10)
         .padding(.vertical, 10)
-        .background(Color.randomDarkColor())
+        .background(Color(readingsColour.backgroundColour))
         .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
         .frame(maxWidth: 200, maxHeight: 100)
-        .shadow(color: Color.shadow.opacity(0.7), radius: 5, x: 0, y: 10)
+        .shadow(color: Color(readingsColour.shadowColour).opacity(0.7), radius: 5, x: 0, y: 10)
         .padding()
     }
 }
+
 
