@@ -124,29 +124,24 @@ struct HomeView: View {
                 } else {
                     TabView {
                         ForEach(viewModel.synaxars, id: \.title) { reading in
-                            Button {
-                                self.reading = reading
-                                showSynaxars = true
-                            } label: {
-                                Text(reading.title ?? "")
-                                    .lineLimit(1)
-                                    .multilineTextAlignment(.leading)
-                                    .padding(.bottom, 5)
-                                    .padding(.horizontal, 16)
-                            }
-                            .scaleEffect(selectedCommemoration == reading ? 1.1 : 1.0)
-                            .onTapGesture {
-                                withAnimation {
-                                    selectedCommemoration = reading
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                            Text(reading.title ?? "")
+                                .lineLimit(1)
+                                .multilineTextAlignment(.leading)
+                                .padding(.bottom, 5)
+                                .padding(.horizontal, 16)
+                                .scaleEffect(selectedCommemoration == reading ? 1.1 : 1.0)
+                                .onTapGesture {
                                     withAnimation {
-                                        selectedCommemoration = nil
-                                        self.reading = reading
-                                        showSynaxars = true
+                                        selectedCommemoration = reading
+                                    }
+                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                                        withAnimation {
+                                            selectedCommemoration = nil
+                                            self.reading = reading
+                                            showSynaxars = true
+                                        }
                                     }
                                 }
-                            }
                         }
                     }
                     .halfSheet(showSheet: $showSynaxars) {
