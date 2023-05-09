@@ -27,7 +27,6 @@ struct HomeView: View {
             .redacted(reason: viewModel.state == .loading ? .placeholder : [])
             .animation(.easeInOut(duration: 0.5))
             .transition(.opacity)
-
     }
     
     //MARK: - Content
@@ -77,7 +76,6 @@ struct HomeView: View {
             .padding(.horizontal, 20)
             .background(Color.superLightBlue.opacity(0.3))
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
-            .modifier(TapToScaleModifier())
             .onTapGesture(perform: viewModel.showLiturgicalInfo)
     }
     
@@ -136,20 +134,19 @@ struct HomeView: View {
                                     .padding(.bottom, 5)
                                     .padding(.horizontal, 16)
                             }
-                            .modifier(TapToScaleModifier())
-                                .scaleEffect(selectedCommemoration == reading ? 1.1 : 1.0)
-                                .onTapGesture {
+                            .scaleEffect(selectedCommemoration == reading ? 1.1 : 1.0)
+                            .onTapGesture {
+                                withAnimation {
+                                    selectedCommemoration = reading
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                     withAnimation {
-                                        selectedCommemoration = reading
-                                    }
-                                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                        withAnimation {
-                                            selectedCommemoration = nil
-                                            self.reading = reading
-                                            showSynaxars = true
-                                        }
+                                        selectedCommemoration = nil
+                                        self.reading = reading
+                                        showSynaxars = true
                                     }
                                 }
+                            }
                         }
                     }
                     .halfSheet(showSheet: $showSynaxars) {
@@ -175,36 +172,32 @@ struct HomeView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack (spacing: -10) {
                     ForEach(viewModel.presentableSections.indices, id: \.self) { index in
-                        Button {
-                            presentableSection = viewModel.presentableSections[index]
-                            showReadings = true
-                        } label: {
                             ReadingSection(presentableSection: viewModel.presentableSections[index],
                                            hasOneName: viewModel.hasOneName(for: viewModel.presentableSections[index]),
                                            readingsColour: readingsColours[index % readingsColours.count])
-                        }
-                            .scaleEffect(selectedPresentableSection == section ? 1.2 : 1.0)
-                            .onTapGesture {
+                        .scaleEffect(selectedPresentableSection == viewModel.presentableSections[index] ? 1.2 : 1.0)
+                        .onTapGesture {
+                            withAnimation {
+                                selectedPresentableSection = viewModel.presentableSections[index]
+                            }
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                                 withAnimation {
-                                    selectedPresentableSection = section
-                                }
-                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                    withAnimation {
-                                        selectedPresentableSection = nil
-                                        presentableSection = section
-                                        showReadings = true
-                                    }
+                                    selectedPresentableSection = nil
+                                    presentableSection = viewModel.presentableSections[index]
+                                    showReadings = true
                                 }
                             }
+                        }
+                    }
+                    .padding(.bottom, 8)
                 }
-                .padding(.bottom, 8)
+                .padding(.top, -10)
+                .halfSheet(showSheet: $showReadings) {
+                    ReadingDetailsView(section: presentableSection)
+                } onDismiss: { self.presentableSection = nil }
             }
-            .padding(.top, -10)
-            .halfSheet(showSheet: $showReadings) {
-                ReadingDetailsView(section: presentableSection)
-            } onDismiss: { self.presentableSection = nil }
+            .foregroundColor(.black)
         }
-        .foregroundColor(.black)
     }
     
     private var upcomingEvents: some View {
@@ -213,7 +206,7 @@ struct HomeView: View {
                 .font(.system(size: 20, weight: .semibold, design: .rounded))
                 .padding(.bottom, 10)
                 .padding(.horizontal, 16)
-
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 7) {
                     ForEach(viewModel.upcomingFeasts) { feast in
@@ -244,46 +237,46 @@ struct HomeView: View {
                        endPoint: .bottom)
         .edgesIgnoringSafeArea(.all)
     }
-}
-
-private struct SaintIconImageView: View {
     
-    let iconModel: SaintIconModel
-    
-    var body: some View {
-        Image(iconModel.name)
-            .resizable()
-            .scaledToFill()
-            .frame(maxWidth: 300, maxHeight: 350)
-            .clipped()
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-            .overlay(alignment: .bottom) {
-                Text(iconModel.name)
-                    .font(Font.system(size: 15, design: .rounded).weight(.semibold))
-                    .multilineTextAlignment(.center)
-                    .padding(5)
-                    .padding(.horizontal, 3)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .background(Color(iconModel.textBackgroundColour).opacity(0.8))
-            }
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-            .background(Image(iconModel.name)
+    private struct SaintIconImageView: View {
+        
+        let iconModel: SaintIconModel
+        
+        var body: some View {
+            Image(iconModel.name)
                 .resizable()
                 .scaledToFill()
                 .frame(maxWidth: 300, maxHeight: 350)
                 .clipped()
                 .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                .blur(radius: 10)
-                .offset(x:8, y: 11)
-                .opacity(0.65)
-                .overlay(Image(iconModel.name)
+                .overlay(alignment: .bottom) {
+                    Text(iconModel.name)
+                        .font(Font.system(size: 15, design: .rounded).weight(.semibold))
+                        .multilineTextAlignment(.center)
+                        .padding(5)
+                        .padding(.horizontal, 3)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: .infinity)
+                        .background(Color(iconModel.textBackgroundColour).opacity(0.8))
+                }
+                .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                .background(Image(iconModel.name)
                     .resizable()
                     .scaledToFill()
                     .frame(maxWidth: 300, maxHeight: 350)
                     .clipped()
-                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous)))
-            )
-            .frame(maxWidth: 300, maxHeight: 350)
+                    .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    .blur(radius: 10)
+                    .offset(x:8, y: 11)
+                    .opacity(0.65)
+                    .overlay(Image(iconModel.name)
+                        .resizable()
+                        .scaledToFill()
+                        .frame(maxWidth: 300, maxHeight: 350)
+                        .clipped()
+                        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous)))
+                )
+                .frame(maxWidth: 300, maxHeight: 350)
+        }
     }
 }

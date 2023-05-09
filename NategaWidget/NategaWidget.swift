@@ -115,17 +115,19 @@ struct NategaWidgetEntryView : View {
                 
                 GeometryReader { geometry in
                     VStack(alignment: .center) {
-                        Text(entry.imageName)
-                            .font(.system(size: 13, weight: .semibold, design: .rounded))
-                            .foregroundColor(.white)
-                            .minimumScaleFactor(0.8)
-                            .truncationMode(.tail)
-                            .multilineTextAlignment(.center)
-                            .lineLimit(2)
-                            .padding(6)
-                            .background(Color.black.opacity(0.4))
-                            .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                            .padding(10)
+                        if let _ = entry.imageName {
+                            Text(entry.imageName!)
+                                .font(.system(size: 13, weight: .semibold, design: .rounded))
+                                .foregroundColor(.white)
+                                .minimumScaleFactor(0.8)
+                                .truncationMode(.tail)
+                                .multilineTextAlignment(.center)
+                                .lineLimit(2)
+                                .padding(6)
+                                .background(Color.black.opacity(0.4))
+                                .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
+                                .padding(10)
+                        }
                     }
                     .frame(maxWidth: 170, maxHeight: 170, alignment: .bottom)
                 }                
