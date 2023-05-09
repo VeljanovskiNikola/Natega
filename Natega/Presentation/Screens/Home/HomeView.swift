@@ -19,6 +19,7 @@ struct HomeView: View {
     @State private var selectedIcon: SaintIconModel?
     @State private var selectedCommemoration: Reading?
     @State private var selectedPresentableSection: PresentableSection?
+    @State private var isFeastTapped:Bool = false
     
     var body: some View {
         contentView
@@ -76,7 +77,9 @@ struct HomeView: View {
             .padding(.horizontal, 20)
             .background(Color.superLightBlue.opacity(0.3))
             .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+            .animation(.spring(response: 0.4, dampingFraction: 0.75))
             .onTapGesture(perform: viewModel.showLiturgicalInfo)
+            .padding(.horizontal, isFeastTapped ? 0 : 20)
     }
     
     private var iconsView: some View {
@@ -84,26 +87,19 @@ struct HomeView: View {
             HStack(spacing: -20) {
                 ForEach(viewModel.saintIconModels) { iconModel in
                     GeometryReader { proxy in
-                        SaintIconImageView(iconModel: iconModel)
-                            .padding(.top, 20)
-                            .padding(.horizontal, 5)
-                            .rotation3DEffect(
-                                Angle(degrees: (Double(proxy.frame(in: .global).minX) - 100) / -50 ),
-                                axis: (x: 0, y: 50, z: 0.0)
-                            )
+                        Button { } label: {
+                            SaintIconImageView(iconModel: iconModel)
+                                .padding(.top, 20)
+                                .padding(.horizontal, 5)
+                        }
+                        .modifier(TapToScaleModifier())
+                        .buttonStyle(GrowingButton())
+                        .rotation3DEffect(
+                            Angle(degrees: (Double(proxy.frame(in: .global).minX) - 100) / -50),
+                            axis: (x: 0, y: 50, z: 0.0)
+                        )
                     }
                     .frame(width: 350, height: 410)
-                    .scaleEffect(selectedIcon == iconModel ? 1.2 : 1.0)
-                    .onTapGesture {
-                        withAnimation {
-                            selectedIcon = iconModel
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                            withAnimation {
-                                selectedIcon = nil
-                            }
-                        }
-                    }
                 }
             }
             .padding(10)
@@ -129,9 +125,10 @@ struct HomeView: View {
                                 .multilineTextAlignment(.leading)
                                 .padding(.bottom, 5)
                                 .padding(.horizontal, 16)
-                                .scaleEffect(selectedCommemoration == reading ? 1.1 : 1.0)
+                                .scaleEffect(selectedCommemoration == reading ? 1.05 : 1.0)
+                                .animation(.spring(response: 0.6, dampingFraction: 0.4))
                                 .onTapGesture {
-                                    withAnimation {
+                                    withAnimation() {
                                         selectedCommemoration = reading
                                     }
                                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -170,7 +167,8 @@ struct HomeView: View {
                             ReadingSection(presentableSection: viewModel.presentableSections[index],
                                            hasOneName: viewModel.hasOneName(for: viewModel.presentableSections[index]),
                                            readingsColour: readingsColours[index % readingsColours.count])
-                        .scaleEffect(selectedPresentableSection == viewModel.presentableSections[index] ? 1.2 : 1.0)
+                        .scaleEffect(selectedPresentableSection == viewModel.presentableSections[index] ? 1.1 : 1.0)
+                        .animation(.spring(response: 0.6, dampingFraction: 0.4))
                         .onTapGesture {
                             withAnimation {
                                 selectedPresentableSection = viewModel.presentableSections[index]
