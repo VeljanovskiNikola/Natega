@@ -8,7 +8,6 @@
 import WidgetKit
 import SwiftUI
 import Intents
-import UIImageColors
 
 struct Provider: TimelineProvider {
     
@@ -43,8 +42,6 @@ struct Provider: TimelineProvider {
         let icons = loadJson(from: "icons2023")
         if let dateForToday = icons.first(where: { $0.copticDate == copticDate }) {
             let imageName = dateForToday.saintIcon.first ?? ""
-            let imageColors = UIImage(named: imageName)?.getColors()
-            color = imageColors?.background
             let entry = SimpleEntry(date: Date(),
                                     image: UIImage(named: imageName) ?? UIImage(named: "placeholder")!,
                                     imageName: imageName,
