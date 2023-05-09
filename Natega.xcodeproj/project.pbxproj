@@ -38,7 +38,6 @@
 		4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */; };
 		4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE92953818500C0B279 /* Date+Extensions.swift */; };
 		4C4A9AED29575C2C00C0B279 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 4C4A9AEC29575C2C00C0B279 /* UIImageColors */; };
-		4C97CC2429DF595700ECD7B0 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 4C97CC2329DF595700ECD7B0 /* UIImageColors */; };
 		4CC7931229C10C0000535818 /* SynaxarsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */; };
 		4CCFA63F295A450200342776 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA622295A447300342776 /* WidgetKit.framework */; };
 		4CCFA640295A450200342776 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA624295A447300342776 /* SwiftUI.framework */; };
@@ -143,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C97CC2429DF595700ECD7B0 /* UIImageColors in Frameworks */,
 				4CCFA640295A450200342776 /* SwiftUI.framework in Frameworks */,
 				4CCFA63F295A450200342776 /* WidgetKit.framework in Frameworks */,
 			);
@@ -379,7 +377,6 @@
 			);
 			name = NategaWidgetExtension;
 			packageProductDependencies = (
-				4C97CC2329DF595700ECD7B0 /* UIImageColors */,
 			);
 			productName = NategaWidgetExtension;
 			productReference = 4CCFA63E295A450200342776 /* NategaWidgetExtension.appex */;
@@ -801,11 +798,6 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		4C4A9AEC29575C2C00C0B279 /* UIImageColors */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */;
-			productName = UIImageColors;
-		};
-		4C97CC2329DF595700ECD7B0 /* UIImageColors */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */;
 			productName = UIImageColors;
