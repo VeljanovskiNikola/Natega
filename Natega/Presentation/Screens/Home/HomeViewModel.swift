@@ -99,7 +99,7 @@ final class HomeViewModel: ObservableObject {
         guard let liturgicalInformation = liturgicalInformation else { return }
         let text = liturgicalInformation.replacingOccurrences(of: ", ", with: "\n\n")
         self.liturgicalInformation = text
-        withAnimation(.easeInOut) {
+        withAnimation() {
             isShowingFeastName.toggle()
         }
     }
