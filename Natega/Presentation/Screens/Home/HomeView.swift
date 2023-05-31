@@ -196,7 +196,7 @@ struct HomeView: View {
     private var upcomingEvents: some View {
         VStack(alignment: .leading) {
             Text("Upcoming feasts")
-                .font(.system(size: 20, weight: .semibold, design: .rounded))
+                .font(.system(size: 20, weight: .bold, design: .rounded))
                 .padding(.bottom, 10)
                 .padding(.horizontal, 16)
             
