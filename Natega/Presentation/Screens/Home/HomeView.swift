@@ -72,6 +72,7 @@ struct HomeView: View {
     private var fastView: some View {
         Text(viewModel.fastView)
             .font(.system(size: 17, weight: .medium, design: .rounded))
+            .multilineTextAlignment(.center)
             .foregroundColor(.black)
             .padding(.vertical, 7)
             .padding(.horizontal, 20)
