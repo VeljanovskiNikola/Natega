@@ -1,9 +1,9 @@
 [
     {
-        "copticDate": "Bashans 29",
-        "feastName": "The First Week of The Fast of the Holy Apostles",
+        "copticDate": "Mesra 10",
+        "feastName": "The Fast of the Holy Virgin St. Mary",
         "liturgicalInformation": "Annual tune",
-        "saintIcon": ["The Fast of the Holy Apostles", "St Simon the Stylite", "Archangel Michael", "Christ Walking on Water"],
+        "saintIcon": ["The Assumption", "RedBorder", "NewerEl3adra2", "NewEl3dra","El3adra", "NewerStMary", "OtherStMaryTest","StMaryTest", "The Nativity", "The Fast of the Holy Apostles", "St Simon the Stylite", "Archangel Michael", "Christ Walking on Water"],
         "feastIcon": [],
         "upcomingEvents": [
             {
