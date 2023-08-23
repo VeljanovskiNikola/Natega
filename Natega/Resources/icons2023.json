@@ -1,9 +1,9 @@
 [
     {
-        "copticDate": "Mesra 10",
+        "copticDate": "Mesra 17",
         "feastName": "The Fast of the Holy Virgin St. Mary",
         "liturgicalInformation": "Annual tune",
-        "saintIcon": ["The Assumption", "RedBorder", "NewerEl3adra2", "NewEl3dra","El3adra", "NewerStMary", "OtherStMaryTest","StMaryTest", "The Nativity", "The Fast of the Holy Apostles", "St Simon the Stylite", "Archangel Michael", "Christ Walking on Water"],
+        "saintIcon": ["The Assumption", "The Nativity", "The Fast of the Holy Apostles", "St Simon the Stylite", "Archangel Michael", "Christ Walking on Water"],
         "feastIcon": [],
         "upcomingEvents": [
             {
