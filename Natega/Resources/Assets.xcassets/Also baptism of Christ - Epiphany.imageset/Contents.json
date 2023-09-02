@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Also baptism of Christ - Epiphany.heic",
-      "idiom" : "universal"
+      "filename" : "Also Baptism of Christ - Epiphany.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

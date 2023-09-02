@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Miracle of Cana at Galilee - turning the water into wine.heic",
-      "idiom" : "universal"
+      "filename" : "Miracle of Cana at Galilee - turning the water into wine.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
