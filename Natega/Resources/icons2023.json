@@ -1,360 +1,199 @@
 [
     {
         "copticDate": "Mesra 26",
-        "feastName": "The Fast of the Holy Virgin St. Mary",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["The Assumption", "The Nativity", "The Fast of the Holy Apostles", "St Simon the Stylite", "Archangel Michael", "Christ Walking on Water"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "Feast of the Holy Epiphany",
-                "time": "In 3 days"
-            },
-            {
-                "name": "Feast of Archangel Michael",
-                "time": "In 4 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Baramhat 29",
         "feastName": "Annual",
         "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Also Pope Kyrillos VI Colorized"],
+        "saintIcon": [
+            "Church"
+        ],
         "feastIcon": [],
         "upcomingEvents": [
             {
-                "name": "Paramoun of the Holy Epiphany",
-                "time": "Tomorrow"
+                "name": "The Commemoration of our fathers Abraham, Isaac and Jacob",
+                "time": "In 2 days"
             },
             {
-                "name": "Feast of Archangel Michael",
+                "name": "The Commemoration of the Three Major Feasts of the Lord: the Annunciation, the Nativity and the Resurrection",
                 "time": "In 3 days"
             }
         ],
         "year": "2023"
     },
     {
-        "copticDate": "Baramhat 30",
-        "feastName": "Paramoun (preparation for) the Holy Epiphany",
+        "copticDate": "Mesra 27",
+        "feastName": "Annual",
         "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Baptism of Christ - Epiphany", "Also baptism of Christ - Epiphany"],
+        "saintIcon": [
+            "Church"
+        ],
         "feastIcon": [],
         "upcomingEvents": [
             {
-                "name": "Feast of the Holy Epiphany",
+                "name": "The Commemoration of our fathers Abraham, Isaac and Jacob",
                 "time": "Tomorrow"
             },
             {
-                "name": "Feast of Archangel Michael",
+                "name": "The Commemoration of the Three Major Feasts of the Lord: the Annunciation, the Nativity and the Resurrection",
                 "time": "In 2 days"
             }
         ],
         "year": "2023"
     },
     {
-        "copticDate": "Toubah 11",
-        "feastName": "Feast of the Holy Epiphany (Theophany)",
-        "liturgicalInformation": "Festal tune",
-        "saintIcon": ["Baptism of Christ - Epiphany", "Also baptism of Christ - Epiphany"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "Feast of the Holy Epiphany",
-                "time": "Today"
-            },
-            {
-                "name": "Feast of Archangel Michael",
-                "time": "Tomorrow"
-            },
-            {
-                "name": "Feast of St Demiana",
-                "time": "In 2 days"
-            }
+        "copticDate": "Mesra 28",
+        "feastName": "Fourth Sunday of Mesra",
+        "liturgicalInformation": "Annual tune",
+        "saintIcon": [
+            "Our Fathers Abraham, Isaac and Jacob",
+            "Church"
         ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 12",
-        "feastName": "Second day of the Feast of the Holy Epiphany (Theophany)",
-        "liturgicalInformation": "Festal tune",
-        "saintIcon": ["Baptism of Christ - Epiphany", "Archangel Michael"],
         "feastIcon": [],
         "upcomingEvents": [
             {
-                "name": "Second day of the Feast of the Holy Epiphany",
-                "time": "Today"
-            },
-            {
-                "name": "Miracle of Cana of Galilee",
-                "time": "Tomorrow"
-            },
-            {
-                "name": "Feast of St Demiana",
+                "name": "The Commemoration of the Three Major Feasts of the Lord: the Annunciation, the Nativity and the Resurrection",
                 "time": "Tomorrow"
             }
         ],
         "year": "2023"
     },
     {
-        "copticDate": "Toubah 13",
-        "feastName": "Annual",
-        "liturgicalInformation": "Festal tune",
-        "saintIcon": ["Miracle of Cana at Galilee - turning the water into wine", "St Demiana and the Forty Virgins"],
+        "copticDate": "Mesra 29",
+        "feastName": "The Commemoration of the Three Major Feasts of the Lord: the Annunciation, the Nativity and the Resurrection",
+        "liturgicalInformation": "Joyful tune",
+        "saintIcon": [
+            "The Annunciation",
+            "The Nativity",
+            "The Resurrection",
+            "St. John the Short",
+            "Church"
+        ],
         "feastIcon": [],
         "upcomingEvents": [],
         "year": "2023"
     },
     {
-        "copticDate": "Toubah 14",
+        "copticDate": "Mesra 30",
         "feastName": "Annual",
         "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St Maximus and St Domadious", "Church"],
+        "saintIcon": [
+            "St. Malachi the Prophet",
+            "Church"
+        ],
         "feastIcon": [],
         "upcomingEvents": [
             {
-                "name": "Feast of St Mary",
-                "time": "In a week"
+                "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                "time": "In 1 week"
             }
         ],
         "year": "2023"
     },
     {
-        "copticDate": "Toubah 15",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-            
-                "name": "Feast of St Maximus and St Domatius",
-                "time": "The day after tomorrow"
-            },
-            {
-                "name": "Feast of St Mary",
-                "time": "In 6 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 16",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-            
-                "name": "Feast of St Maximus and St Domatius",
-                "time": "Tomorrow"
-            },
-            {
-                "name": "Feast of St Mary",
-                "time": "In 5 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 17",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St Maximus and St Domadious", "Anba Yusab El- Abbah", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "Feast of St Mary",
-                "time": "In 4 days"
-            },
-            {
-                "name": "Feast of St Gregory of Nysaa, the brother of St Basil the Great",
-                "time": "In 4 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 18",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "Feast of St Mary",
-                "time": "In 3 days"
-            },
-            {
-                "name": "Feast of St Gregory of Nysaa, the brother of St Basil the Great",
-                "time": "In 3 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 19",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St. Abahor, St. Bisoura and their Mother Ampira", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-            
-                "name": "Feast of St Mary",
-                "time": "The day after tomorrow"
-            },
-            {
-                "name": "Feast of St Gregory of Nysaa, the brother of St Basil the Great",
-                "time": "In 2 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 20",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St John and St Prochorus", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-            
-                "name": "Feast of St Mary",
-                "time": "Tomorrow"
-            },
-            {
-                "name": "Feast St Gregory of Nysaa, the brother of St Basil the Great",
-                "time": "Tomorrow"
-            },
-            {
-                "name": "The feast of St Antony the Great - Father of Monasticism",
-                "time": "In 2 days"
-            }
-            
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 21",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St Mary The Mother of God", "St Hilaria", "St Gregory of Nyssa"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-            
-                "name": "The feast of St Antony the Great - Father of Monasticism",
-                "time": "Tomorrow"
-            },
-            {
-                "name": "The departure of Pope Cyril IV (Kyrillos), 110th Pope of Alexandria",
-                "time": "In 2 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 22",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St Anthony the Great", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "The departure of Pope Cyril IV (Kyrillos), 110th Pope of Alexandria",
-                "time": "Tomorrow"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 23",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Pope Kyrillos VI Icon", "Pope Kyrillos Colorized"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "We will commemorate The Martyrdom of the Forty-Nine Saints, the Elders of Sheheat",
-                "time": "In 3 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 24",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St Mary the Ascetic", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "We commemorate The Martyrdom of the Forty-Nine Saints, the Elders of Sheheat",
-                "time": "In 2 days"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 25",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Church"],
-        "feastIcon": [],
-        "upcomingEvents": [
-            {
-                "name": "We will commemorate The Martyrdom of the Forty-Nine Saints, the Elders of Sheheat",
-                "time": "Tomorrow"
-            }
-        ],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 26",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["The Forty-Nine Saints, Elders of Shiheat", "St Anastasia", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Tubah 27",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Archangel Suriel", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 28",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St Clement", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 29",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["Church"],
-        "feastIcon": [],
-        "upcomingEvents": [],
-        "year": "2023"
-    },
-    {
-        "copticDate": "Toubah 30",
-        "feastName": "Annual",
-        "liturgicalInformation": "Annual tune",
-        "saintIcon": ["St Pistis, Helpis, Agape and Their Mother Sophia", "Church"],
-        "feastIcon": [],
-        "upcomingEvents": [],
-        "year": "2023"
-    }
+            "copticDate": "Nasie 01",
+            "feastName": "The Beginning of Nasie, the Short Coptic Month",
+            "liturgicalInformation": "Annual tune",
+            "saintIcon": [
+                "Church"
+            ],
+            "feastIcon": [],
+            "upcomingEvents": [
+                {
+                    "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                    "time": "In 6 days"
+                }
+            ],
+            "year": "2023"
+        },
+        {
+            "copticDate": "Nasie 02",
+            "feastName": "Annual",
+            "liturgicalInformation": "Annual tune",
+            "saintIcon": [
+                "St. Titus the Apostle",
+                "Church"
+            ],
+            "feastIcon": [],
+            "upcomingEvents": [
+                {
+                    "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                    "time": "In 5 days"
+                }
+            ],
+            "year": "2023"
+        },
+        {
+            "copticDate": "Nasie 03",
+            "feastName": "Annual",
+            "liturgicalInformation": "Annual tune",
+            "saintIcon": [
+                "Archangel Raphael",
+                "St Adrian (Andrianus) and his wife St Natalia (Anatolia)",
+                "Church"
+            ],
+            "feastIcon": [],
+            "upcomingEvents": [
+                {
+                    "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                    "time": "In 4 days"
+                }
+            ],
+            "year": "2023"
+        },
+        {
+            "copticDate": "Nasie 04",
+            "feastName": "Annual",
+            "liturgicalInformation": "Annual tune",
+            "saintIcon": [
+                "St. Poimen (Anba Baymon)",
+                "Church"
+            ],
+            "feastIcon": [],
+            "upcomingEvents": [
+                {
+                    "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                    "time": "In 3 days"
+                }
+            ],
+            "year": "2023"
+        },
+        {
+            "copticDate": "Nasie 05",
+            "feastName": "Annual",
+            "liturgicalInformation": "Annual tune",
+            "saintIcon": [
+                "Holy Prophet Amos",
+                "Also Holy Prophet Amos",
+                "St. Barsoma",
+                "Church"
+            ],
+            "feastIcon": [],
+            "upcomingEvents": [
+                {
+                    "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                    "time": "In 2 days"
+                }
+            ],
+            "year": "2023"
+        },
+        {
+            "copticDate": "Nasie 06",
+            "feastName": "End of the Coptic Year",
+            "liturgicalInformation": "Annual tune",
+            "saintIcon": [
+                "Our Lord Christ the Protector",
+                "Church"
+            ],
+            "feastIcon": [],
+            "upcomingEvents": [
+                {
+                    "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                    "time": "Tomorrow"
+                },
+                {
+                    "name": "The Commemoration of the Martyrdom of St John the Baptist",
+                    "time": "In 2 days"
+                }
+            ],
+            "year": "2023"
+        }
 ]
