@@ -50,6 +50,7 @@ struct HomeView: View {
             readings
             upcomingEvents
                 .padding(.top, 16)
+                .padding(.bottom, 40)
         }
     }
     

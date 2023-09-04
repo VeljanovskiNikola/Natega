@@ -68,7 +68,12 @@
             "Our Lord Christ the Protector"
         ],
         "feastIcon": [],
-        "upcomingEvents": [],
+        "upcomingEvents": [
+            {
+                "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
+                "time": "In 8 days"
+            }
+        ],
         "year": "2023"
     },
     {
