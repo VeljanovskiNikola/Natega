@@ -112,6 +112,7 @@ struct HomeView: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Commemorations")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
+                .foregroundColor(.black)
                 .padding(.horizontal, 16)
             HStack(spacing: 0) {
                 if viewModel.synaxars.isEmpty {
@@ -161,6 +162,7 @@ struct HomeView: View {
         VStack (alignment: .leading) {
             Text("Daily readings")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
+                .foregroundColor(.black)
                 .padding(.horizontal, 16)
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -199,6 +201,7 @@ struct HomeView: View {
         VStack(alignment: .leading) {
             Text("Upcoming feasts")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
+                .foregroundColor(.black)
                 .padding(.bottom, 10)
                 .padding(.horizontal, 16)
             

@@ -126,7 +126,8 @@ struct NategaWidgetEntryView : View {
                                 .padding(6)
                                 .background(Color.black.opacity(0.4))
                                 .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                                .padding(10)
+                                .padding(.horizontal, 10)
+                                .padding(.bottom, 15)
                         }
                     }
                     .frame(maxWidth: 170, maxHeight: 170, alignment: .bottom)
@@ -147,8 +148,6 @@ struct NategaWidgetEntryView : View {
             .foregroundColor(.white)
     }
 }
-
-
 
 struct NategaWidget: Widget {
     let kind: String = "NategaWidget"
