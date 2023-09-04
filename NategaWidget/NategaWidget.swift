@@ -158,8 +158,8 @@ struct NategaWidget: Widget {
                             provider: Provider()) { entry in
             NategaWidgetEntryView(entry: entry, color: entry.color ?? .black)
         }
-                            .configurationDisplayName("Natega Widget")
-                            .description("Coptic icon that updates daily")
+                            .configurationDisplayName("Agios Widget")
+                            .description("A Coptic icon on your home screen that updates daily so you never miss a Saint's Feast ever again!")
                             .supportedFamilies([.systemSmall])
     }
 }
