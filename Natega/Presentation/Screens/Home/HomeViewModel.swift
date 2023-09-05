@@ -66,20 +66,28 @@ final class HomeViewModel: ObservableObject {
             .sink { _ in
                 // Intentionally empty
             }
-    receiveValue: { [weak self] readings in
-        self?.readings = readings
-        self?.setSynaxars()
-        self?.setPresentableSections()
-        self?.update(state: .ready)
+        receiveValue: { [weak self] readings in
+            // Clearing the lists
+            self?.presentableSections.removeAll()
+            self?.synaxars.removeAll()
+            
+            self?.readings = readings
+            self?.setSynaxars()
+            self?.setPresentableSections()
+            self?.update(state: .ready)
+        }
+        .store(in: &cancellables)
     }
-    .store(in: &cancellables)
-    }
+
     
     func loadJson() {
         let icons: AnyPublisher<[IconModel], Error> = loadJsonCase.execute(fileName: "icons2023")
         icons.sink { completion in
             print(completion)
         } receiveValue: { [weak self] model in
+            // Clearing the list
+            self?.saintIconModels.removeAll()
+            
             print(Date.currentYear)
             let dataForCurrentYear = model.filter { $0.year == Date.currentYear }
             if let dataForToday = dataForCurrentYear.filter({ $0.copticDate == self?.copticDate }).first {
@@ -94,6 +102,7 @@ final class HomeViewModel: ObservableObject {
         }
         .store(in: &cancellables)
     }
+
     
     func showLiturgicalInfo() {
         guard let liturgicalInformation = liturgicalInformation else { return }

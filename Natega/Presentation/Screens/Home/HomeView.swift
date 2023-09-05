@@ -37,6 +37,9 @@ struct HomeView: View {
             readyView
         }
         .background(backgroundColor)
+        .refreshable {
+            viewModel.onAppear()
+        }
     }
     
     private var readyView: some View {
