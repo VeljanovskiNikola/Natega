@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Christ on throne.heic",
-      "idiom" : "universal"
+      "filename" : "Christ on throne.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

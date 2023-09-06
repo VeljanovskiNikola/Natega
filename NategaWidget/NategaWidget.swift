@@ -126,7 +126,8 @@ struct NategaWidgetEntryView : View {
                                 .padding(6)
                                 .background(Color.black.opacity(0.4))
                                 .mask(RoundedRectangle(cornerRadius: 12, style: .continuous))
-                                .padding(10)
+                                .padding(.horizontal, 10)
+                                .padding(.bottom, 15)
                         }
                     }
                     .frame(maxWidth: 170, maxHeight: 170, alignment: .bottom)
@@ -148,8 +149,6 @@ struct NategaWidgetEntryView : View {
     }
 }
 
-
-
 struct NategaWidget: Widget {
     let kind: String = "NategaWidget"
     
@@ -158,8 +157,8 @@ struct NategaWidget: Widget {
                             provider: Provider()) { entry in
             NategaWidgetEntryView(entry: entry, color: entry.color ?? .black)
         }
-                            .configurationDisplayName("Natega Widget")
-                            .description("Coptic icon that updates daily")
+                            .configurationDisplayName("Agios Widget")
+                            .description("A Coptic icon on your home screen that updates daily so you never miss a Saint's Feast ever again!")
                             .supportedFamilies([.systemSmall])
     }
 }

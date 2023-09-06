@@ -16,7 +16,13 @@ struct SaintIconModel: Identifiable, Equatable {
     }
     
     var image: UIImage {
-        UIImage(named: name) ?? UIImage(named: "placeholder")!
+        if let img = UIImage(named: name) {
+            return img
+        } else if let placeholderImg = UIImage(named: "placeholder") {
+            return placeholderImg
+        } else {
+            fatalError("Both main image and placeholder image are missing!")
+        }
     }
     
     func getImageColor() -> UIImageColors {
