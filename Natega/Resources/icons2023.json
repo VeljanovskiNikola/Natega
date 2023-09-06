@@ -94,7 +94,7 @@
         "year": "2023"
     },
     {
-            "copticDate": "Nasie 01",
+            "copticDate": "Nasie 1",
             "feastName": "The Beginning of Nasie, the Short Coptic Month",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
@@ -105,12 +105,16 @@
                 {
                     "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
                     "time": "In 6 days"
+                },
+                {
+                    "name": "The Commemoration of Archangel Raphael, The Joy of All Hearts",
+                    "time": "In 2 days"
                 }
             ],
             "year": "2023"
         },
         {
-            "copticDate": "Nasie 02",
+            "copticDate": "Nasie 2",
             "feastName": "Annual",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
@@ -122,12 +126,16 @@
                 {
                     "name": "The beginning of the Blessed New Coptic Year - The Feast of El-Nayrouz",
                     "time": "In 5 days"
+                },
+                {
+                    "name": "The Commemoration of Archangel Raphael, The Joy of All Hearts",
+                    "time": "Tomorrow"
                 }
             ],
             "year": "2023"
         },
         {
-            "copticDate": "Nasie 03",
+            "copticDate": "Nasie 3",
             "feastName": "Annual",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
@@ -145,7 +153,7 @@
             "year": "2023"
         },
         {
-            "copticDate": "Nasie 04",
+            "copticDate": "Nasie 4",
             "feastName": "Annual",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
@@ -162,7 +170,7 @@
             "year": "2023"
         },
         {
-            "copticDate": "Nasie 05",
+            "copticDate": "Nasie 5",
             "feastName": "Annual",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
@@ -181,7 +189,7 @@
             "year": "2023"
         },
         {
-            "copticDate": "Nasie 06",
+            "copticDate": "Nasie 6",
             "feastName": "End of the Coptic Year",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
@@ -202,7 +210,7 @@
             "year": "2023"
         },
         {
-                "copticDate": "Tout 01",
+                "copticDate": "Tout 1",
                 "feastName": "Feast of El-Nayrouz (Beginning of the Blessed Coptic Year)",
                 "liturgicalInformation": "Joyful tune from 1 - 16th of Tout",
                 "saintIcon": ["Coptic New Year","St. Bartholomew the Apostle", "Our Lord Christ the True Vine"],
@@ -215,7 +223,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 02",
+                "copticDate": "Tout 2",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
                 "saintIcon": ["Coptic New Year", "St. John the Baptist", "Also St. John the Baptist"],
@@ -224,7 +232,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 03",
+                "copticDate": "Tout 3",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
                 "saintIcon": ["Coptic New Year", "St. Theodora of Alexandra"],
@@ -233,7 +241,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 04",
+                "copticDate": "Tout 4",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
                 "saintIcon": ["Coptic New Year", "St. Joshua the Son of Nun", "St. Verena"],
@@ -246,7 +254,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 05",
+                "copticDate": "Tout 5",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
                 "saintIcon": ["Coptic New Year", "St. Sophia","St. Phoebe the Deaconess", "Also St. Phoebe the Deaconess"],
@@ -260,7 +268,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 06",
+                "copticDate": "Tout 6",
                 "feastName": "First Sunday of Tout - Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
                 "saintIcon": ["St. Isaiah the Prophet", "Coptic New Year"],
@@ -282,7 +290,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 07",
+                "copticDate": "Tout 7",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
                 "saintIcon": ["St. Dioscorus the Great", "Sts. Agathon, Peter, John, Amun and Amuna and Their Mother, Rebecca", "Coptic New Year"],
@@ -300,7 +308,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 08",
+                "copticDate": "Tout 8",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
                 "saintIcon": ["St. Zacharias the Prophet", "The Burning Bush Seen by Moses", "Moses Parting the Red Sea", "Moses with the 10 Commandements", "Coptic New Year"],
@@ -309,7 +317,7 @@
                 "year": "2023"
             },
                       {
-                "copticDate": "Tout 09",
+                "copticDate": "Tout 9",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
                 "saintIcon": ["Our Lord Christ the Good Shepard","Coptic New Year"],
@@ -627,7 +635,7 @@
                 "year": "2023"
             },
         {
-                "copticDate": "Baba 01",
+                "copticDate": "Baba 1",
                 "feastName": "Annual",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Anastasia", "Our Lord Christ the True Vine"],
@@ -641,7 +649,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 02",
+                "copticDate": "Baba 2",
                 "feastName": "",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Severus" , "Our Lord Christ the Good Shepard"],
@@ -650,7 +658,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 03",
+                "copticDate": "Baba 3",
                 "feastName": "",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. John El-Ashruby, the Soldier", "St. Ursus of Solothurn", "St. Victor of Solothurn"],
@@ -663,7 +671,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 04",
+                "copticDate": "Baba 4",
                 "feastName": "First Sunday of Baba",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Sergius and St. Bacchus", "Christ the Good Shepard"],
@@ -677,7 +685,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 05",
+                "copticDate": "Baba 5",
                 "feastName": "Annual",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Paul Patriarch of Constantinople","Our Lord God and Saviour Jesus Christ"],
@@ -691,7 +699,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 06",
+                "copticDate": "Baba 6",
                 "feastName": "Annual",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Hannah Mother of Samuel"],
@@ -700,7 +708,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 07",
+                "copticDate": "Baba 7",
                 "feastName": "Annual",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["Anba Paula of Tamouh (El-Tamouhy)"],
@@ -709,7 +717,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 08",
+                "copticDate": "Baba 8",
                 "feastName": "Annual",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Matra the Elder", "Abba Agathon"],
@@ -723,7 +731,7 @@
                 "year": "2023"
             },
                    {
-                "copticDate": "Baba 09",
+                "copticDate": "Baba 9",
                 "feastName": "Annual",
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Eumenius", "St. Simon the Bishop"],
@@ -1021,7 +1029,7 @@
                    "year": "2023"
                },
              {
-                     "copticDate": "Hator 01",
+                     "copticDate": "Hator 1",
                      "feastName": "Annual",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["St. Cleopas the Apostle, One of the Two Disciples of Emmaus, and His Companion", "St. Cyriacus Bishop of Jerusalem", "Christ on the Throne of Glory"],
@@ -1030,7 +1038,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 02",
+                     "copticDate": "Hator 2",
                      "feastName": "First Sunday of Hator",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["Our Lord God and Saviour Jesus Christ"],
@@ -1039,7 +1047,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 03",
+                     "copticDate": "Hator 3",
                      "feastName": "Annual",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["St. Cyriacus", "Christ the Good Shepard"],
@@ -1048,7 +1056,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 04",
+                     "copticDate": "Hator 4",
                      "feastName": "Annual",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["Sts. John and James Bishops of Persia", "Christ on the Throne of Glory"],
@@ -1057,7 +1065,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 05",
+                     "copticDate": "Hator 5",
                      "feastName": "Annual",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["St. Longinus the Soldier who pierced the side of our Savior, when He was on the Cross", "St. Timothy the Deacon and His Wife Mora (Maura)", "St Theodore of Shotep - Amir Tadros","Our Lord God and Saviour Jesus Christ"],
@@ -1071,7 +1079,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 06",
+                     "copticDate": "Hator 6",
                      "feastName": "Annual",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["Pope St. Felix I", "St. Mary the Mother of God"],
@@ -1085,7 +1093,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 07",
+                     "copticDate": "Hator 7",
                      "feastName": "Annual",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["St. George of Alexandria", "St. George The Prince of Martyrs", "If anyone hears My voice and opens the door, I will come in to him and dine with him, and he with Me."],
@@ -1107,7 +1115,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 08",
+                     "copticDate": "Hator 8",
                      "feastName": "Annual",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["The Four Incorporeal Creatures Carrying the Throne of God", "St Nikandros Priest of the City of Myra", "Christ the Good Shepard"],
@@ -1125,7 +1133,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Hator 09",
+                     "copticDate": "Hator 9",
                      "feastName": "Second Sunday of Hator",
                      "liturgicalInformation": "Annual tune",
                      "saintIcon": ["The First Ecumenical Council of Nicea 325 A.D., Icon from The Mégalo Metéoron Monastery in Greece", "St. Athanasius the Apostolic Defender of the Faith at the Council of Nicea When He Was Only 27 Years Old"],
@@ -1499,7 +1507,7 @@
                      "year": "2023"
                  },
                        {
-                     "copticDate": "Kiahk 01",
+                     "copticDate": "Kiahk 1",
                      "feastName": "The First Day of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["St. Shounda the Archimandrite", "The Nativity"],
@@ -1513,7 +1521,7 @@
                      "year": "2023"
                  },
                      {
-                     "copticDate": "Kiahk 02",
+                     "copticDate": "Kiahk 2",
                      "feastName": "The First Week of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["St. Abba Hermina the Anchorite", "The Nativity"],
@@ -1527,7 +1535,7 @@
                      "year": "2023"
                  },
                         {
-                     "copticDate": "Kiahk 03",
+                     "copticDate": "Kiahk 3",
                      "feastName": "The First Week of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["The Presentation of Saint Mary into the Temple at Jerusalem", "St. Bestavros", "The Nativity"],
@@ -1536,7 +1544,7 @@
                      "year": "2023"
                  },
                         {
-                     "copticDate": "Kiahk 04",
+                     "copticDate": "Kiahk 4",
                      "feastName": "The First Week of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["St. Andrew the Apostle", "Anba Pishoy, the Perfect Man, the Beloved of our Good Saviour", "Anba Paula of Tamouh (El-Tamouhy)", "The Nativity"],
@@ -1545,7 +1553,7 @@
                      "year": "2023"
                  },
                         {
-                     "copticDate": "Kiahk 05",
+                     "copticDate": "Kiahk 5",
                      "feastName": "The First Week of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["St. Nahum the Prophet", "St. Victor (Boctor Shaou) of Assiut", "St. Isidore the Alexandrian", "The Nativity"],
@@ -1554,7 +1562,7 @@
                      "year": "2023"
                  },
                         {
-                     "copticDate": "Kiahk 06",
+                     "copticDate": "Kiahk 6",
                      "feastName": "The First Week of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["St. Abraam (Abraham) of Alexandria", "Pope Abram Ebn-Zaraa and St. Simon the Tanner - The Miracle of Moving the Mokattam Mountain", "St. Bibiana (Vivian)", "The Nativity"],
@@ -1568,7 +1576,7 @@
                      "year": "2023"
                  },
                         {
-                     "copticDate": "Kiahk 07",
+                     "copticDate": "Kiahk 7",
                      "feastName": "Second Sunday of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                        "saintIcon": ["St. Mattaos El Fakhoury (St. Matthew the Poor)", "St. Abaskhairon El-Kelini", "Also St. Abaskhairon El-Kelini", "Distinguished Coptic Engineer Saeed Ebn Kateb El-Faraghany", "The Mosque of Ibn Tulun, Built by Saeed Ebn Kateb El-Faraghany", "The Mosque of Ibn Tulun is Pictured on Every Egyptian 5 Pound Note", "The Nativity"],
@@ -1590,7 +1598,7 @@
                      "year": "2023"
                  },
                         {
-                     "copticDate": "Kiahk 08",
+                     "copticDate": "Kiahk 8",
                      "feastName": "Second Week of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["St. Heraclas (Theoclas)", "St. Barbara and St. Juliana", "St. Samuel the Confessor", "The Nativity"],
@@ -1608,7 +1616,7 @@
                      "year": "2023"
                  },
                         {
-                     "copticDate": "Kiahk 09",
+                     "copticDate": "Kiahk 9",
                      "feastName": "Second Week of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
                      "saintIcon": ["St. Poemen the Confessor", "The Nativity"],
