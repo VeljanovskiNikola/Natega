@@ -31,7 +31,7 @@ struct KatamerosAPI: KatamerosAPIType {
         let date = Date()
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "katameros.azurewebsites.net"
+        components.host = "api.katameros.app"
         components.path = "/readings/gregorian/\(date.formattedDateForAPI)"
         components.queryItems = [URLQueryItem(name: "languageId", value: "2")]
         return components.url
