@@ -2,16 +2,7 @@
   "images" : [
     {
       "filename" : "St. Eustathius and His Two Sons and Wife.jpeg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {

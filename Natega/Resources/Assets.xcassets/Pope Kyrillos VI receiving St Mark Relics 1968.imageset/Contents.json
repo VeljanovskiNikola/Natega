@@ -2,16 +2,7 @@
   "images" : [
     {
       "filename" : "Pope Kyrillos VI receiving St Mark Relics 1968.jpeg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {
