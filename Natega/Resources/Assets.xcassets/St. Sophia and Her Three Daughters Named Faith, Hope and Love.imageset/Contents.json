@@ -2,16 +2,7 @@
   "images" : [
     {
       "filename" : "St. Sophia and Her Three Daughters Named Faith, Hope and Love.jpeg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {

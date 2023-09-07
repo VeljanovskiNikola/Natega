@@ -2,16 +2,7 @@
   "images" : [
     {
       "filename" : "The Mosque of Ibn Tulun is Pictured on the Egyptian 5 Pound Note.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {

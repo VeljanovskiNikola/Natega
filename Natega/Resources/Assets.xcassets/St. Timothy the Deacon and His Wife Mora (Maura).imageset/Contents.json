@@ -2,16 +2,7 @@
   "images" : [
     {
       "filename" : "St. Timothy the Deacon and His Wife Mora (Maura).jpeg",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "idiom" : "universal"
     }
   ],
   "info" : {
