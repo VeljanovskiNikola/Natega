@@ -54,6 +54,8 @@
 		4CCFA65A295F4C1800342776 /* Feast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA659295F4C1800342776 /* Feast.swift */; };
 		4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */; };
 		4CCFA65E295F689600342776 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65D295F689600342776 /* Image+Extensions.swift */; };
+		9916FD912AAA586000496B5C /* PsalmAndGospel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916FD902AAA586000496B5C /* PsalmAndGospel.swift */; };
+		9916FD932AAA588700496B5C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916FD922AAA588700496B5C /* String+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,8 @@
 		4CCFA659295F4C1800342776 /* Feast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feast.swift; sourceTree = "<group>"; };
 		4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReadingsUseCase.swift; sourceTree = "<group>"; };
 		4CCFA65D295F689600342776 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
+		9916FD902AAA586000496B5C /* PsalmAndGospel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsalmAndGospel.swift; sourceTree = "<group>"; };
+		9916FD922AAA588700496B5C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,7 @@
 				4C4A9AD5294E631C00C0B279 /* Synaxar.swift */,
 				4CCFA659295F4C1800342776 /* Feast.swift */,
 				4C3403462997C8B3007DAB84 /* PresentableSection.swift */,
+				9916FD902AAA586000496B5C /* PsalmAndGospel.swift */,
 				4C34034F29BE83F5007DAB84 /* IconModel.swift */,
 			);
 			path = Entities;
@@ -310,6 +315,7 @@
 			children = (
 				4C4A9AE92953818500C0B279 /* Date+Extensions.swift */,
 				4C34034A29BA646F007DAB84 /* ButtonStyle.swift */,
+				9916FD922AAA588700496B5C /* String+Extensions.swift */,
 				4CCFA655295CB34200342776 /* Colours+Extensions.swift */,
 				4CCFA65D295F689600342776 /* Image+Extensions.swift */,
 			);
@@ -466,6 +472,8 @@
 				4C4A9AD1294E5E5F00C0B279 /* KatamerosAPI.swift in Sources */,
 				4C4A9ADD294E6D5B00C0B279 /* Assembler.swift in Sources */,
 				474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */,
+				9916FD932AAA588700496B5C /* String+Extensions.swift in Sources */,
+				9916FD912AAA586000496B5C /* PsalmAndGospel.swift in Sources */,
 				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
 				4CCFA65A295F4C1800342776 /* Feast.swift in Sources */,
 				4C3D1F5B29C4FBC700940B62 /* ReadingsView.swift in Sources */,

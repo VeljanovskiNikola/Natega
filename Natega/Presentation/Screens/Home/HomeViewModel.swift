@@ -33,7 +33,6 @@ final class HomeViewModel: ObservableObject {
     @Published var sections: [Section] = []
     @Published var synaxars: [Reading] = []
     @Published var readings: Feast?
-    @Published var presentablePassages: [Passage] = []
     @Published var iconModels: [IconModel] = []
     @Published var upcomingFeasts: [UpcomingFeast] = []
     @Published var state: State = .loading
@@ -123,28 +122,7 @@ final class HomeViewModel: ObservableObject {
         loadReadings()
         loadJson()
     }
-    
-    //    private func setupColors() {
-    
-    //        if imageNames.count > 0 {
-    //            UIImage(imageLiteralResourceName: imageNames[0]).getColors { [weak self] colors in
-    //                self?.backgroundColor = colors?.background ?? UIColor()
-    //                self?.primaryColor = colors?.primary ?? UIColor()
-    //                self?.secondaryColor = colors?.secondary ?? UIColor()
-    //                self?.detailColor = colors?.detail ?? UIColor()
-    //                self?.previousBackgroundColor = self?.backgroundColor ?? UIColor()
-    //                self?.previousPrimaryColor = self?.primaryColor ?? UIColor()
-    //                self?.previousSecondaryColor = self?.secondaryColor ?? UIColor()
-    //                self?.previousDetailColor = self?.detailColor ?? UIColor()
-    //            }
-    //            nextColors = UIImage(imageLiteralResourceName: imageNames[safeIndex: 1] ?? "Archangel Michael").getColors()
-    //            nextBackgroundColor = nextColors?.background ?? UIColor()
-    //            nextPrimaryColor = nextColors?.primary ?? UIColor()
-    //            nextSecondaryColor = nextColors?.secondary ?? UIColor()
-    //            detailColor = nextColors?.detail ?? UIColor()
-    //        }
-    //    }
-    
+
     func formattedDate() -> String {
         let date = Date()
         let formatter = DateFormatter()
@@ -175,42 +153,25 @@ final class HomeViewModel: ObservableObject {
         let synaxars = liturgy?.subSections.first(where: { $0.title == "Synaxarium" })
         self.synaxars = synaxars?.readings ?? []
     }
-    
-    private func setPassages() {
-        let sections = readings.map { $0.sections }
-        let matins = sections?.first(where: { $0.title == "Matins" })
-        let matinsSubSection = matins?.subSections.first(where: { $0.id == 1 })
-        let matinsReadings = matinsSubSection?.readings.first(where: { $0.id == 2 })
-        if let matinsPassage = matinsReadings?.passages?.first {
-            self.presentablePassages.append(matinsPassage)
-        }
-        let liturgy = sections?.first(where: { $0.title == "Liturgy" })
-        if let liturgyPassages = liturgy?.subSections.flatMap({ $0.readings }).compactMap({ $0.passages }).flatMap({ $0 }) {
-            presentablePassages = presentablePassages + liturgyPassages
-        }
-        let vespers = sections?.first(where: { $0.title == "Vespers" })
-        if let vesperPassages = vespers?.subSections.flatMap({ $0.readings }).compactMap({ $0.passages }).flatMap({ $0 }) {
-            presentablePassages = presentablePassages + vesperPassages
-        }
-    }
-    
+
     private func setPresentableSections() {
         let sections = readings.map { $0.sections }
         self.sections = sections ?? []
-        var psalmAndGospels = [SubSection]()
-        sections?.forEach({ section in
+        var psalmAndGospels = [PsalmAndGospel]()
+        self.sections.forEach({ section in
             let subSections = section.subSections.filter { $0.title != "Synaxarium" }
             subSections.forEach { subSection in
                 if subSection.title == "Psalm & Gospel" {
-                    psalmAndGospels.append(subSection)
+                    psalmAndGospels.append(PsalmAndGospel(subSection: subSection,
+                                                          sectionTitle: section.title ?? ""))
                     return
                 }
                 if psalmAndGospels.count > 0 {
                     psalmAndGospels.forEach({
-                        let passages = $0.readings.flatMap { $0.passages ?? [] }
+                        let passages = $0.subSection.readings.flatMap { $0.passages ?? [] }
                         presentableSections.append(PresentableSection(passages: passages,
-                                                                      subSectionTitle: subSection.title ?? "",
-                                                                      title: section.title ?? ""))
+                                                                      subSectionTitle: $0.subSection.title?.psalmAndGospelFormat ?? "",
+                                                                      title: $0.sectionTitle))
                     })
                     psalmAndGospels = []
                 }

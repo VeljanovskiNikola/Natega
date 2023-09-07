@@ -32,7 +32,8 @@ struct ReadingDetailsView: View {
                             VStack(spacing: 16) {
                                 ForEach(passage.verses) { verse in
                                     Text(verse.text)
-                                        .font(Font.system(size: 20, design: .rounded).weight(.light))
+                                        .font(Font.system(size: 20,
+                                                          design: .rounded).weight(.light))
                                         .multilineTextAlignment(.leading)
                                 }
                             }
