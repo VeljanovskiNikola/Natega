@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Christ Presented at the Temple.jpeg",
-      "idiom" : "universal"
+      "filename" : "Christ Presented at the Temple.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

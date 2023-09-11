@@ -177,7 +177,7 @@
                 "Holy Prophet Amos",
                 "Also Holy Prophet Amos",
                 "St. Barsoma",
-                "Christ on the Throne of Glory"
+                "Christ on the Throne of Glory",
             ],
             "feastIcon": [],
             "upcomingEvents": [
@@ -193,8 +193,7 @@
             "feastName": "End of the Coptic Year",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
-                "Our Lord Christ the Protector",
-                "Our Lord Christ the Protector"
+                "Our Lord Christ the Protector", "Christ the King of Kings and Lord of Lords"
             ],
             "feastIcon": [],
             "upcomingEvents": [
@@ -226,7 +225,7 @@
                 "copticDate": "Tout 2",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
-                "saintIcon": ["Coptic New Year", "St. John the Baptist", "Also St. John the Baptist"],
+                "saintIcon": ["Coptic New Year", "St. John the Baptist", "Also St. John the Baptist", "The Baptism of Christ"],
                 "feastIcon": [],
                 "upcomingEvents": [],
                 "year": "2023"
@@ -380,7 +379,7 @@
                 "copticDate": "Tout 14",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
-                "saintIcon": ["St Agathon the Stylite","St.Felix, St Regula and St. Exuperantius", "Coptic New Year"],
+                "saintIcon": ["St Agathon the Stylite", "St. Felix, St. Regula and St. Exuperantius the Patron Saints of Zürich", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
                       {
@@ -1136,7 +1135,7 @@
                      "copticDate": "Hator 9",
                      "feastName": "Second Sunday of Hator",
                      "liturgicalInformation": "Annual tune",
-                     "saintIcon": ["The First Ecumenical Council of Nicea 325 A.D., Icon from The Mégalo Metéoron Monastery in Greece", "St. Athanasius the Apostolic Defender of the Faith at the Council of Nicea When He Was Only 27 Years Old"],
+                     "saintIcon": ["The First Ecumenical Council of Nicea 325 A.D.", "St. Athanasius the Apostolic Defender of the Faith at the Council of Nicea When He Was Only 27 Years Old"],
                      "feastIcon": [],
                      "upcomingEvents": [
                            {
