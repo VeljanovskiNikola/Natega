@@ -193,7 +193,8 @@
             "feastName": "End of the Coptic Year",
             "liturgicalInformation": "Annual tune",
             "saintIcon": [
-                "Our Lord Christ the Protector", "Christ the King of Kings and Lord of Lords"
+                "Our Lord Christ the Protector",
+                "Christ the King of Kings and Lord of Lords"
             ],
             "feastIcon": [],
             "upcomingEvents": [
@@ -227,7 +228,11 @@
                 "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
                 "saintIcon": ["Coptic New Year", "St. John the Baptist", "Also St. John the Baptist", "The Baptism of Christ"],
                 "feastIcon": [],
-                "upcomingEvents": [],
+                "upcomingEvents": [
+                    {
+                      "name": "The Departure of Isaiah the Prophet",
+                      "time": "In 4 days"
+                    }],
                 "year": "2023"
             },
                       {
@@ -236,7 +241,11 @@
                 "liturgicalInformation": "Joyful tune",
                 "saintIcon": ["Coptic New Year", "St. Theodora of Alexandra"],
                 "feastIcon": [],
-                "upcomingEvents": [],
+                "upcomingEvents": [
+                    {
+                      "name": "The Departure of Isaiah the Prophet",
+                      "time": "In 3 days"
+                    }],
                 "year": "2023"
             },
                       {
@@ -312,7 +321,11 @@
                 "liturgicalInformation": "Joyful tune",
                 "saintIcon": ["St. Zacharias the Prophet", "The Burning Bush Seen by Moses", "Moses Parting the Red Sea", "Moses with the 10 Commandements", "Coptic New Year"],
                 "feastIcon": [],
-                "upcomingEvents": [],
+                "upcomingEvents": [
+                    {
+                    "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
+                    "time": "In 4 days"
+                  }],
                 "year": "2023"
             },
                       {
@@ -321,7 +334,11 @@
                 "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
                 "saintIcon": ["Our Lord Christ the Good Shepard","Coptic New Year"],
                 "feastIcon": [],
-                "upcomingEvents": [],
+                "upcomingEvents": [
+                    {
+                    "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
+                    "time": "In 3 days"
+                  }],
                 "year": "2023"
             },
                       {
@@ -356,7 +373,7 @@
                 "copticDate": "Tout 12",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
-                "saintIcon": ["Council of Ephesus in 431 AD, icon from the Basiica of Fourvière in Lyon, in the middle stands St. Cyril of Alexandria defending the faith", "St. Cyril of Alexandria, Defender of the Faith at the Council of Ephesus", "St. Cyril of Alexandria, St. Dioscorus of Alexandria, and St. Severus of Antioch", "Archangel Michael", "Another Icon of Archangel Michael", "Coptic New Year"],
+                "saintIcon": ["Council of Ephesus in 431 AD, icon from the Basiica of Fourvière in Lyon, in the middle stands St. Cyril of Alexandria defending the faith", "Council of Ephesus 431 AD", "St. Cyril of Alexandria, Defender of the Faith at the Council of Ephesus", "St. Cyril of Alexandria, St. Dioscorus of Alexandria, and St. Severus of Antioch", "Archangel Michael", "Another Icon of Archangel Michael", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [],
                 "year": "2023"
@@ -427,7 +444,7 @@
                       {
                 "copticDate": "Tout 16",
                 "feastName": "Celebrating the New Coptic Year",
-                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
+                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast without abstinence, and abstain from eating fish",
                 "saintIcon": ["Consecration of the Church of the Resurrection at Jerusalem", "Translocation of the Relics of St. John Chrysostom", "St. Paul Guides St. John Chrysostom", "Also St. Paul Guides St. John Chrysostom", "St. John Chrysostom"],
                 "feastIcon": [],
                 "upcomingEvents": [
