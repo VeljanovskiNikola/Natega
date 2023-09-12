@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Also St. Demiana and the Forty Virgins.jpeg",
-      "idiom" : "universal"
+      "filename" : "Also St. Demiana and the Forty Virgins.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
