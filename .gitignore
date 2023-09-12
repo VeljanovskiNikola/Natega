@@ -30,6 +30,11 @@ DerivedData/
 *.dSYM.zip
 *.dSYM
 
+# OS-specific files
+.DS_Store
+.Trashes
+Thumbs.db
+
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace

@@ -183,6 +183,15 @@ final class HomeViewModel: ObservableObject {
                  })
             }
         })
+        if psalmAndGospels.count > 0 {
+            psalmAndGospels.forEach({
+                let passages = $0.subSection.readings.flatMap { $0.passages ?? [] }
+                presentableSections.append(PresentableSection(passages: passages,
+                                                              subSectionTitle: $0.subSection.title?.psalmAndGospelFormat ?? "",
+                                                              title: $0.sectionTitle))
+            })
+            psalmAndGospels = []
+        }
     }
     
     func hasOneName(for section: PresentableSection) -> Bool {
