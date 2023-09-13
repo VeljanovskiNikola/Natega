@@ -471,7 +471,6 @@
 				4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */,
 				474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */,
 				4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */,
-				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
 				4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */,
 				4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */,
 				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
