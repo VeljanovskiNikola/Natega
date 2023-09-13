@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Job the Prophet.jpeg",
-      "idiom" : "universal"
+      "filename" : "Job the Prophet.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
