@@ -110,8 +110,6 @@ struct NategaWidgetEntryView : View {
                     .mask(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     .frame(maxWidth: 180, maxHeight: 180)
                     .scaleEffect(1.1)
-//                    .offset(y: 15)
-                
                 
                 GeometryReader { geometry in
                     VStack(alignment: .center) {

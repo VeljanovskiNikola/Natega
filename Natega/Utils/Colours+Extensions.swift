@@ -26,18 +26,5 @@ extension Color {
     static let brownish = Color(uiColor: UIColor(named: "brownish")!)
     static let lightBrownish = Color(uiColor: UIColor(named: "lightBrownish")!)
     static let shadow = Color(uiColor: UIColor(named: "shadow")!)
-    
-    static func randomDarkColor() -> Color {
-           let threshold = 0.5
-           var red = Double.random(in: 0...1)
-           var green = Double.random(in: 0...1)
-           var blue = Double.random(in: 0...1)
-           while (red + green + blue) / 3.0 > threshold {
-               red = Double.random(in: 0...1)
-               green = Double.random(in: 0...1)
-               blue = Double.random(in: 0...1)
-           }
-           return Color(red: red, green: green, blue: blue)
-       }
 }
 

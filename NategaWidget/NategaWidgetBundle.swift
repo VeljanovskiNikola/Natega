@@ -12,6 +12,5 @@ import SwiftUI
 struct NategaWidgetBundle: WidgetBundle {
     var body: some Widget {
         NategaWidget()
-//        NategaWidgetLiveActivity()
     }
 }

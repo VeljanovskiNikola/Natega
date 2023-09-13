@@ -12,9 +12,6 @@ struct NategaApp: App {
     var body: some Scene {
         WindowGroup {
             AppCompositionRoot.start
-            
-//            TestHomeView3()
-            
         }
     }
 }

@@ -35,24 +35,3 @@ struct TapToScaleModifier: ViewModifier {
             })
     }
 }
-
-/*
- 
- This is the closest to what i want:
- 
- struct GrowingButton: ButtonStyle {
-     @State private var isTapped = false
-     
-     func makeBody(configuration: Configuration) -> some View {
-         configuration.label
-             .scaleEffect(configuration.isPressed ? 1.08 : 1)
-             .onChange(of: configuration.isPressed) { isPressed in
-                 isTapped = isPressed
-             }
-     }
- }
-
- but there is no animation when this happens :/
- 
- 
- */

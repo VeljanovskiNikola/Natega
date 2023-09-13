@@ -7,13 +7,10 @@
 
 import Combine
 import SwiftUI
-import UIImageColors
 
 final class HomeViewModel: ObservableObject {
-    
     let readingsCase: LoadReadingsUseCaseType
     let loadJsonCase: LoadJsonUseCaseProtocol
-    var nextColors: UIImageColors?
     var colors: [Color] {
         [
             Color(uiColor: backgroundColor.withAlphaComponent(0.3)),
@@ -37,18 +34,7 @@ final class HomeViewModel: ObservableObject {
     @Published var upcomingFeasts: [UpcomingFeast] = []
     @Published var state: State = .loading
     @Published var backgroundColor: UIColor = .clear
-    @Published var primaryColor: UIColor = .clear
-    @Published var secondaryColor: UIColor = .clear
-    @Published var detailColor: UIColor = .clear
     // Private properties
-    private var nextBackgroundColor: UIColor = .clear
-    private var previousBackgroundColor: UIColor = .clear
-    private var nextPrimaryColor: UIColor = .clear
-    private var previousPrimaryColor: UIColor = .clear
-    private var nextSecondaryColor: UIColor = .clear
-    private var previousDetailColor: UIColor = .clear
-    private var nextDetailColor: UIColor = .clear
-    private var previousSecondaryColor: UIColor = .clear
     private var cancellables = Set<AnyCancellable>()
     
     // MARK: - Init
@@ -86,8 +72,6 @@ final class HomeViewModel: ObservableObject {
         } receiveValue: { [weak self] model in
             // Clearing the list
             self?.saintIconModels.removeAll()
-            
-            print(Date.currentYear)
             let dataForCurrentYear = model.filter { $0.year == Date.currentYear }
             if let dataForToday = dataForCurrentYear.filter({ $0.copticDate == self?.copticDate }).first {
                 self?.checkIfEmpty(data: dataForToday)
@@ -102,7 +86,6 @@ final class HomeViewModel: ObservableObject {
         .store(in: &cancellables)
     }
 
-    
     func showLiturgicalInfo() {
         guard let liturgicalInformation = liturgicalInformation else { return }
         let text = liturgicalInformation.replacingOccurrences(of: ", ", with: "\n\n")
@@ -196,16 +179,5 @@ final class HomeViewModel: ObservableObject {
     
     func hasOneName(for section: PresentableSection) -> Bool {
         section.passages.dropFirst().allSatisfy({ $0.bookTranslation == section.passages.first?.bookTranslation })
-    }
-    
-}
-
-extension Array {
-    public subscript(safeIndex index: Int) -> Element? {
-        guard index >= 0, index < endIndex else {
-            return nil
-        }
-
-        return self[index]
     }
 }
