@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Lazarus Raised From the Dead After 4 Days.jpeg",
-      "idiom" : "universal"
+      "filename" : "Lazarus Raised From the Dead After 4 Days.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
