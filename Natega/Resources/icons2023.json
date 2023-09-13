@@ -213,7 +213,7 @@
                 "copticDate": "Tout 1",
                 "feastName": "Feast of El-Nayrouz (Beginning of the Blessed Coptic Year)",
                 "liturgicalInformation": "Joyful tune from 1 - 16th of Tout",
-                "saintIcon": ["Coptic New Year","St. Bartholomew the Apostle", "Our Lord Christ the True Vine"],
+                "saintIcon": ["Coptic New Year","St. Bartholomew the Apostle", "Jesus Rejected at Nazareth - Luke Chapter 4 Verses 18-19"],
                 "feastIcon": [],
                 "upcomingEvents": [
                     {
@@ -225,8 +225,8 @@
                       {
                 "copticDate": "Tout 2",
                 "feastName": "Celebrating the New Coptic Year",
-                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
-                "saintIcon": ["Coptic New Year", "St. John the Baptist", "Also St. John the Baptist", "The Baptism of Christ"],
+                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast without abstinence, and abstain from eating fish",
+                "saintIcon": ["St. John the Baptist", "Also St. John the Baptist", "The Baptism of Christ", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
                     {
@@ -239,7 +239,7 @@
                 "copticDate": "Tout 3",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
-                "saintIcon": ["Coptic New Year", "St. Theodora of Alexandra"],
+                "saintIcon": ["St. Theodora of Alexandra", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
                     {
@@ -251,8 +251,8 @@
                       {
                 "copticDate": "Tout 4",
                 "feastName": "Celebrating the New Coptic Year",
-                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
-                "saintIcon": ["Coptic New Year", "St. Joshua the Son of Nun", "St. Verena"],
+                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast without abstinence, and abstain from eating fish",
+                "saintIcon": ["St. Joshua the Son of Nun", "St. Verena", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
                       {
@@ -265,7 +265,7 @@
                 "copticDate": "Tout 5",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
-                "saintIcon": ["Coptic New Year", "St. Sophia","St. Phoebe the Deaconess", "Also St. Phoebe the Deaconess"],
+                "saintIcon": ["St. Sophia","St. Phoebe the Deaconess", "Also St. Phoebe the Deaconess", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
                       {
@@ -291,9 +291,9 @@
                         "time": "In 2 days"
                       },
                       {
-                        "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
+                        "name": "The Commemoration of the Honorable Archangel Michael",
                         "time": "In 6 days"
-                      }
+                      },
                 ],
                 "year": "2023"
             },
@@ -307,6 +307,10 @@
                       {
                         "name": "The Departure of Moses the Prophet",
                         "time": "Tomorrow"
+                      },
+                      {
+                        "name": "The Commemoration of the Honorable Archangel Michael",
+                        "time": "In 5 days"
                       },
                       {
                         "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
@@ -323,6 +327,10 @@
                 "feastIcon": [],
                 "upcomingEvents": [
                     {
+                      "name": "The Commemoration of the Honorable Archangel Michael",
+                      "time": "In 4 days"
+                    },
+                    {
                     "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
                     "time": "In 4 days"
                   }],
@@ -331,10 +339,14 @@
                       {
                 "copticDate": "Tout 9",
                 "feastName": "Celebrating the New Coptic Year",
-                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
-                "saintIcon": ["Our Lord Christ the Good Shepard","Coptic New Year"],
+                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast without abstinence, and abstain from eating fish",
+                "saintIcon": ["Our Lord Christ the Good Shepard", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
+                    {
+                      "name": "The Commemoration of the Honorable Archangel Michael",
+                      "time": "In 3 days"
+                    },
                     {
                     "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
                     "time": "In 3 days"
@@ -348,23 +360,39 @@
                 "saintIcon": ["St. Matrona of Moscow", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
-                        {
+                    {
+                      "name": "The Commemoration of the Honorable Archangel Michael",
+                      "time": "In 2 days"
+                    },
+                    {
                         "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
                         "time": "In 2 days"
-                      }
+                      },
+                    {
+                      "name": "Feast of the Cross",
+                      "time": "In 1 week"
+                    }
                 ],
                 "year": "2023"
             },
                    {
                 "copticDate": "Tout 11",
                 "feastName": "Celebrating the New Coptic Year",
-                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast wiTout abstinence, and abstain from eating fish",
+                "liturgicalInformation": "Joyful tune, Today members of the church are expected to fast without abstinence, and abstain from eating fish",
                 "saintIcon": ["St. Basilides (Wasilides)", "The Three Farmers in Esna", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
                       {
+                        "name": "The Commemoration of the Honorable Archangel Michael",
+                        "time": "Tomorrow"
+                      },
+                      {
                         "name": "The Assembly of the 200 at the Council of Ephesus in 431 AD",
                         "time": "Tomorrow"
+                      },
+                      {
+                        "name": "Feast of the Cross",
+                        "time": "In 6 days"
                       }
                 ],
                 "year": "2023"
@@ -373,9 +401,13 @@
                 "copticDate": "Tout 12",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
-                "saintIcon": ["Council of Ephesus in 431 AD, icon from the Basiica of Fourvière in Lyon, in the middle stands St. Cyril of Alexandria defending the faith", "Council of Ephesus 431 AD", "St. Cyril of Alexandria, Defender of the Faith at the Council of Ephesus", "St. Cyril of Alexandria, St. Dioscorus of Alexandria, and St. Severus of Antioch", "Archangel Michael", "Another Icon of Archangel Michael", "Coptic New Year"],
+                "saintIcon": ["Archangel Michael", "Council of Ephesus in 431 AD, icon from the Basiica of Fourvière in Lyon, in the middle stands St. Cyril of Alexandria defending the faith", "Council of Ephesus 431 AD", "St. Cyril of Alexandria, Defender of the Faith at the Council of Ephesus", "St. Cyril of Alexandria, St. Dioscorus of Alexandria, and St. Severus of Antioch", "Another Icon of Archangel Michael", "Coptic New Year"],
                 "feastIcon": [],
-                "upcomingEvents": [],
+                "upcomingEvents": [
+                    {
+                      "name": "Feast of the Cross",
+                      "time": "In 5 days"
+                    }],
                 "year": "2023"
             },
                       {
@@ -529,7 +561,11 @@
                 "liturgicalInformation": "Annual tune",
                 "saintIcon": ["St. Mary", "St. Cyprian and St. Justina"],
                 "feastIcon": [],
-                "upcomingEvents": [],
+                "upcomingEvents": [
+                    {
+                      "name": "The Departure of Jonah, the Great Prophet",
+                      "time": "In 4 days"
+                    }],
                 "year": "2023"
             },
                       {
