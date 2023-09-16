@@ -269,7 +269,9 @@
                 "copticDate": "Tout 5",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
-                "saintIcon": ["St. Sophia","St. Phoebe the Deaconess", "Also St. Phoebe the Deaconess", "Coptic New Year"],
+                "saintIcon": [
+                    "St. Sophia","St. Phoebe the Deaconess", "Also St. Phoebe the Deaconess", "Coptic New Year"
+                ],
                 "feastIcon": [],
                 "upcomingEvents": [
                       {
@@ -1566,7 +1568,7 @@
                      "copticDate": "Kiahk 1",
                      "feastName": "The First Day of Kiahk",
                      "liturgicalInformation": "Kiahk tune",
-                     "saintIcon": ["St. Shounda the Archimandrite", "The Nativity"],
+                     "saintIcon": ["St. Shenouda the Archimandrite", "The Nativity"],
                      "feastIcon": [],
                      "upcomingEvents": [
                            {

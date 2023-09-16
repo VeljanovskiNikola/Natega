@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "St. Basil the Great.jpg",
-      "idiom" : "universal"
+      "filename" : "St. Basil the Great.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "St. Samuel.jpeg",
-      "idiom" : "universal"
+      "filename" : "St. Samuel.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
