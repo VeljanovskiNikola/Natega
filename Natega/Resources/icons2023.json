@@ -239,9 +239,13 @@
                 "copticDate": "Tout 3",
                 "feastName": "Celebrating the New Coptic Year",
                 "liturgicalInformation": "Joyful tune",
-                "saintIcon": ["St. Theodora of Alexandra", "Coptic New Year"],
+                "saintIcon": ["St. Theodora of Alexandria", "Coptic New Year"],
                 "feastIcon": [],
                 "upcomingEvents": [
+                    {
+                      "name": "The Departure of St. Verena",
+                      "time": "Tomorrow"
+                    },
                     {
                       "name": "The Departure of Isaiah the Prophet",
                       "time": "In 3 days"
