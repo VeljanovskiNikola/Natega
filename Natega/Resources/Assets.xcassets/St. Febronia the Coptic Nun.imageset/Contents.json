@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "St. Febronia the Coptic Nun.jpeg",
-      "idiom" : "universal"
+      "filename" : "St. Febronia the Coptic Nun.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {

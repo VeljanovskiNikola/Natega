@@ -1,0 +1,818 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */; };
+		474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */; };
+		474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474703D6299A81FC00B2D0D1 /* SheetModel.swift */; };
+		476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B39012983E3FB00CFFADC /* TestHomeView3.swift */; };
+		477C537E297D9FED00722487 /* SmallIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477C537D297D9FED00722487 /* SmallIcon.swift */; };
+		4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */; };
+		478963AB29ED8DDD00EEE0FF /* ReadingsColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478963AA29ED8DDD00EEE0FF /* ReadingsColours.swift */; };
+		4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3403462997C8B3007DAB84 /* PresentableSection.swift */; };
+		4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034A29BA646F007DAB84 /* ButtonStyle.swift */; };
+		4C34034E29BE8364007DAB84 /* icons2023.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C34034D29BE8364007DAB84 /* icons2023.json */; };
+		4C34035029BE83F5007DAB84 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34034F29BE83F5007DAB84 /* IconModel.swift */; };
+		4C34035229BE8546007DAB84 /* JSONManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */; };
+		4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */; };
+		4C34035629BE8746007DAB84 /* JSONRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C34035529BE8746007DAB84 /* JSONRepository.swift */; };
+		4C3D1F5B29C4FBC700940B62 /* ReadingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D1F5A29C4FBC700940B62 /* ReadingsView.swift */; };
+		4C3D1F5D29C4FCA900940B62 /* ReadingDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3D1F5C29C4FCA900940B62 /* ReadingDetailsView.swift */; };
+		4C4875F029DA22AB00BC80A7 /* icons2023.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C34034D29BE8364007DAB84 /* icons2023.json */; };
+		4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */; };
+		4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC1294E54CC00C0B279 /* HomeView.swift */; };
+		4C4A9AC4294E54CD00C0B279 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */; };
+		4C4A9AC7294E54CD00C0B279 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC6294E54CD00C0B279 /* Preview Assets.xcassets */; };
+		4C4A9AD1294E5E5F00C0B279 /* KatamerosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD0294E5E5F00C0B279 /* KatamerosAPI.swift */; };
+		4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD5294E631C00C0B279 /* Synaxar.swift */; };
+		4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD7294E660700C0B279 /* KatamerosRepository.swift */; };
+		4C4A9ADA294E66BB00C0B279 /* LoadSynaxarsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AD9294E66BB00C0B279 /* LoadSynaxarsUseCase.swift */; };
+		4C4A9ADD294E6D5B00C0B279 /* Assembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9ADC294E6D5B00C0B279 /* Assembler.swift */; };
+		4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */; };
+		4C4A9AE4294E6F1B00C0B279 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE3294E6F1B00C0B279 /* HomeViewModel.swift */; };
+		4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */; };
+		4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4A9AE92953818500C0B279 /* Date+Extensions.swift */; };
+		4C4A9AED29575C2C00C0B279 /* UIImageColors in Frameworks */ = {isa = PBXBuildFile; productRef = 4C4A9AEC29575C2C00C0B279 /* UIImageColors */; };
+		4CC7931229C10C0000535818 /* SynaxarsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */; };
+		4CCFA63F295A450200342776 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA622295A447300342776 /* WidgetKit.framework */; };
+		4CCFA640295A450200342776 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CCFA624295A447300342776 /* SwiftUI.framework */; };
+		4CCFA643295A450200342776 /* NategaWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA642295A450200342776 /* NategaWidgetBundle.swift */; };
+		4CCFA645295A450200342776 /* NategaWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA644295A450200342776 /* NategaWidgetLiveActivity.swift */; };
+		4CCFA647295A450200342776 /* NategaWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA646295A450200342776 /* NategaWidget.swift */; };
+		4CCFA64A295A450300342776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA649295A450300342776 /* Assets.xcassets */; };
+		4CCFA64C295A450300342776 /* NategaWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA648295A450200342776 /* NategaWidget.intentdefinition */; };
+		4CCFA64D295A450300342776 /* NategaWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA648295A450200342776 /* NategaWidget.intentdefinition */; };
+		4CCFA650295A450300342776 /* NategaWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4CCFA63E295A450200342776 /* NategaWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4CCFA654295A4A0900342776 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */; };
+		4CCFA656295CB34200342776 /* Colours+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA655295CB34200342776 /* Colours+Extensions.swift */; };
+		4CCFA658295E054C00342776 /* Colours.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA657295E054C00342776 /* Colours.xcassets */; };
+		4CCFA65A295F4C1800342776 /* Feast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA659295F4C1800342776 /* Feast.swift */; };
+		4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */; };
+		4CCFA65E295F689600342776 /* Image+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA65D295F689600342776 /* Image+Extensions.swift */; };
+		9916FD912AAA586000496B5C /* PsalmAndGospel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916FD902AAA586000496B5C /* PsalmAndGospel.swift */; };
+		9916FD932AAA588700496B5C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9916FD922AAA588700496B5C /* String+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CCFA64E295A450300342776 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C4A9AB4294E54CC00C0B279 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CCFA63D295A450200342776;
+			remoteInfo = NategaWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4CCFA636295A447400342776 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4CCFA650295A450300342776 /* NategaWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsModel.swift; sourceTree = "<group>"; };
+		474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsCard.swift; sourceTree = "<group>"; };
+		474703D6299A81FC00B2D0D1 /* SheetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetModel.swift; sourceTree = "<group>"; };
+		476B39012983E3FB00CFFADC /* TestHomeView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeView3.swift; sourceTree = "<group>"; };
+		477C537D297D9FED00722487 /* SmallIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallIcon.swift; sourceTree = "<group>"; };
+		4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintIconModel.swift; sourceTree = "<group>"; };
+		478963AA29ED8DDD00EEE0FF /* ReadingsColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsColours.swift; sourceTree = "<group>"; };
+		4C3403462997C8B3007DAB84 /* PresentableSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentableSection.swift; sourceTree = "<group>"; };
+		4C34034A29BA646F007DAB84 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		4C34034D29BE8364007DAB84 /* icons2023.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = icons2023.json; sourceTree = "<group>"; };
+		4C34034F29BE83F5007DAB84 /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
+		4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManagerProtocol.swift; sourceTree = "<group>"; };
+		4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJsonUseCase.swift; sourceTree = "<group>"; };
+		4C34035529BE8746007DAB84 /* JSONRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONRepository.swift; sourceTree = "<group>"; };
+		4C3D1F5A29C4FBC700940B62 /* ReadingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingsView.swift; sourceTree = "<group>"; };
+		4C3D1F5C29C4FCA900940B62 /* ReadingDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingDetailsView.swift; sourceTree = "<group>"; };
+		4C4A9ABC294E54CC00C0B279 /* Natega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Natega.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NategaApp.swift; sourceTree = "<group>"; };
+		4C4A9AC1294E54CC00C0B279 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C4A9AC6294E54CD00C0B279 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C4A9AD0294E5E5F00C0B279 /* KatamerosAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatamerosAPI.swift; sourceTree = "<group>"; };
+		4C4A9AD5294E631C00C0B279 /* Synaxar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synaxar.swift; sourceTree = "<group>"; };
+		4C4A9AD7294E660700C0B279 /* KatamerosRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KatamerosRepository.swift; sourceTree = "<group>"; };
+		4C4A9AD9294E66BB00C0B279 /* LoadSynaxarsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadSynaxarsUseCase.swift; sourceTree = "<group>"; };
+		4C4A9ADC294E6D5B00C0B279 /* Assembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembler.swift; sourceTree = "<group>"; };
+		4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembler.swift; sourceTree = "<group>"; };
+		4C4A9AE3294E6F1B00C0B279 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCompositionRoot.swift; sourceTree = "<group>"; };
+		4C4A9AE7294E781F00C0B279 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4C4A9AE92953818500C0B279 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynaxarsDetailsView.swift; sourceTree = "<group>"; };
+		4CCFA622295A447300342776 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4CCFA624295A447300342776 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4CCFA63E295A450200342776 /* NategaWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NategaWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCFA642295A450200342776 /* NategaWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NategaWidgetBundle.swift; sourceTree = "<group>"; };
+		4CCFA644295A450200342776 /* NategaWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NategaWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		4CCFA646295A450200342776 /* NategaWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NategaWidget.swift; sourceTree = "<group>"; };
+		4CCFA648295A450200342776 /* NategaWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = NategaWidget.intentdefinition; sourceTree = "<group>"; };
+		4CCFA649295A450300342776 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CCFA64B295A450300342776 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CCFA655295CB34200342776 /* Colours+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colours+Extensions.swift"; sourceTree = "<group>"; };
+		4CCFA657295E054C00342776 /* Colours.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colours.xcassets; sourceTree = "<group>"; };
+		4CCFA659295F4C1800342776 /* Feast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feast.swift; sourceTree = "<group>"; };
+		4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadReadingsUseCase.swift; sourceTree = "<group>"; };
+		4CCFA65D295F689600342776 /* Image+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extensions.swift"; sourceTree = "<group>"; };
+		9916FD902AAA586000496B5C /* PsalmAndGospel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PsalmAndGospel.swift; sourceTree = "<group>"; };
+		9916FD922AAA588700496B5C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C4A9AB9294E54CC00C0B279 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4A9AED29575C2C00C0B279 /* UIImageColors in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCFA63B295A450200342776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCFA640295A450200342776 /* SwiftUI.framework in Frameworks */,
+				4CCFA63F295A450200342776 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C34034C29BE832B007DAB84 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C34034D29BE8364007DAB84 /* icons2023.json */,
+				4C4A9AC3294E54CD00C0B279 /* Assets.xcassets */,
+				4CCFA657295E054C00342776 /* Colours.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4C4A9AB3294E54CC00C0B279 = {
+			isa = PBXGroup;
+			children = (
+				4C4A9ABE294E54CC00C0B279 /* Natega */,
+				4CCFA641295A450200342776 /* NategaWidget */,
+				4CCFA621295A447300342776 /* Frameworks */,
+				4C4A9ABD294E54CC00C0B279 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C4A9ABD294E54CC00C0B279 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9ABC294E54CC00C0B279 /* Natega.app */,
+				4CCFA63E295A450200342776 /* NategaWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C4A9ABE294E54CC00C0B279 /* Natega */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AE82953817900C0B279 /* Utils */,
+				4C4A9AE7294E781F00C0B279 /* Info.plist */,
+				4C4A9ADE294E6D9700C0B279 /* Presentation */,
+				4C4A9ADB294E676000C0B279 /* Main */,
+				4C4A9AD2294E620800C0B279 /* Domain */,
+				4C4A9ACD294E5DAA00C0B279 /* Data */,
+				4C4A9ABF294E54CC00C0B279 /* NategaApp.swift */,
+				4C34034C29BE832B007DAB84 /* Resources */,
+				4C4A9AC5294E54CD00C0B279 /* Preview Content */,
+			);
+			path = Natega;
+			sourceTree = "<group>";
+		};
+		4C4A9AC5294E54CD00C0B279 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AC6294E54CD00C0B279 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4C4A9ACD294E5DAA00C0B279 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9ACE294E5DB100C0B279 /* API */,
+				4C4A9ACF294E5DB900C0B279 /* Gateways */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4C4A9ACE294E5DB100C0B279 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AD0294E5E5F00C0B279 /* KatamerosAPI.swift */,
+				4C34035129BE8546007DAB84 /* JSONManagerProtocol.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		4C4A9ACF294E5DB900C0B279 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AD7294E660700C0B279 /* KatamerosRepository.swift */,
+				4C34035529BE8746007DAB84 /* JSONRepository.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		4C4A9AD2294E620800C0B279 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AD4294E621E00C0B279 /* Entities */,
+				4C4A9AD3294E621100C0B279 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4C4A9AD3294E621100C0B279 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AD9294E66BB00C0B279 /* LoadSynaxarsUseCase.swift */,
+				4CCFA65B295F4DFB00342776 /* LoadReadingsUseCase.swift */,
+				4C34035329BE86B3007DAB84 /* LoadJsonUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		4C4A9AD4294E621E00C0B279 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AD5294E631C00C0B279 /* Synaxar.swift */,
+				4CCFA659295F4C1800342776 /* Feast.swift */,
+				4C3403462997C8B3007DAB84 /* PresentableSection.swift */,
+				9916FD902AAA586000496B5C /* PsalmAndGospel.swift */,
+				4C34034F29BE83F5007DAB84 /* IconModel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		4C4A9ADB294E676000C0B279 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9ADC294E6D5B00C0B279 /* Assembler.swift */,
+				4C4A9AE5294E722600C0B279 /* AppCompositionRoot.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4C4A9ADE294E6D9700C0B279 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9ADF294E6DA600C0B279 /* Screens */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4C4A9ADF294E6DA600C0B279 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AE0294E6DC000C0B279 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4C4A9AE0294E6DC000C0B279 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AC1294E54CC00C0B279 /* HomeView.swift */,
+				4CC7931129C10C0000535818 /* SynaxarsDetailsView.swift */,
+				4C3D1F5C29C4FCA900940B62 /* ReadingDetailsView.swift */,
+				4C4A9AE1294E6DCB00C0B279 /* HomeAssembler.swift */,
+				4C4A9AE3294E6F1B00C0B279 /* HomeViewModel.swift */,
+				4C3D1F5A29C4FBC700940B62 /* ReadingsView.swift */,
+				477C537D297D9FED00722487 /* SmallIcon.swift */,
+				4786DDAA297D98CC0067BD2A /* SaintIconModel.swift */,
+				476B39012983E3FB00CFFADC /* TestHomeView3.swift */,
+				474703D0299A7F6800B2D0D1 /* ReadingsModel.swift */,
+				474703D2299A7F8700B2D0D1 /* ReadingsCard.swift */,
+				474703D6299A81FC00B2D0D1 /* SheetModel.swift */,
+				478963AA29ED8DDD00EEE0FF /* ReadingsColours.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		4C4A9AE82953817900C0B279 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A9AE92953818500C0B279 /* Date+Extensions.swift */,
+				4C34034A29BA646F007DAB84 /* ButtonStyle.swift */,
+				9916FD922AAA588700496B5C /* String+Extensions.swift */,
+				4CCFA655295CB34200342776 /* Colours+Extensions.swift */,
+				4CCFA65D295F689600342776 /* Image+Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4CCFA621295A447300342776 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CCFA622295A447300342776 /* WidgetKit.framework */,
+				4CCFA624295A447300342776 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4CCFA641295A450200342776 /* NategaWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4CCFA642295A450200342776 /* NategaWidgetBundle.swift */,
+				4CCFA644295A450200342776 /* NategaWidgetLiveActivity.swift */,
+				4CCFA646295A450200342776 /* NategaWidget.swift */,
+				4CCFA648295A450200342776 /* NategaWidget.intentdefinition */,
+				4CCFA649295A450300342776 /* Assets.xcassets */,
+				4CCFA64B295A450300342776 /* Info.plist */,
+			);
+			path = NategaWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C4A9ABB294E54CC00C0B279 /* Natega */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C4A9ACA294E54CD00C0B279 /* Build configuration list for PBXNativeTarget "Natega" */;
+			buildPhases = (
+				4C4A9AB8294E54CC00C0B279 /* Sources */,
+				4C4A9AB9294E54CC00C0B279 /* Frameworks */,
+				4C4A9ABA294E54CC00C0B279 /* Resources */,
+				4CCFA636295A447400342776 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CCFA64F295A450300342776 /* PBXTargetDependency */,
+			);
+			name = Natega;
+			packageProductDependencies = (
+				4C4A9AEC29575C2C00C0B279 /* UIImageColors */,
+			);
+			productName = Natega;
+			productReference = 4C4A9ABC294E54CC00C0B279 /* Natega.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CCFA63D295A450200342776 /* NategaWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CCFA651295A450300342776 /* Build configuration list for PBXNativeTarget "NategaWidgetExtension" */;
+			buildPhases = (
+				4CCFA63A295A450200342776 /* Sources */,
+				4CCFA63B295A450200342776 /* Frameworks */,
+				4CCFA63C295A450200342776 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NategaWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = NategaWidgetExtension;
+			productReference = 4CCFA63E295A450200342776 /* NategaWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C4A9AB4294E54CC00C0B279 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = NO;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					4C4A9ABB294E54CC00C0B279 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					4CCFA63D295A450200342776 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 4C4A9AB7294E54CC00C0B279 /* Build configuration list for PBXProject "5" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4C4A9AB3294E54CC00C0B279;
+			packageReferences = (
+				4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */,
+			);
+			productRefGroup = 4C4A9ABD294E54CC00C0B279 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C4A9ABB294E54CC00C0B279 /* Natega */,
+				4CCFA63D295A450200342776 /* NategaWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C4A9ABA294E54CC00C0B279 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C4A9AC7294E54CD00C0B279 /* Preview Assets.xcassets in Resources */,
+				4CCFA658295E054C00342776 /* Colours.xcassets in Resources */,
+				4C4A9AC4294E54CD00C0B279 /* Assets.xcassets in Resources */,
+				4C34034E29BE8364007DAB84 /* icons2023.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCFA63C295A450200342776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCFA654295A4A0900342776 /* Assets.xcassets in Resources */,
+				4CCFA64A295A450300342776 /* Assets.xcassets in Resources */,
+				4C4875F029DA22AB00BC80A7 /* icons2023.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C4A9AB8294E54CC00C0B279 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C34035629BE8746007DAB84 /* JSONRepository.swift in Sources */,
+				4CCFA656295CB34200342776 /* Colours+Extensions.swift in Sources */,
+				477C537E297D9FED00722487 /* SmallIcon.swift in Sources */,
+				4CCFA64D295A450300342776 /* NategaWidget.intentdefinition in Sources */,
+				4C34034B29BA646F007DAB84 /* ButtonStyle.swift in Sources */,
+				478963AB29ED8DDD00EEE0FF /* ReadingsColours.swift in Sources */,
+				476B39022983E3FB00CFFADC /* TestHomeView3.swift in Sources */,
+				4CCFA65E295F689600342776 /* Image+Extensions.swift in Sources */,
+				4C4A9AC2294E54CC00C0B279 /* HomeView.swift in Sources */,
+				4CCFA65C295F4DFB00342776 /* LoadReadingsUseCase.swift in Sources */,
+				4C4A9AEA2953818500C0B279 /* Date+Extensions.swift in Sources */,
+				4C4A9AE4294E6F1B00C0B279 /* HomeViewModel.swift in Sources */,
+				4C4A9AD1294E5E5F00C0B279 /* KatamerosAPI.swift in Sources */,
+				4C4A9ADD294E6D5B00C0B279 /* Assembler.swift in Sources */,
+				474703D1299A7F6800B2D0D1 /* ReadingsModel.swift in Sources */,
+				9916FD932AAA588700496B5C /* String+Extensions.swift in Sources */,
+				9916FD912AAA586000496B5C /* PsalmAndGospel.swift in Sources */,
+				4C4A9AE6294E722600C0B279 /* AppCompositionRoot.swift in Sources */,
+				4CCFA65A295F4C1800342776 /* Feast.swift in Sources */,
+				4C3D1F5B29C4FBC700940B62 /* ReadingsView.swift in Sources */,
+				4CC7931229C10C0000535818 /* SynaxarsDetailsView.swift in Sources */,
+				474703D3299A7F8700B2D0D1 /* ReadingsCard.swift in Sources */,
+				4C34035429BE86B3007DAB84 /* LoadJsonUseCase.swift in Sources */,
+				4C34035229BE8546007DAB84 /* JSONManagerProtocol.swift in Sources */,
+				4C34035029BE83F5007DAB84 /* IconModel.swift in Sources */,
+				4C3D1F5D29C4FCA900940B62 /* ReadingDetailsView.swift in Sources */,
+				4C4A9AC0294E54CC00C0B279 /* NategaApp.swift in Sources */,
+				4C4A9AD6294E631C00C0B279 /* Synaxar.swift in Sources */,
+				474703D7299A81FC00B2D0D1 /* SheetModel.swift in Sources */,
+				4C4A9AE2294E6DCB00C0B279 /* HomeAssembler.swift in Sources */,
+				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
+				4786DDAB297D98CC0067BD2A /* SaintIconModel.swift in Sources */,
+				4C3403472997C8B3007DAB84 /* PresentableSection.swift in Sources */,
+				4C4A9AD8294E660700C0B279 /* KatamerosRepository.swift in Sources */,
+				4C4A9ADA294E66BB00C0B279 /* LoadSynaxarsUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCFA63A295A450200342776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCFA645295A450200342776 /* NategaWidgetLiveActivity.swift in Sources */,
+				4CCFA643295A450200342776 /* NategaWidgetBundle.swift in Sources */,
+				4CCFA64C295A450300342776 /* NategaWidget.intentdefinition in Sources */,
+				4CCFA647295A450200342776 /* NategaWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CCFA64F295A450300342776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CCFA63D295A450200342776 /* NategaWidgetExtension */;
+			targetProxy = 4CCFA64E295A450300342776 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4C4A9AC8294E54CD00C0B279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4C4A9AC9294E54CD00C0B279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C4A9ACB294E54CD00C0B279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEVELOPMENT_ASSET_PATHS = "\"Natega/Preview Content\"";
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Natega/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Agios;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4C4A9ACC294E54CD00C0B279 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEVELOPMENT_ASSET_PATHS = "\"Natega/Preview Content\"";
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Natega/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Agios;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		4CCFA652295A450300342776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NategaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NategaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2.NategaWidget2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CCFA653295A450300342776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 48F5YYF5VU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NategaWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NategaWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nikola.Natega2.NategaWidget2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C4A9AB7294E54CC00C0B279 /* Build configuration list for PBXProject "5" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C4A9AC8294E54CD00C0B279 /* Debug */,
+				4C4A9AC9294E54CD00C0B279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4C4A9ACA294E54CD00C0B279 /* Build configuration list for PBXNativeTarget "Natega" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C4A9ACB294E54CD00C0B279 /* Debug */,
+				4C4A9ACC294E54CD00C0B279 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4CCFA651295A450300342776 /* Build configuration list for PBXNativeTarget "NategaWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCFA652295A450300342776 /* Debug */,
+				4CCFA653295A450300342776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jathu/UIImageColors";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4C4A9AEC29575C2C00C0B279 /* UIImageColors */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4C4A9AEB29575C2C00C0B279 /* XCRemoteSwiftPackageReference "UIImageColors" */;
+			productName = UIImageColors;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4C4A9AB4294E54CC00C0B279 /* Project object */;
+}

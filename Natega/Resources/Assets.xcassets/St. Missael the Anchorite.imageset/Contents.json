@@ -1,8 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "St. Missael the Anchorite.jpeg",
-      "idiom" : "universal"
+      "filename" : "St. Missael the Anchorite.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
     }
   ],
   "info" : {
