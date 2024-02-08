@@ -202,7 +202,7 @@ struct HomeView: View {
     
     private var upcomingEvents: some View {
         VStack(alignment: .leading) {
-            Text("Upcoming feasts")
+            Text("Upcoming")
                 .font(.system(size: 20, weight: .bold, design: .rounded))
                 .foregroundColor(.black)
                 .padding(.bottom, 10)
@@ -210,20 +210,20 @@ struct HomeView: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 7) {
-                    ForEach(viewModel.upcomingFeasts) { feast in
+                    
                         HStack {
-                            Text(feast.name)
+                            Text("Agios is currently undergoing development for a wonderful fresh new update coming soon. Some things to look forward to: the ability to view full size icons inside the app, daily quotes from church fathers, more accurate synaxarium readings everyday and other improvements too!")
                                 .font(.system(size: 20, weight: .medium, design: .rounded))
                             Image(systemName: "smallcircle.filled.circle.fill")
                                 .font(.system(size: 7, weight: .thin))
-                            Text(feast.time)
+                            Text("Thank you for being a beta user, you will be the first to know about new updates 🙏 keep the Agios team in your prayers - all those who contribute to the project alongside their work and family commitments, all those who serve in the development and production of the app, pray that God covers this project with His divine grace ✨.")
                                 .font(.system(size: 20, weight: .regular, design: .rounded))
                         }
                         .padding(.vertical, 15)
                         .padding(.horizontal, 35)
-                        .background(Color.white.opacity(0.7))
+                        .background(Color.white.opacity(0.25))
                         .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    }
+                    
                 }
                 .padding(.horizontal, 16)
             }
